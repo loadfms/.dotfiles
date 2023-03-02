@@ -1,0 +1,22 @@
+[user]
+	email = loadfms@gmail.com
+	name = loadfms
+[diff]
+	tool = vimdiff3
+[difftool "vimdiff3"]
+	path = nvim
+[difftool]
+	prompt = false
+[init]
+	defaultBranch = main
+[merge]
+	tool = fugitive
+[difftool "nvimdiff"]
+    cmd = nvim -f -c \"Gdiffsplit!\" \"$MERGED\"
+    ;cmd = "nvim -d \"$LOCAL\" \"$REMOTE\""
+[mergetool "fugitive"]
+	cmd = nvim -f -c \"Gvdiffsplit!\" \"$MERGED\"
+[mergetool]
+	keepBackup = false
+[pull]
+	rebase = false

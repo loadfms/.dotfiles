@@ -1,0 +1,90 @@
+# Configuration for Alacritty, the GPU enhanced terminal emulator.
+
+# Setup term for programs to be able to use it
+env:
+  TERM: xterm-256color
+
+window:
+  # Spread additional padding evenly around the terminal content.
+  dynamic_padding: false
+
+  # Startup Mode (changes require restart)
+  startup_mode: Windowed
+
+  #decorations: buttonless
+  #opacity: 0.8
+
+  padding:
+    x: 10
+    y: 10
+
+# Do I really need tmux?
+#shell:
+  #program: /bin/zsh
+  #args:
+    #- -l
+    #- -c
+    #- "source ~/.zshrc && tmux"
+
+# Sample Font configuration for font: Monoid.
+# Feel free to use different font configuration family & face for each sections
+font:
+  # Normal font face - Also used to draw glyphs on tmux & VIM
+  # NOTE: You may use any font you'd like but make sure the normal fonts
+  # support ligatures/glyphs. That's used by tmux & VIM to provide a better
+  # UI for powerline & tmux bottom bar.
+  normal:
+    # Font name
+    family: UbuntuMono Nerd Font
+    # Font face
+    style: Regular
+
+  # Bold font face
+  bold:
+    family: UbuntuMono Nerd Font
+    style: Bold
+
+  # Italic font face
+  italic:
+    family: UbuntuMono Nerd Font
+    style: Italic
+
+  # Bold italic font face
+  # Note: Since i don't have a font italic version of this font, I just specified
+  # italic & it just works. You may specifiy the bold italic version if it exists
+  # for your font
+  bold_italic:
+    family: UbuntuMono Nerd Font
+    style: Italic
+
+  # Font size
+  size: 15.0
+
+  # Offset is the extra space around each character. `offset.y` can be thought of
+  # as modifying the line spacing, and `offset.x` as modifying the letter spacing
+  # I've given in 14 spacing which fits really well with my fonts, you may change it
+  # to your convenience but make sure to adjust 'glyph_offset' appropriately post that
+  offset:
+   x: -1
+   y: 0
+
+  # Note: This requires RESTART
+  # By default when you change the offset above you'll see an issue, where the texts are bottom
+  # aligned with the cursor, this is to make sure they center align.
+  # This offset should usually be 1/2 of the above offset-y being set.
+  glyph_offset:
+   x: 0
+   # Keeping this as half of offset to vertically align the text in cursor
+   y: 0
+
+selection:
+  # semantic_escape_chars: ",│`|:\"' ()[]{}<>\t"
+
+  # When set to `true`, selected text will be copied to the primary clipboard.
+  save_to_clipboard: true
+
+# Live config reload (changes require restart)
+live_config_reload: true
+
+import:
+ - ~/.alacrittythemes/gruvbox-material.yml

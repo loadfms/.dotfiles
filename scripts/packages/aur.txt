@@ -1,0 +1,15 @@
+aws-okta-bin
+catppuccin-gtk-theme-macchiato
+catppuccin-gtk-theme-mocha
+cava
+cbonsai-git
+grpcurl
+jdtls
+pfetch
+pokemon-colorscripts-git
+slack-desktop
+spotify
+teams
+ttf-symbola
+yay
+zoom
