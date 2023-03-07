@@ -8,8 +8,8 @@
     fg-col2:#ea6962;
     grey:#d4be98;
 
-    width: 800;
-    font: "UbuntuMono Nerd Font 15";
+    width: 600;
+    font: "UbuntuMono Nerd Font 10";
 }
 
 element-text, element-icon , mode-switcher {
