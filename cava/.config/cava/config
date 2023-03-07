@@ -129,23 +129,35 @@ method = ncurses
 ; foreground = '#d50368'
 
 # SDL only support hex code colors, these are the default:
-; background = '#111111'
+; background = '#1d2021'
 ; foreground = '#33cccc'
 
 
 # Gradient mode, only hex defined colors (and thereby ncurses mode) are supported,
 # background must also be defined in hex  or remain commented out. 1 = on, 0 = off.
 # You can define as many as 8 different colors. They range from bottom to top of screen
+#[color]
+#gradient = 1
+#gradient_color_1 = '#B5E8E0'
+#gradient_color_2 = '#89DCEB'
+#gradient_color_3 = '#96CDFB'
+#gradient_color_4 = '#DDB6F2'
+#gradient_color_5 = '#F5C2E7'
+#gradient_color_6 = '#E8A2AF'
+#gradient_color_7 = '#F2CDCD'
+#gradient_color_8 = '#F5E0DC'
+#
+
 [color]
 gradient = 1
-gradient_color_1 = '#B5E8E0'
-gradient_color_2 = '#89DCEB'
-gradient_color_3 = '#96CDFB'
-gradient_color_4 = '#DDB6F2'
-gradient_color_5 = '#F5C2E7'
-gradient_color_6 = '#E8A2AF'
-gradient_color_7 = '#F2CDCD'
-gradient_color_8 = '#F5E0DC'
+gradient_color_1  ='#32302f'
+gradient_color_2  ='#ea6962'
+gradient_color_3  ='#a9b665'
+gradient_color_4  ='#d8a657'
+gradient_color_5  ='#7daea3'
+gradient_color_6  ='#d3869b'
+gradient_color_7  ='#89b482'
+gradient_color_8  ='#d4be98'
 
 
 
@@ -157,7 +169,7 @@ gradient_color_8 = '#F5E0DC'
 
 # Disables or enables the so-called "Monstercat smoothing" with or without "waves". Set to 0 to disable.
 ; monstercat = 0
-; waves = 0
+; wave = 0
 
 # Set gravity percentage for "drop off". Higher values means bars will drop faster.
 # Accepts only non-negative values. 50 means half gravity, 200 means double. Set to 0 to disable "drop off".
