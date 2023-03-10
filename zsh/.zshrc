@@ -89,18 +89,14 @@ export FZF_DEFAULT_OPTS="--height 96% --reverse --preview 'cat {}'"
 ###############################################################
 # => Aliases
 ###############################################################
-alias aws-run="aws-vault exec " # USAGE: aws-run {acc} -- {cmd}
-alias aws-run-prd="aws-vault exec "
 alias git-oops="git commit --amend --no-edit"
 alias git-clean-branches="git branch --merged | grep -v \* | xargs git branch -D; git remote prune origin;"
 alias git-undo="git reset HEAD~1 --soft"
 alias vim=nvim
 alias cpf="curl https://www.4devs.com.br/ferramentas_online.php --data-raw 'acao=gerar_cpf&pontuacao=S&cpf_estado=' -s | cut -d '%' -f 1 | pbcopy -selection clipboard"
-alias todo="vim ~/.dotfiles/todo.md"
 alias dotsync="sh ~/.dotfiles/scripts/revive-packages.sh && git -C ~/.dotfiles add . && git -C ~/.dotfiles commit -m 'feat: update' && git -C ~/.dotfiles push origin main"
 alias docsync="git -C ~/notes add . && git -C ~/notes commit -m 'feat: update' && git -C ~/notes push origin main"
-alias animedoro="sh ~/.dotfiles/scripts/animedoro.sh"
-alias ls="exa --icons -ll --sort type"
+alias ls="exa --icons -ll --sort=type"
 alias ps="procs"
 alias mypr="sh ~/.dotfiles/scripts/myprs.sh"
 alias rgf='rg --files | rg -i '

@@ -1,7 +1,6 @@
 alacritty
 autoconf
 automake
-aws-vault
 bandwhich
 base
 bc
@@ -73,6 +72,7 @@ pacman
 pacman-contrib
 pass
 patch
+pdftk
 perl-anyevent-i3
 picom
 pipewire
