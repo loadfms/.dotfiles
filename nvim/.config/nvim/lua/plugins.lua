@@ -50,4 +50,8 @@ return require('packer').startup(function()
     use { "ellisonleao/gruvbox.nvim" }
     use 'folke/tokyonight.nvim'
     use "rebelot/kanagawa.nvim"
+    use {
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+    }
 end)

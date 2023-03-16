@@ -32,7 +32,7 @@ keymap('n', '<Leader>dq', '<C-W>k <C-W>o', ns) -- Close compare buffs
 keymap('n', '<Leader>gp', ':G pull<CR>', ns) -- Close compare buffs
 keymap('n', '<Leader>gP', ':G push<CR>', ns) -- Close compare buffs
 keymap('n', '<Leader>ga', ':G add .<CR>', ns) -- Close compare buffs
-keymap('n', '<Leader>dh', ':diffget //2<CR>', ns) -- Get content from left side
+keymap('n', '<Leader>da', ':diffget //2<CR>', ns) -- Get content from left side
 keymap('n', '<Leader>dl', ':diffget //3<CR>', ns) -- Get content from right side
 
 keymap('n', '<Leader>t', ':Dispatch<CR>', ns) -- Test compile
@@ -52,3 +52,4 @@ keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', ns)
 keymap('n', '<Leader>fj', '<cmd>%!jq <CR>', ns)
 
 keymap('n', '<Leader>ch', ':lua require("chettahsheet").run() <CR>', ns)
+--keymap('n', 'f', ':lua require("hop").hint_char2() <CR>', ns)
