@@ -101,6 +101,7 @@ alias ps="procs"
 alias mypr="sh ~/.dotfiles/scripts/myprs.sh"
 alias rgf='rg --files | rg -i '
 alias tmux='tmux attach -t TMUX || tmux new -s TMUX'
+alias cgpt='git commit -m "$(commitgpt)"'
 
 if uname | rg -q "Linux"; then
     alias cpf="curl https://www.4devs.com.br/ferramentas_online.php --data-raw 'acao=gerar_cpf&pontuacao=S&cpf_estado=' -s | cut -d '%' -f 1 | xclip -selection clipboard"

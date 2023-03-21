@@ -68,6 +68,7 @@ npm
 ntfs-3g
 openssh
 os-prober
+p7zip
 pacman
 pacman-contrib
 pass
