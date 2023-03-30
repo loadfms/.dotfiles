@@ -83,6 +83,7 @@ polybar
 procs
 python-pip
 python-pywal
+ranger
 ripgrep
 rofi
 rofi-emoji
@@ -101,7 +102,6 @@ ttf-ubuntu-nerd
 unzip
 uthash
 vi
-vifm
 virtualbox
 virtualbox-guest-iso
 virtualbox-host-modules-arch
