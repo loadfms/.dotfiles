@@ -38,3 +38,4 @@ opt.smartcase = true
 opt.relativenumber = true
 opt.scrolloff = 9999
 opt.guicursor = ""
+opt.termguicolors = true
