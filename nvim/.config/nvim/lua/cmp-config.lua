@@ -30,7 +30,7 @@ local kind_icons = {
 }
 
 local has_words_before = function()
-    local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+    local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
     return col ~= 0 and
         vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
 end
@@ -57,7 +57,6 @@ cmp.setup {
                 path = "[Path]",
                 nvim_lsp_signature_help = "[Signature]",
                 cmdline = "[Vim Command]",
-                cmp_tabnine = "[Tab Nine]"
             })[entry.source.name]
             return vim_item
         end,
@@ -98,7 +97,6 @@ cmp.setup {
         { name = 'buffer' },
         { name = 'path' },
         { name = 'luasnip' },
-        { name = 'cmp_tabnine' }
     }
 }
 
