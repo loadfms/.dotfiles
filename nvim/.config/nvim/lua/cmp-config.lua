@@ -100,7 +100,6 @@ cmp.setup {
     }
 }
 
-
 local ls = require("luasnip")
 ls.filetype_extend("go", { "go" })
 ls.filetype_extend("html", { "html" })

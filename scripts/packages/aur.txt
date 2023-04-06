@@ -4,6 +4,7 @@ catppuccin-gtk-theme-mocha
 cava
 cbonsai-git
 grpcurl
+irpf
 jdtls
 pfetch
 pokemon-colorscripts-git

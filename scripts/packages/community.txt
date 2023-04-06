@@ -8,6 +8,7 @@ binutils
 bison
 btrfs-progs
 calc
+cameractrls
 cowsay
 discord
 docker
