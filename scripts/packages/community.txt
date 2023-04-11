@@ -2,6 +2,7 @@ alacritty
 alsa-utils
 base
 base-devel
+cameractrls
 dunst
 efibootmgr
 exa
@@ -31,6 +32,7 @@ tmux
 ttf-ubuntu-mono-nerd
 vulkan-radeon
 xclip
+xcursor-themes
 xf86-video-amdgpu
 xorg-server
 xorg-xinit

@@ -1,4 +1,6 @@
+google-chrome
 pokemon-colorscripts-git
 slack-desktop
+spotify
 yay-git
 zoom
