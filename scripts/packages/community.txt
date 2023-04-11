@@ -13,10 +13,12 @@ gnome-themes-extra
 grub
 i3-wm
 intel-ucode
+libnotify
 linux
 linux-firmware
 lxappearance-gtk3
 neovim
+nodejs
 ntfs-3g
 os-prober
 picom
