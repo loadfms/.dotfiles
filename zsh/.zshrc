@@ -8,7 +8,7 @@ export PATH="$HOME/.local/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
 
 ###############################################################
-# => Theme
+# => Startx
 ###############################################################
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && uname | rg -q "Linux"; then
   exec startx

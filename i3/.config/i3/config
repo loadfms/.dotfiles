@@ -127,15 +127,15 @@ bindsym $mod+Control Down        resize shrink height 5 px or 5 ppt
 # startup programs
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id feh --bg-fill ~/pictures/eberhard-grossgasteiger-2MUb65gx8Tk-unsplash.jpg
+exec --no-startup-id feh --bg-fill ~/Pictures/eberhard-grossgasteiger-yjUuh2P-CjA-unsplash.jpg
 exec --no-startup-id picom
 exec --no-startup-id dunst
 
 # FKeys
 # Pulse Audio controls
-bindsym $mod+Prior exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym $mod+Next exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym $mod+Prior exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ +5% #increase sound volume
+bindsym $mod+Next exec --no-startup-id pactl set-sink-volume @DEFAULT_SINK@ -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute @DEFAULT_SINK@ toggle # mute sound
 #
 
 # Printscreen controls
