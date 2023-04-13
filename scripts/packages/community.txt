@@ -20,6 +20,7 @@ linux-firmware
 lxappearance-gtk3
 neovim
 nodejs
+noto-fonts
 ntfs-3g
 os-prober
 picom
@@ -30,6 +31,7 @@ rofi
 stow
 tmux
 ttf-ubuntu-mono-nerd
+vifm
 vulkan-radeon
 xclip
 xcursor-themes

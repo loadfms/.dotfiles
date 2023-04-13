@@ -87,4 +87,4 @@ selection:
 live_config_reload: true
 
 import:
- - ~/.alacrittythemes/everforest.yml
+ - ~/.alacrittythemes/catppuccin.yml
