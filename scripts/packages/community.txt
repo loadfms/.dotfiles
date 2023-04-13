@@ -11,6 +11,7 @@ firefox
 git
 github-cli
 gnome-themes-extra
+go
 grub
 i3-wm
 intel-ucode
@@ -21,6 +22,7 @@ lxappearance-gtk3
 neovim
 nodejs
 noto-fonts
+npm
 ntfs-3g
 os-prober
 picom
