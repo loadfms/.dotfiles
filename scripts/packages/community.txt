@@ -2,6 +2,7 @@ alacritty
 alsa-utils
 base
 base-devel
+calc
 cameractrls
 dunst
 efibootmgr
@@ -18,7 +19,9 @@ intel-ucode
 libnotify
 linux
 linux-firmware
+love
 lxappearance-gtk3
+maim
 neovim
 nodejs
 noto-fonts
@@ -27,12 +30,17 @@ ntfs-3g
 os-prober
 picom
 polybar
+procs
 pulseaudio
 ripgrep
 rofi
+steam
 stow
+tiled
+tldr
 tmux
 ttf-ubuntu-mono-nerd
+unzip
 vifm
 vulkan-radeon
 xclip
