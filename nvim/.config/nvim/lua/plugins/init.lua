@@ -16,14 +16,15 @@ return {
     { "ellisonleao/gruvbox.nvim" },
     'folke/tokyonight.nvim',
     "rebelot/kanagawa.nvim",
-    { "windwp/nvim-autopairs", config = function() require("nvim-autopairs").setup {} end },
-    { "catppuccin/nvim",
+    { "windwp/nvim-autopairs",   config = function() require("nvim-autopairs").setup {} end },
+    {
+        "catppuccin/nvim",
         name = "catppuccin",
         config = function()
-
             require("catppuccin").setup({
                 flavour = "macchiato", -- latte, frappe, macchiato, mocha
-                background = { -- :h background
+                background = {
+                    -- :h background
                     light = "latte",
                     dark = "mocha",
                 },
@@ -35,7 +36,7 @@ return {
                     percentage = 0.15,
                 },
                 no_italic = false, -- Force no italic
-                no_bold = false, -- Force no bold
+                no_bold = false,   -- Force no bold
                 styles = {
                     comments = { "italic" },
                     conditionals = { "italic" },
@@ -62,9 +63,8 @@ return {
                     -- For more plugins integrations please scroll down (https://github.com/catppuccin/nvim#integrations)
                 },
             })
-
-
-        end },
+        end
+    },
     {
         'rose-pine/neovim',
         name = 'rose-pine',
@@ -77,7 +77,6 @@ return {
                 disable_background = false,
                 disable_float_background = false,
                 disable_italics = false,
-
                 --- @usage string hex value or named color from rosepinetheme.com/palette
                 groups = {
                     background = 'base',
@@ -86,12 +85,10 @@ return {
                     comment = 'muted',
                     link = 'iris',
                     punctuation = 'subtle',
-
                     error = 'love',
                     hint = 'iris',
                     info = 'foam',
                     warn = 'gold',
-
                     headings = {
                         h1 = 'iris',
                         h2 = 'foam',
@@ -103,7 +100,6 @@ return {
                     -- or set all headings at once
                     -- headings = 'subtle'
                 },
-
                 -- Change specific vim highlight groups
                 highlight_groups = {
                     ColorColumn = { bg = 'rose' }

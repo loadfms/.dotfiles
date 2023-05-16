@@ -38,13 +38,13 @@ git_info(){
 
 PROMPT='
 $(directory) $(git_info)
-%B%b '
+%B%b '
 
 # Add extra space between symbol in Linux
 if uname | rg -q "Linux"; then
     PROMPT='
 $(directory) $(git_info)
-%B%b '
+%B%b '
 fi
 
 ###############################################################
@@ -77,7 +77,7 @@ zplugin light agkozak/zsh-z
 ###############################################################
 ZSH_THEME_GIT_PROMPT_PREFIX="on  "
 ZSH_THEME_GIT_PROMPT_SUFFIX=" "
-ZSH_THEME_GIT_PROMPT_DIRTY=" 六"
+ZSH_THEME_GIT_PROMPT_DIRTY=" "
 ZSH_THEME_GIT_PROMPT_CLEAN=""
 
 ###############################################################
@@ -108,3 +108,11 @@ if uname | rg -q "Linux"; then
 fi
 
 pokemon-colorscripts -r 1 --no-title
+
+# pnpm
+export PNPM_HOME="/home/load/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
