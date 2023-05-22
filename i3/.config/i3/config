@@ -21,7 +21,7 @@ font pango:UbuntuMono Nerd Font 10
 for_window [class="^.*"] border pixel 0
 gaps inner 10
 gaps outer 1
-gaps top 40
+gaps top 30
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
