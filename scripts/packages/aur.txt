@@ -1,5 +1,3 @@
-obs-backgroundremoval
-obs-face-tracker
 pokemon-colorscripts-git
 slack-desktop
 spotify

@@ -87,4 +87,4 @@ selection:
 live_config_reload: true
 
 import:
- - ~/.alacrittythemes/catppuccin.yml
+ - ~/.alacrittythemes/tokyo-night.yml

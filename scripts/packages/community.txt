@@ -29,7 +29,6 @@ nodejs
 noto-fonts
 npm
 ntfs-3g
-obs-studio
 os-prober
 picom
 polybar
