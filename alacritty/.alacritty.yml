@@ -35,18 +35,18 @@ font:
   # UI for powerline & tmux bottom bar.
   normal:
     # Font name
-    family: FantasqueSansM Nerd Font Mono
+    family: UbuntuMono Nerd Font
     # Font face
     style: Regular
 
   # Bold font face
   bold:
-    family: FantasqueSansM Nerd Font Mono
+    family: UbuntuMono Nerd Font
     style: Bold
 
   # Italic font face
   italic:
-    family: FantasqueSansM Nerd Font Mono
+    family: UbuntuMono Nerd Font 
     style: Italic
 
   # Bold italic font face
