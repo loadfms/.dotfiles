@@ -35,18 +35,18 @@ font:
   # UI for powerline & tmux bottom bar.
   normal:
     # Font name
-    family: UbuntuMono Nerd Font
+    family: FantasqueSansM Nerd Font Mono
     # Font face
     style: Regular
 
   # Bold font face
   bold:
-    family: UbuntuMono Nerd Font
+    family: FantasqueSansM Nerd Font Mono
     style: Bold
 
   # Italic font face
   italic:
-    family: UbuntuMono Nerd Font
+    family: FantasqueSansM Nerd Font Mono
     style: Italic
 
   # Bold italic font face
@@ -58,14 +58,14 @@ font:
     style: Italic
 
   # Font size
-  size: 12.0
+  size: 14.0
 
   # Offset is the extra space around each character. `offset.y` can be thought of
   # as modifying the line spacing, and `offset.x` as modifying the letter spacing
   # I've given in 14 spacing which fits really well with my fonts, you may change it
   # to your convenience but make sure to adjust 'glyph_offset' appropriately post that
   offset:
-   x: -1
+   x: 0
    y: 0
 
   # Note: This requires RESTART
@@ -87,4 +87,4 @@ selection:
 live_config_reload: true
 
 import:
- - ~/.alacrittythemes/tokyo-night.yml
+ - ~/.alacrittythemes/gruvbox-material.yml

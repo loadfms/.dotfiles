@@ -38,7 +38,7 @@ git_info(){
 
 PROMPT='
 $(directory) $(git_info)
-%B󰅂%b '
+%B%b '
 
 # Add extra space between symbol in Linux
 if uname | rg -q "Linux"; then
