@@ -6,6 +6,7 @@ efibootmgr
 exa
 feh
 git
+github-cli
 grub
 gst-plugin-pipewire
 i3-wm
