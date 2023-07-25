@@ -17,6 +17,7 @@ linux
 linux-firmware
 neovim
 ntfs-3g
+openssh
 os-prober
 picom
 pipewire
