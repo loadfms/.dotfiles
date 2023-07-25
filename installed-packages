@@ -1,5 +1,4 @@
 alacritty
-aws
 cava
 dunst
 fontconfig
@@ -14,3 +13,4 @@ vifm
 zsh
 xinit
 xresources
+usr

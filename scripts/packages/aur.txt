@@ -1,6 +1,3 @@
+google-chrome
 pokemon-colorscripts-git
-slack-desktop
-spotify
-teams
-yay-git
-zoom
+yay

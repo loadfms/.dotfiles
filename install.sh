@@ -6,6 +6,3 @@ do
     stow -D $folder
     stow $folder
 done
-
-cd x11
-sudo stow -t /etc/X11/ .

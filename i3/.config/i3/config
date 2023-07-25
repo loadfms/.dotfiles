@@ -19,7 +19,7 @@ font pango:UbuntuMono Nerd Font 10
 #
 # Thanks Childz
 for_window [class="^.*"] border pixel 0
-gaps inner 10
+gaps inner 25
 gaps outer 1
 gaps top 30
 
@@ -127,7 +127,7 @@ bindsym $mod+Control Down        resize shrink height 5 px or 5 ppt
 # startup programs
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id feh --bg-fill ~/Pictures/13.png
+exec --no-startup-id feh --bg-fill ~/pictures/futurism.jpg
 exec --no-startup-id picom
 exec --no-startup-id dunst
 
