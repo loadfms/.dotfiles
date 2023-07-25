@@ -15,6 +15,7 @@ libpulse
 libva-mesa-driver
 linux
 linux-firmware
+lxappearance
 neovim
 ntfs-3g
 openssh

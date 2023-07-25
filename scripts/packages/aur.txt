@@ -1,3 +1,4 @@
+adwaita-dark
 google-chrome
 pokemon-colorscripts-git
 yay
