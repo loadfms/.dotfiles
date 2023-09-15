@@ -16,7 +16,12 @@ return {
         config = function()
             require('gitsigns').setup {
                 signs                        = {
-                    add          = { hl = 'GitSignsAdd', text = '│', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
+                    add          = {
+                        hl = 'GitSignsAdd',
+                        text = '│',
+                        numhl = 'GitSignsAddNr',
+                        linehl = 'GitSignsAddLn'
+                    },
                     change       = {
                         hl = 'GitSignsChange',
                         text = '│',
@@ -41,7 +46,12 @@ return {
                         numhl = 'GitSignsChangeNr',
                         linehl = 'GitSignsChangeLn'
                     },
-                    untracked    = { hl = 'GitSignsAdd', text = '┆', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
+                    untracked    = {
+                        hl = 'GitSignsAdd',
+                        text = '┆',
+                        numhl = 'GitSignsAddNr',
+                        linehl = 'GitSignsAddLn'
+                    },
                 },
                 signcolumn                   = true,  -- Toggle with `:Gitsigns toggle_signs`
                 numhl                        = true,  -- Toggle with `:Gitsigns toggle_numhl`
