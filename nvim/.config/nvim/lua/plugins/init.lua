@@ -5,10 +5,20 @@ return {
     'tpope/vim-fugitive',
     'preservim/nerdcommenter',
     {
-        'github/copilot.vim',
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
         config = function()
-            vim.g.copilot_no_tab_map = true
-            vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+            require("copilot").setup({
+                suggestion = { enabled = false },
+                panel = { enabled = false },
+            })
+        end,
+    },
+    {
+        "zbirenbaum/copilot-cmp",
+        config = function()
+            require("copilot_cmp").setup()
         end
     },
     {
@@ -240,4 +250,12 @@ return {
             }
         end,
     },
+    {
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!).
+        build = "make install_jsregexp"
+    },
+    "onsails/lspkind.nvim"
 }

@@ -1,38 +1,34 @@
 local cmp = require 'cmp'
+local luasnip = require 'luasnip'
+local lspkind = require 'lspkind'
 
-local has_words_before = function()
-    local line, col = table.unpack(vim.api.nvim_win_get_cursor(0))
-    return col ~= 0 and
-        vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-end
+lspkind.init({
+    symbol_map = {
+        Copilot = "",
+    },
+})
 
 cmp.setup {
     snippet = {
         expand = function(args)
-        end,
+            luasnip.lsp_expand(args.body)
+        end
     },
     formatting = {
-        format = function(entry, vim_item)
-            vim_item.menu = ({
-                nvim_lsp = "[LSP]",
-                spell = "[Spellings]",
-                zsh = "[Zsh]",
-                buffer = "[Buffer]",
-                treesitter = "[Treesitter]",
-                calc = "[Calculator]",
-                nvim_lua = "[Lua]",
-                path = "[Path]",
-                nvim_lsp_signature_help = "[Signature]",
-                cmdline = "[Vim Command]",
-            })[entry.source.name]
-            return vim_item
-        end,
+        format = lspkind.cmp_format({
+            mode = 'symbol',       -- show only symbol annotations
+            maxwidth = 50,         -- prevent the popup from showing more than provided characters (e.g 50 will not show more than 50 characters)
+            ellipsis_char = '...', -- when popup menu exceed maxwidth, the truncated part would show ellipsis_char instead (must define maxwidth first)
+            before = function(entry, vim_item)
+                return vim_item
+            end
+        })
     },
     mapping = {
-        ['<CR>'] = cmp.mapping.confirm({
-            behavior = cmp.ConfirmBehavior.Insert,
+        ['<CR>'] = cmp.mapping.confirm {
+            behavior = cmp.ConfirmBehavior.Replace,
             select = true,
-        }),
+        },
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
@@ -40,8 +36,6 @@ cmp.setup {
         ["<Tab>"] = cmp.mapping(function(fallback)
             if cmp.visible() then
                 cmp.select_next_item()
-            elseif has_words_before() then
-                cmp.complete()
             else
                 fallback()
             end
@@ -56,6 +50,7 @@ cmp.setup {
         end, { "i", "s" }),
     },
     sources = {
+        { name = "copilot" },
         { name = 'nvim_lsp' },
         { name = 'buffer' },
         { name = 'path' },

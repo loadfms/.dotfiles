@@ -1,26 +1,25 @@
-
 local keymap = vim.api.nvim_set_keymap
 local ns = { noremap = true, silent = true }
 
-keymap('n', '<Leader>w', ':w<CR>', ns) -- Fast save
+keymap('n', '<Leader>w', ':w<CR>', ns)                                      -- Fast save
 keymap('n', '<Leader>ep', ':e ~/.config/nvim/lua/plugins/init.lua<CR>', ns) -- Open config
-keymap('n', '<Leader>bd', ':bd<CR>', ns) -- Close buffer
-keymap('n', 'Y', 'y$', ns) -- Yank from the cursor to the end of line
-keymap('n', 'Q', '<Nop>', ns) -- Disable ex mode. I dunno what is it
-keymap('n', '<Leader><CR>', ':noh<CR>', ns) -- Clear highlight
+keymap('n', '<Leader>bd', ':bd<CR>', ns)                                    -- Close buffer
+keymap('n', 'Y', 'y$', ns)                                                  -- Yank from the cursor to the end of line
+keymap('n', 'Q', '<Nop>', ns)                                               -- Disable ex mode. I dunno what is it
+keymap('n', '<Leader><CR>', ':noh<CR>', ns)                                 -- Clear highlight
 keymap('', ']b', ':bnext<CR>', ns)
 keymap('', '[b', ':bprevious<CR>', ns)
 
-keymap('n', '<C-p>', ':Telescope find_files<CR>', ns) -- Telescope navigation
-keymap('n', '<Leader>k', ':Telescope live_grep<CR>', ns) -- Telescope find in files
+keymap('n', '<C-p>', ':Telescope find_files<CR>', ns)      -- Telescope navigation
+keymap('n', '<Leader>k', ':Telescope live_grep<CR>', ns)   -- Telescope find in files
 keymap('n', '<Leader>K', ':Telescope grep_string<CR>', ns) -- Telescope find in files
 keymap('n', '<leader>B', ':lua require("telescope.builtin").buffers()<CR>', ns)
 
-keymap('n', '<Leader>gs', ':G<CR>', ns) -- Vim fugitive summary
-keymap('n', '<Leader>dq', '<C-W>k <C-W>o', ns) -- Close compare buffs
-keymap('n', '<Leader>gp', ':G pull<CR>', ns) -- Close compare buffs
-keymap('n', '<Leader>gP', ':G push<CR>', ns) -- Close compare buffs
-keymap('n', '<Leader>ga', ':G add .<CR>', ns) -- Close compare buffs
+keymap('n', '<Leader>gs', ':G<CR>', ns)           -- Vim fugitive summary
+keymap('n', '<Leader>dq', '<C-W>k <C-W>o', ns)    -- Close compare buffs
+keymap('n', '<Leader>gp', ':G pull<CR>', ns)      -- Close compare buffs
+keymap('n', '<Leader>gP', ':G push<CR>', ns)      -- Close compare buffs
+keymap('n', '<Leader>ga', ':G add .<CR>', ns)     -- Close compare buffs
 keymap('n', '<Leader>da', ':diffget //2<CR>', ns) -- Get content from left side
 keymap('n', '<Leader>dl', ':diffget //3<CR>', ns) -- Get content from right side
 
