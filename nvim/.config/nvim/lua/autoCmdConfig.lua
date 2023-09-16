@@ -1,5 +1,5 @@
 vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.lua", "*.html", "*.rs", "*.tsx", "*.ts", "*.json" },
+    pattern = { "*.lua", "*.html", "*.rs", "*.tsx", "*.ts", "*.json", "*.scss" },
     command = ":lua vim.lsp.buf.format()",
 })
 

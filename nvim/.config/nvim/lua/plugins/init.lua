@@ -5,11 +5,33 @@ return {
     'tpope/vim-fugitive',
     'preservim/nerdcommenter',
     {
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
+        config = function()
+            require("copilot").setup({
+                suggestion = { enabled = false },
+                panel = { enabled = false },
+            })
+        end,
+    },
+    {
+        "zbirenbaum/copilot-cmp",
+        config = function()
+            require("copilot_cmp").setup()
+        end
+    },
+    {
         'lewis6991/gitsigns.nvim',
         config = function()
             require('gitsigns').setup {
                 signs                        = {
-                    add          = { hl = 'GitSignsAdd', text = '│', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
+                    add          = {
+                        hl = 'GitSignsAdd',
+                        text = '│',
+                        numhl = 'GitSignsAddNr',
+                        linehl = 'GitSignsAddLn'
+                    },
                     change       = {
                         hl = 'GitSignsChange',
                         text = '│',
@@ -34,7 +56,12 @@ return {
                         numhl = 'GitSignsChangeNr',
                         linehl = 'GitSignsChangeLn'
                     },
-                    untracked    = { hl = 'GitSignsAdd', text = '┆', numhl = 'GitSignsAddNr', linehl = 'GitSignsAddLn' },
+                    untracked    = {
+                        hl = 'GitSignsAdd',
+                        text = '┆',
+                        numhl = 'GitSignsAddNr',
+                        linehl = 'GitSignsAddLn'
+                    },
                 },
                 signcolumn                   = true,  -- Toggle with `:Gitsigns toggle_signs`
                 numhl                        = true,  -- Toggle with `:Gitsigns toggle_numhl`
@@ -168,7 +195,7 @@ return {
         build = ':TSUpdate',
         config = function()
             require 'nvim-treesitter.configs'.setup {
-                ensure_installed = { "go", "lua", "javascript", "html", "typescript", "css", "java", "terraform", "tsx" },
+                ensure_installed = { "go", "lua", "javascript", "html", "typescript", "css", "scss", "terraform", "tsx" },
 
                 -- Install parsers synchronously (only applied to `ensure_installed`)
                 sync_install = false,
@@ -207,4 +234,28 @@ return {
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-nvim-lsp',
+    {
+        "jose-elias-alvarez/null-ls.nvim",
+        event = { "BufReadPre", "BufNewFile" },
+        dependencies = { "mason.nvim" },
+        opts = function()
+            local null_ls = require("null-ls")
+            local formatting = null_ls.builtins.formatting
+            return {
+                sources = {
+                    formatting.prettierd.with {
+                        filetypes = { 'scss', 'css' },
+                    },
+                },
+            }
+        end,
+    },
+    {
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!).
+        build = "make install_jsregexp"
+    },
+    "onsails/lspkind.nvim"
 }
