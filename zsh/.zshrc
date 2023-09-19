@@ -105,6 +105,11 @@ alias rgf='rg --files | rg -i '
 alias tmux='tmux attach -t TMUX || tmux new -s TMUX'
 alias cgpt='git commit -m "$(commitgpt)"'
 
+fcd() {
+  local dir
+  dir=$(find . -maxdepth 2 -type d | sed 's|^\./||' | fzf +m) && cd "$dir"
+}
+
 if uname | rg -q "Linux"; then
     alias cpf="curl https://www.4devs.com.br/ferramentas_online.php --data-raw 'acao=gerar_cpf&pontuacao=S&cpf_estado=' -s | cut -d '%' -f 1 | xclip -selection clipboard"
 fi
