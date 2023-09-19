@@ -68,6 +68,7 @@ source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
+source <(kubectl completion zsh)
 
 zplugin light zdharma-continuum/fast-syntax-highlighting
 zplugin light zsh-users/zsh-autosuggestions
@@ -104,6 +105,7 @@ alias mypr="sh ~/.dotfiles/scripts/myprs.sh"
 alias rgf='rg --files | rg -i '
 alias tmux='tmux attach -t TMUX || tmux new -s TMUX'
 alias cgpt='git commit -m "$(commitgpt)"'
+alias dockerstart='sudo systemctl start docker.service'
 
 fcd() {
   local dir
