@@ -1,12 +1,12 @@
 * {
-    bg-col:#1d2021;
-    bg-col-light:#1d2021;
-    border-col:#1d2021;
-    selected-col:#1d2021;
-    blue:#7daea3;
-    fg-col:#7daea3;
-    fg-col2:#ea6962;
-    grey:#d4be98;
+    bg-col:#1E1E2E;
+    bg-col-light:#1E1E2E;
+    border-col:#1E1E2E;
+    selected-col:#1E1E2E;
+    blue:#89B4FA;
+    fg-col:#89B4FA;
+    fg-col2:#F38BA8;
+    grey:#BAC2DE;
 
     width: 600;
     font: "UbuntuMono Nerd Font 13";

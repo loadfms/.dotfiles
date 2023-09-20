@@ -1,7 +1,7 @@
 return {
     'nvim-lua/plenary.nvim',
     'tpope/vim-vinegar',
-    'sainnhe/gruvbox-material',
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
     'tpope/vim-fugitive',
     'preservim/nerdcommenter',
     'tpope/vim-surround',
