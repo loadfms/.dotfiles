@@ -2,12 +2,6 @@ local cmp = require 'cmp'
 local luasnip = require 'luasnip'
 local lspkind = require 'lspkind'
 
-lspkind.init({
-    symbol_map = {
-        Copilot = "",
-    },
-})
-
 cmp.setup {
     snippet = {
         expand = function(args)
@@ -50,7 +44,6 @@ cmp.setup {
         end, { "i", "s" }),
     },
     sources = {
-        { name = "copilot" },
         { name = 'nvim_lsp' },
         { name = 'buffer' },
         { name = 'path' },

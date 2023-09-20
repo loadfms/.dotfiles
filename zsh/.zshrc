@@ -107,9 +107,9 @@ alias tmux='tmux attach -t TMUX || tmux new -s TMUX'
 alias cgpt='git commit -m "$(commitgpt)"'
 alias dockerstart='sudo systemctl start docker.service'
 
-fcd() {
+projects() {
   local dir
-  dir=$(find . -maxdepth 2 -type d | sed 's|^\./||' | fzf +m) && cd "$dir"
+  dir=$(find ~/workspace -maxdepth 2 -type d | sed 's|^\./||' | fzf +m) && cd "$dir"
 }
 
 if uname | rg -q "Linux"; then

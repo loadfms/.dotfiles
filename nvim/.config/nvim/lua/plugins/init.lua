@@ -4,21 +4,12 @@ return {
     'sainnhe/gruvbox-material',
     'tpope/vim-fugitive',
     'preservim/nerdcommenter',
+    'tpope/vim-surround',
     {
-        "zbirenbaum/copilot.lua",
-        cmd = "Copilot",
-        event = "InsertEnter",
+        'github/copilot.vim',
         config = function()
-            require("copilot").setup({
-                suggestion = { enabled = false },
-                panel = { enabled = false },
-            })
-        end,
-    },
-    {
-        "zbirenbaum/copilot-cmp",
-        config = function()
-            require("copilot_cmp").setup()
+            vim.g.copilot_no_tab_map = true
+            vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
         end
     },
     {

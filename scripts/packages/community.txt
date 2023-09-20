@@ -6,6 +6,7 @@ dunst
 efibootmgr
 eza
 feh
+fzf
 git
 github-cli
 grub
