@@ -1,5 +1,7 @@
 local keymap = vim.api.nvim_set_keymap
 local ns = { noremap = true, silent = true }
+local mark = require("harpoon.mark")
+local ui = require("harpoon.ui")
 
 keymap('n', '<Leader>w', ':w<CR>', ns)                                      -- Fast save
 keymap('n', '<Leader>ep', ':e ~/.config/nvim/lua/plugins/init.lua<CR>', ns) -- Open config
@@ -35,3 +37,11 @@ keymap('n', 'gt', '<cmd>Gitsigns diffthis<CR>', ns)
 
 keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', ns)
 keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', ns)
+
+-- Harpoon
+vim.keymap.set("n", "<leader>a", mark.add_file)
+vim.keymap.set("n", "<leader>h", ui.toggle_quick_menu)
+vim.keymap.set("n", "<C-h>", function() ui.nav_file(1) end)
+vim.keymap.set("n", "<C-j>", function() ui.nav_file(2) end)
+vim.keymap.set("n", "<C-k>", function() ui.nav_file(3) end)
+vim.keymap.set("n", "<C-l>", function() ui.nav_file(4) end)

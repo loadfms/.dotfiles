@@ -13,7 +13,9 @@ KUBECONFIG=~/.kube/config
 # => Startx
 ###############################################################
 if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && uname | rg -q "Linux"; then
-  exec startx
+    if ! startx; then
+        echo "Error occurred while running startx"
+    fi
 fi
 
 ###############################################################

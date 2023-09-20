@@ -5,6 +5,7 @@ return {
     'tpope/vim-fugitive',
     'preservim/nerdcommenter',
     'tpope/vim-surround',
+    'ThePrimeagen/harpoon',
     {
         'github/copilot.vim',
         config = function()
