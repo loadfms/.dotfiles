@@ -1,6 +1,8 @@
+adobe-source-sans-fonts
 alacritty
 base
 base-devel
+discord
 docker
 dunst
 efibootmgr
@@ -22,6 +24,7 @@ lxappearance
 maim
 neovim
 nodejs
+noto-fonts-emoji
 npm
 ntfs-3g
 openssh
@@ -38,6 +41,7 @@ rust
 stow
 tldr
 tmux
+ttf-droid
 ttf-ubuntu-mono-nerd
 unzip
 vifm
