@@ -6,7 +6,7 @@ xset -b
 
 # Configure keyboard layout
 setxkbmap -layout us -variant altgr-intl
-xmodmap -e "keycode 119 = grave asciitilde"
+#xmodmap -e "keycode 119 = grave asciitilde"
 
 # Start i3
 exec i3
