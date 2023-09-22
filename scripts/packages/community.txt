@@ -24,6 +24,7 @@ lxappearance
 maim
 neovim
 nodejs
+noto-fonts
 noto-fonts-emoji
 npm
 ntfs-3g
@@ -37,6 +38,7 @@ pipewire-pulse
 polybar
 ripgrep
 rofi
+rofi-emoji
 rust
 stow
 tldr

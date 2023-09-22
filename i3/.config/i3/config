@@ -40,6 +40,7 @@ focus_follows_mouse no
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun
 bindsym $mod+space exec --no-startup-id rofi -modi emoji -show emoji
+bindsym $mod+f exec --no-startup-id rofi -modi "clipboard:greenclip print" -show clipboard -run-command '{cmd}'
 
 # change focus
 bindsym $mod+Left focus left
@@ -130,6 +131,7 @@ exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 exec --no-startup-id feh --bg-fill ~/pictures/montains.jpg
 exec --no-startup-id picom
 exec --no-startup-id dunst
+exec --no-startup-id greenclip daemon
 
 # FKeys
 # Pulse Audio controls
