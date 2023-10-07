@@ -1,5 +1,6 @@
 adwaita-dark
 apple-fonts
+cava
 google-chrome
 pokemon-colorscripts-git
 rofi-greenclip

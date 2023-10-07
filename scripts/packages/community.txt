@@ -44,6 +44,7 @@ stow
 tldr
 tmux
 ttf-droid
+ttf-firacode-nerd
 ttf-ubuntu-mono-nerd
 unzip
 vifm

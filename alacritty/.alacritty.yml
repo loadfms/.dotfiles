@@ -35,18 +35,18 @@ font:
   # UI for powerline & tmux bottom bar.
   normal:
     # Font name
-    family: UbuntuMono Nerd Font
+    family: FiraCode Nerd Font
     # Font face
     style: Regular
 
   # Bold font face
   bold:
-    family: UbuntuMono Nerd Font
+    family: FiraCode Nerd Font
     style: Bold
 
   # Italic font face
   italic:
-    family: UbuntuMono Nerd Font 
+    family: FiraCode Nerd Font
     style: Italic
 
   # Bold italic font face
@@ -54,7 +54,7 @@ font:
   # italic & it just works. You may specifiy the bold italic version if it exists
   # for your font
   bold_italic:
-    family: UbuntuMono Nerd Font
+    family: FiraCode Nerd Font
     style: Italic
 
   # Font size
@@ -65,7 +65,7 @@ font:
   # I've given in 14 spacing which fits really well with my fonts, you may change it
   # to your convenience but make sure to adjust 'glyph_offset' appropriately post that
   offset:
-   x: 0
+   x: -2
    y: 0
 
   # Note: This requires RESTART
