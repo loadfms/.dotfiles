@@ -111,7 +111,7 @@ alias dockerstart='sudo systemctl start docker.service'
 
 projects() {
   local dir
-  dir=$(find ~/workspace -maxdepth 2 -type d | sed 's|^\./||' | fzf +m) && cd "$dir"
+  dir=$(find ~/workspace -maxdepth 1 -type d -exec basename {} \; | grep -v "workspace" | fzf +m) && cd "$HOME/workspace/$dir"
 }
 
 if uname | rg -q "Linux"; then

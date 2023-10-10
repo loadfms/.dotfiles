@@ -22,6 +22,7 @@ linux
 linux-firmware
 lxappearance
 maim
+ncdu
 neovim
 nodejs
 noto-fonts
