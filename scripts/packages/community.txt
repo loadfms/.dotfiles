@@ -2,6 +2,7 @@ adobe-source-sans-fonts
 alacritty
 base
 base-devel
+delve
 discord
 docker
 dunst
@@ -20,6 +21,7 @@ libpulse
 libva-mesa-driver
 linux
 linux-firmware
+luarocks
 lxappearance
 maim
 ncdu
