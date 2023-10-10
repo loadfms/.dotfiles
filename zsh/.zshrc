@@ -108,8 +108,9 @@ alias rgf='rg --files | rg -i '
 alias tmux='tmux attach -t TMUX || tmux new -s TMUX'
 alias cgpt='git commit -m "$(commitgpt)"'
 alias dockerstart='sudo systemctl start docker.service'
+alias prj='list_projects'
 
-projects() {
+list_projects() {
   local dir
   dir=$(find ~/workspace -maxdepth 1 -type d -exec basename {} \; | grep -v "workspace" | fzf +m) && cd "$HOME/workspace/$dir"
 }
