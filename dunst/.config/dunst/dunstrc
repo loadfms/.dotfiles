@@ -32,10 +32,12 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = 300
+    #width = 300
 
     # The maximum height of a single notification, excluding the frame.
-    height = 300
+    #height = 300
+
+    geometry = "300x5-30+20"
 
     # Position the notification in the top right corner
     origin = top-right 
@@ -117,7 +119,7 @@
 
     ### Text ###
 
-    font = UbuntuMono Nerd Font 10
+    font = UbuntuMono Nerd Font 13
 
     # The spacing between lines.  If the height is smaller than the
     # font height, it will get raised to the font height.

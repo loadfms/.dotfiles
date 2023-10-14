@@ -7,14 +7,6 @@ return {
     'tpope/vim-surround',
     'ThePrimeagen/harpoon',
     {
-        "m4xshen/hardtime.nvim",
-        dependencies = { "MunifTanjim/nui.nvim" },
-        opts = {},
-        config = function()
-            require("hardtime").setup()
-        end
-    },
-    {
         'github/copilot.vim',
         config = function()
             vim.g.copilot_no_tab_map = true

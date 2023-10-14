@@ -112,7 +112,7 @@ alias prj='list_projects'
 
 list_projects() {
   local dir
-  dir=$(find ~/workspace -maxdepth 1 -type d -exec basename {} \; | grep -v "workspace" | fzf +m) && cd "$HOME/workspace/$dir"
+  dir=$(find ~/workspace -maxdepth 1 -type d -exec basename {} \; | fzf +m) && cd "$HOME/workspace/$dir"
 }
 
 if uname | rg -q "Linux"; then
