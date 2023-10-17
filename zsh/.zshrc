@@ -109,6 +109,8 @@ alias tmux='tmux attach -t TMUX || tmux new -s TMUX'
 alias cgpt='git commit -m "$(commitgpt)"'
 alias dockerstart='sudo systemctl start docker.service'
 alias prj='list_projects'
+alias audio-handsfree='pacmd set-card-profile bluez_card.CC_98_8B_F5_5C_13 handsfree_head_unit'
+alias audio-quality='pacmd set-card-profile bluez_card.CC_98_8B_F5_5C_13 a2dp_sink'
 
 list_projects() {
   local dir
