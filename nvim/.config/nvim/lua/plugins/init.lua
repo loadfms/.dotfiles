@@ -1,19 +1,12 @@
 return {
     'nvim-lua/plenary.nvim',
     'tpope/vim-vinegar',
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { "sainnhe/gruvbox-material" },
     'tpope/vim-fugitive',
     'preservim/nerdcommenter',
     'tpope/vim-surround',
     'ThePrimeagen/harpoon',
-    { 'mattn/emmet-vim', ft = "html" },
-    --{
-    --'github/copilot.vim',
-    --config = function()
-    --vim.g.copilot_no_tab_map = true
-    --vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-    --end
-    --},
+    { 'mattn/emmet-vim',         ft = { "html", "jsx", "vue" } },
     {
         'lewis6991/gitsigns.nvim',
         config = function()
@@ -233,6 +226,7 @@ return {
     {
         "jose-elias-alvarez/null-ls.nvim",
         event = { "BufReadPre", "BufNewFile" },
+        ft = { "scss", "css" },
         dependencies = { "mason.nvim" },
         opts = function()
             local null_ls = require("null-ls")
