@@ -70,7 +70,7 @@ source "$HOME/.zinit/bin/zinit.zsh"
 autoload -Uz _zinit
 (( ${+_comps} )) && _comps[zinit]=_zinit
 
-source <(kubectl completion zsh)
+#source <(kubectl completion zsh)
 
 zplugin light zdharma-continuum/fast-syntax-highlighting
 zplugin light zsh-users/zsh-autosuggestions

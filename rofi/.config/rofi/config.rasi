@@ -10,4 +10,4 @@ configuration{
     sidebar-mode: false;
 }
 
-@theme "/home/load/.local/share/rofi/themes/default.rafi"
+@theme "~/.local/share/rofi/themes/default.rafi"
