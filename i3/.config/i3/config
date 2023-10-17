@@ -128,7 +128,7 @@ bindsym $mod+Control Down        resize shrink height 5 px or 5 ppt
 # startup programs
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id feh --bg-fill ~/pictures/moon.png
+exec --no-startup-id feh --bg-fill ~/pictures/wall.jpg
 exec --no-startup-id picom
 exec --no-startup-id dunst
 exec --no-startup-id greenclip daemon
