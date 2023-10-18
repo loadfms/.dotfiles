@@ -114,7 +114,7 @@ alias audio-quality='pacmd set-card-profile bluez_card.CC_98_8B_F5_5C_13 a2dp_si
 
 list_projects() {
   local dir
-  dir=$(find ~/workspace -maxdepth 1 -type d -exec basename {} \; | fzf +m) && cd "$HOME/workspace/$dir"
+  dir=$(find ~/workspace -maxdepth 1 -type d -exec basename {} \; | rg -v workspace | fzf +m) && cd "$HOME/workspace/$dir"
 }
 
 if uname | rg -q "Linux"; then
