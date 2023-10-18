@@ -1,3 +1,4 @@
 aws/
 nvim/.config/nvim/lazy-lock.json
 rofi/.local
+alacritty/.alacrittythemes/font.yml
