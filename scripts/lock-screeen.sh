@@ -33,3 +33,8 @@ i3lock \
 --indicator                  \
 --time-str="%H:%M:%S"        \
 --date-str="%A, %Y-%m-%d"       \
+--verif-font="UbuntuMono Nerd Font" \
+--time-font="UbuntuMono Nerd Font" \
+--date-font="UbuntuMono Nerd Font" \
+--verif-size=60 \
+--verif-text="" \
