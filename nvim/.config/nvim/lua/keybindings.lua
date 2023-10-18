@@ -11,7 +11,11 @@ keymap('n', '<Leader><CR>', ':noh<CR>', ns)                                 -- C
 keymap('', ']b', ':bnext<CR>', ns)
 keymap('', '[b', ':bprevious<CR>', ns)
 
-keymap('n', '<C-p>', ':Telescope find_files<CR>', ns)      -- Telescope navigation
+--keymap('n', '<C-p>', ':Telescope find_files<CR>', ns) -- Telescope navigation
+
+keymap('n', '<C-p>',
+    "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
+    ns)
 keymap('n', '<Leader>k', ':Telescope live_grep<CR>', ns)   -- Telescope find in files
 keymap('n', '<Leader>K', ':Telescope grep_string<CR>', ns) -- Telescope find in files
 keymap('n', '<leader>B', ':lua require("telescope.builtin").buffers()<CR>', ns)
