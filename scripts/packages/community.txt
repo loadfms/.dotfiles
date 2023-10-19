@@ -1,5 +1,6 @@
 adobe-source-sans-fonts
 alacritty
+aws-cli
 base
 base-devel
 delve
@@ -26,13 +27,13 @@ lxappearance
 maim
 ncdu
 neovim
-nodejs
 noto-fonts
 noto-fonts-emoji
 npm
 ntfs-3g
 openssh
 os-prober
+pdftk
 picom
 pipewire
 pipewire-alsa
