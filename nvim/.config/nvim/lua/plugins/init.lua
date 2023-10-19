@@ -184,7 +184,8 @@ return {
         build = ':TSUpdate',
         config = function()
             require 'nvim-treesitter.configs'.setup {
-                ensure_installed = { "go", "lua", "javascript", "html", "typescript", "css", "scss", "terraform", "tsx" },
+                ensure_installed = { "go", "lua", "javascript", "html", "typescript", "css", "scss", "terraform", "tsx",
+                    "bash" },
 
                 -- Install parsers synchronously (only applied to `ensure_installed`)
                 sync_install = false,
