@@ -26,6 +26,7 @@ luarocks
 lxappearance
 maim
 ncdu
+neofetch
 neovim
 noto-fonts
 noto-fonts-emoji
