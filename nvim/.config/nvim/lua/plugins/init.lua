@@ -6,7 +6,7 @@ return {
     'preservim/nerdcommenter',
     'tpope/vim-surround',
     'ThePrimeagen/harpoon',
-    { 'mattn/emmet-vim',         ft = { "html", "jsx", "vue" } },
+    { 'mattn/emmet-vim',         ft = { "html", "jsx", "vue", "typescriptreact" } },
     {
         'lewis6991/gitsigns.nvim',
         config = function()
