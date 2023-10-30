@@ -248,5 +248,10 @@ return {
         -- install jsregexp (optional!).
         build = "make install_jsregexp"
     },
-    "onsails/lspkind.nvim"
+    "onsails/lspkind.nvim",
+    --{
+    --"folke/trouble.nvim",
+    --dependencies = { "nvim-tree/nvim-web-devicons" },
+    --opts = {},
+    --},
 }
