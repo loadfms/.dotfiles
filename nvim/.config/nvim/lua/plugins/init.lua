@@ -6,6 +6,7 @@ return {
     'preservim/nerdcommenter',
     'tpope/vim-surround',
     'ThePrimeagen/harpoon',
+    "neanias/everforest-nvim",
     { 'mattn/emmet-vim',         ft = { "html", "jsx", "vue", "typescriptreact" } },
     {
         'lewis6991/gitsigns.nvim',

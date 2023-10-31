@@ -87,5 +87,5 @@ selection:
 live_config_reload: true
 
 import:
- - ~/.alacrittythemes/gruvbox-material.yml
+ - ~/.alacrittythemes/everforest.yml
  - ~/.alacrittythemes/font.yml

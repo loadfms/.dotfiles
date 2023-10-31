@@ -1,8 +1,10 @@
 adobe-source-sans-fonts
 alacritty
+arc-gtk-theme
 aws-cli
 base
 base-devel
+composer
 delve
 discord
 docker
@@ -23,7 +25,7 @@ libva-mesa-driver
 linux
 linux-firmware
 luarocks
-lxappearance
+lxappearance-gtk3
 maim
 ncdu
 neofetch
@@ -41,6 +43,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 polybar
+python-pip
 ripgrep
 rofi
 rofi-emoji
