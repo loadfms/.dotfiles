@@ -2,6 +2,7 @@ local keymap = vim.api.nvim_set_keymap
 local ns = { noremap = true, silent = true }
 
 keymap('n', '<Leader>w', ':w<CR>', ns)                                      -- Fast save
+keymap('n', '<Leader>qa', ':qa<CR>', ns)                                    -- Fast save
 keymap('n', '<Leader>ep', ':e ~/.config/nvim/lua/plugins/init.lua<CR>', ns) -- Open config
 keymap('n', '<Leader>bd', ':bd<CR>', ns)                                    -- Close buffer
 keymap("n", "<A-TAB>", "<C-^>", ns)
