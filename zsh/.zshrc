@@ -100,13 +100,11 @@ alias git-undo="git reset HEAD~1 --soft"
 alias vim=nvim
 alias cpf="curl https://www.4devs.com.br/ferramentas_online.php --data-raw 'acao=gerar_cpf&pontuacao=S&cpf_estado=' -s | cut -d '%' -f 1 | pbcopy -selection clipboard"
 alias dotsync="sh ~/.dotfiles/scripts/revive-packages.sh && git -C ~/.dotfiles add . && git -C ~/.dotfiles commit -m 'feat: update' && git -C ~/.dotfiles push origin main"
-alias docsync="git -C ~/notes add . && git -C ~/notes commit -m 'feat: update' && git -C ~/notes push origin main"
 alias ls="eza --icons -ll --sort=type"
 alias ps="procs"
 alias mypr="sh ~/.dotfiles/scripts/myprs.sh"
 alias rgf='rg --files | rg -i '
 alias tmux='tmux attach -t TMUX || tmux new -s TMUX'
-alias cgpt='git commit -m "$(commitgpt)"'
 alias dockerstart='sudo systemctl start docker.service'
 alias prj='list_projects'
 alias audio-handsfree='pacmd set-card-profile bluez_card.CC_98_8B_F5_5C_13 handsfree_head_unit'
