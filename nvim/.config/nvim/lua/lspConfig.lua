@@ -31,10 +31,10 @@ require('mason-lspconfig').setup_handlers({
 })
 
 local signs = {
-    Error = "",
+    Error = " ",
     Warn = "",
-    Hint = "󰣐",
-    Information = "󰋼"
+    Hint = "󱠂 ",
+    Information = "󰋼 "
 }
 
 for type, icon in pairs(signs) do
