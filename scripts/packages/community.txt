@@ -43,6 +43,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 polybar
+procs
 python-pip
 ripgrep
 rofi
