@@ -12,7 +12,7 @@ keymap('n', '<Leader><CR>', ':noh<CR>', ns)                                 -- C
 keymap('', ']b', ':bnext<CR>', ns)
 keymap('', '[b', ':bprevious<CR>', ns)
 
---keymap('n', '<C-p>', ':Telescope find_files<CR>', ns) -- Telescope navigation
+keymap('n', '-', '<CMD>Oil<CR>', ns)
 
 keymap('n', '<C-p>',
     "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
