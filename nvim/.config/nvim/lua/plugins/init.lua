@@ -1,6 +1,5 @@
 return {
     'nvim-lua/plenary.nvim',
-    'tpope/vim-vinegar',
     { "sainnhe/gruvbox-material" },
     'tpope/vim-fugitive',
     'preservim/nerdcommenter',
@@ -274,4 +273,10 @@ return {
             })
         end,
     },
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        -- Optional dependencies
+        dependencies = { "nvim-tree/nvim-web-devicons" },
+    }
 }
