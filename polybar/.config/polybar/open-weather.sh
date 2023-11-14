@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/zsh
 
 KEY=$(<~/.config/polybar/ow_key)
 CITY="3448439"
