@@ -5,7 +5,7 @@ return {
     'preservim/nerdcommenter',
     'tpope/vim-surround',
     'ThePrimeagen/harpoon',
-    "neanias/everforest-nvim",
+    'ellisonleao/gruvbox.nvim',
     {
         'lewis6991/gitsigns.nvim',
         config = function()
