@@ -6,6 +6,8 @@ return {
     'tpope/vim-surround',
     'ThePrimeagen/harpoon',
     'ellisonleao/gruvbox.nvim',
+    'stevearc/oil.nvim',
+    'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
         config = function()
@@ -248,11 +250,6 @@ return {
         build = "make install_jsregexp"
     },
     "onsails/lspkind.nvim",
-    --{
-    --"folke/trouble.nvim",
-    --dependencies = { "nvim-tree/nvim-web-devicons" },
-    --opts = {},
-    --},
     {
         "j-hui/fidget.nvim",
         config = function()
@@ -273,10 +270,4 @@ return {
             })
         end,
     },
-    {
-        'stevearc/oil.nvim',
-        opts = {},
-        -- Optional dependencies
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-    }
 }
