@@ -1,7 +1,6 @@
 #!/bin/sh
 
 KEY=$(<~/.config/polybar/ow_key)
-KEY="1880bc40b3997ce5d0a25b50408729b0"
 CITY="3448439"
 UNITS="metric"
 SYMBOL="°"
