@@ -1,13 +1,26 @@
 return {
+    { 'sainnhe/gruvbox-material' },
     'nvim-lua/plenary.nvim',
-    { "sainnhe/gruvbox-material" },
     'tpope/vim-fugitive',
-    'preservim/nerdcommenter',
     'tpope/vim-surround',
-    'ThePrimeagen/harpoon',
-    'ellisonleao/gruvbox.nvim',
-    'stevearc/oil.nvim',
+    'tpope/vim-repeat',
+    'preservim/nerdcommenter',
+    { 'stevearc/oil.nvim',       opts = {} },
     'nvim-tree/nvim-web-devicons',
+    {
+        'phaazon/hop.nvim',
+        branch = 'v2', -- optional but strongly recommended
+        config = function()
+            local hop = require('hop')
+            local directions = require('hop.hint').HintDirection
+            hop.setup {}
+
+            vim.keymap.set('', 'f', function() hop.hint_char1({ direction = directions.AFTER_CURSOR }) end,
+                { remap = true })
+            vim.keymap.set('', 'F', function() hop.hint_char1({ direction = directions.BEFORE_CURSOR }) end,
+                { remap = true })
+        end
+    },
     {
         'lewis6991/gitsigns.nvim',
         config = function()
@@ -119,7 +132,6 @@ return {
             }
         end
     },
-
     {
         'nvim-telescope/telescope.nvim',
         config = function()
