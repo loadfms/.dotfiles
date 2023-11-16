@@ -7,6 +7,7 @@ base-devel
 composer
 delve
 discord
+dmidecode
 docker
 dunst
 efibootmgr
@@ -18,6 +19,7 @@ github-cli
 grub
 gst-plugin-pipewire
 i3-wm
+inetutils
 intel-ucode
 jq
 libpulse
