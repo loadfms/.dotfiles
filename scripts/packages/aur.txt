@@ -2,6 +2,7 @@ adwaita-dark
 apple-fonts
 cava
 cider
+cider-polybar
 google-chrome
 pokemon-colorscripts-git
 rofi-greenclip
