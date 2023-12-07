@@ -1,11 +1,13 @@
 return {
+
+    { "ellisonleao/gruvbox.nvim", priority = 1000,  config = true, opts = ... },
     { 'sainnhe/gruvbox-material' },
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim',       opts = {} },
+    { 'stevearc/oil.nvim', opts = {} },
     'nvim-tree/nvim-web-devicons',
     {
         'ggandor/leap.nvim',
