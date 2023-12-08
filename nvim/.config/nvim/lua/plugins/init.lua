@@ -1,13 +1,12 @@
 return {
 
-    { "ellisonleao/gruvbox.nvim", priority = 1000,  config = true, opts = ... },
-    { 'sainnhe/gruvbox-material' },
+    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim', opts = {} },
+    { 'stevearc/oil.nvim',        opts = {} },
     'nvim-tree/nvim-web-devicons',
     {
         'ggandor/leap.nvim',
@@ -231,23 +230,6 @@ return {
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-nvim-lsp',
-    {
-        "jose-elias-alvarez/null-ls.nvim",
-        event = { "BufReadPre", "BufNewFile" },
-        ft = { "scss", "css" },
-        dependencies = { "mason.nvim" },
-        opts = function()
-            local null_ls = require("null-ls")
-            local formatting = null_ls.builtins.formatting
-            return {
-                sources = {
-                    formatting.prettierd.with {
-                        filetypes = { 'scss', 'css' },
-                    },
-                },
-            }
-        end,
-    },
     {
         "L3MON4D3/LuaSnip",
         -- follow latest release.
