@@ -1,5 +1,4 @@
 return {
-
     { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
@@ -265,6 +264,7 @@ return {
             require("conform").setup({
                 formatters_by_ft = {
                     css = { { "prettier" } },
+                    go = { "goimports", "gofmt" },
                 },
                 format_on_save = {
                     -- These options will be passed to conform.format()
