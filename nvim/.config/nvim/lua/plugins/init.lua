@@ -6,17 +6,23 @@ return {
             local alpha = require 'alpha'
             local startify = require 'alpha.themes.startify'
             startify.section.header.val = {
-                [[╭╮╭┬─╮╭─╮┬  ┬┬╭┬╮]],
-                [[│││├┤ │ │╰┐┌╯││││]],
-                [[╯╰╯╰─╯╰─╯ ╰╯ ┴┴ ┴]],
+                '          ▀████▀▄▄              ▄█ ',
+                '            █▀    ▀▀▄▄▄▄▄    ▄▄▀▀█ ',
+                '    ▄        █          ▀▀▀▀▄  ▄▀  ',
+                '   ▄▀ ▀▄      ▀▄              ▀▄▀  ',
+                '  ▄▀    █     █▀   ▄█▀▄      ▄█    ',
+                '  ▀▄     ▀▄  █     ▀██▀     ██▄█   ',
+                '   ▀▄    ▄▀ █   ▄██▄   ▄  ▄  ▀▀ █  ',
+                '    █  ▄▀  █    ▀██▀    ▀▀ ▀▀  ▄▀  ',
+                '   █   █  █      ▄▄           ▄▀   ',
             }
             startify.section.top_buttons.val = {
-                startify.button("e", "  New file", ":ene <CR>"),
-                startify.button("<c-p>", "󰍉  Telescope",
+                startify.button("<c-e>", "  New file", ":ene <CR>"),
+                startify.button("<c-p>", "  Telescope",
                     "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>"),
             }
             startify.section.bottom_buttons.val = {
-                startify.button("q", "󰠚  Quit NVIM", ":qa<CR>"),
+                startify.button("q", "󰠚  Quit", ":qa<CR>"),
             }
             startify.section.footer = {
                 { type = "text", val = "footer" },
