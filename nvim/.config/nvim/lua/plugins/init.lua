@@ -100,13 +100,21 @@ return {
                     component_separators = { left = '', right = '' },
                     section_separators = { left = '', right = '' },
                     disabled_filetypes = {},
-                    always_divide_middle = true,
-                    globalstatus = false,
+                    always_divide_middle = false,
+                    globalstatus = true,
                 },
                 sections = {
                     lualine_a = { 'mode' },
-                    lualine_b = { 'branch', 'diff', 'diagnostics' },
-                    lualine_c = { { 'filename', path = 1 } },
+                    lualine_b = { 'branch', { 'diagnostics', always_visible = true } },
+                    lualine_c = { { 'buffers', use_mode_colors = true, show_modified_status = false,
+                        buffers_color = {
+                            active = { fg = "#ffffff" }, -- color for active buffer
+                        },
+                        symbols = {
+                            modified = ' ●', -- Text to show when the buffer is modified
+                            alternate_file = ' ', -- Text to show to identify the alternate file
+                            directory = '', -- Text to show when the buffer is a directory
+                        } } },
                     lualine_x = { 'encoding', 'fileformat', 'filetype' },
                     lualine_y = { 'progress' },
                     lualine_z = { 'location' }
