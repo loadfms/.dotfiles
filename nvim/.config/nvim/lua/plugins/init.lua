@@ -264,6 +264,7 @@ return {
             require("conform").setup({
                 formatters_by_ft = {
                     css = { { "prettier" } },
+                    scss = { { "prettier" } },
                     go = { "goimports", "gofmt" },
                 },
                 format_on_save = {
