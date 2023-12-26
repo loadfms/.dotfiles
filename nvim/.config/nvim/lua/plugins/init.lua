@@ -1,35 +1,4 @@
 return {
-    {
-        'goolord/alpha-nvim',
-        dependencies = { 'nvim-tree/nvim-web-devicons' },
-        config = function()
-            local alpha = require 'alpha'
-            local startify = require 'alpha.themes.startify'
-            startify.section.header.val = {
-                '          ▀████▀▄▄              ▄█ ',
-                '            █▀    ▀▀▄▄▄▄▄    ▄▄▀▀█ ',
-                '    ▄        █          ▀▀▀▀▄  ▄▀  ',
-                '   ▄▀ ▀▄      ▀▄              ▀▄▀  ',
-                '  ▄▀    █     █▀   ▄█▀▄      ▄█    ',
-                '  ▀▄     ▀▄  █     ▀██▀     ██▄█   ',
-                '   ▀▄    ▄▀ █   ▄██▄   ▄  ▄  ▀▀ █  ',
-                '    █  ▄▀  █    ▀██▀    ▀▀ ▀▀  ▄▀  ',
-                '   █   █  █      ▄▄           ▄▀   ',
-            }
-            startify.section.top_buttons.val = {
-                startify.button("<c-e>", "  New file", ":ene <CR>"),
-                startify.button("<c-p>", "  Telescope",
-                    "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>"),
-            }
-            startify.section.bottom_buttons.val = {
-                startify.button("q", "󰠚  Quit", ":qa<CR>"),
-            }
-            startify.section.footer = {
-                { type = "text", val = "footer" },
-            }
-            alpha.setup(startify.config)
-        end
-    },
     { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
@@ -38,12 +7,6 @@ return {
     'preservim/nerdcommenter',
     { 'stevearc/oil.nvim',        opts = {} },
     'nvim-tree/nvim-web-devicons',
-    {
-        'ggandor/leap.nvim',
-        config = function()
-            require('leap').add_default_mappings()
-        end
-    },
     {
         'lewis6991/gitsigns.nvim',
         config = function()
@@ -137,15 +100,19 @@ return {
                 sections = {
                     lualine_a = { 'mode' },
                     lualine_b = { 'branch', { 'diagnostics', always_visible = true } },
-                    lualine_c = { { 'buffers', use_mode_colors = true, show_modified_status = false,
-                        buffers_color = {
-                            active = { fg = "#ffffff" }, -- color for active buffer
-                        },
-                        symbols = {
-                            modified = ' ●', -- Text to show when the buffer is modified
-                            alternate_file = ' ', -- Text to show to identify the alternate file
-                            directory = '', -- Text to show when the buffer is a directory
-                        } } },
+                    lualine_c = {
+                        { 'buffers',
+                            use_mode_colors = true, show_modified_status = false,
+                            buffers_color = {
+                                active = { fg = "#ffffff" }, -- color for active buffer
+                            },
+                            symbols = {
+                                modified = ' ●', -- Text to show when the buffer is modified
+                                alternate_file = ' ', -- Text to show to identify the alternate file
+                                directory = '', -- Text to show when the buffer is a directory
+                            }
+                        }
+                    },
                     lualine_x = { 'encoding', 'fileformat', 'filetype' },
                     lualine_y = { 'progress' },
                     lualine_z = { 'location' }
