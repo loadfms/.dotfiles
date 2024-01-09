@@ -14,12 +14,17 @@ keymap('', '[b', ':bprevious<CR>', ns)
 
 keymap('n', '-', '<CMD>Oil<CR>', ns)
 
-keymap('n', '<C-p>',
-    "<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
-    ns)
-keymap('n', '<Leader>k', ':Telescope live_grep<CR>', ns)   -- Telescope find in files
-keymap('n', '<Leader>K', ':Telescope grep_string<CR>', ns) -- Telescope find in files
-keymap('n', '<leader>B', ':lua require("telescope.builtin").buffers()<CR>', ns)
+--keymap('n', '<C-p>',
+--"<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
+--ns)
+--keymap('n', '<Leader>k', ':Telescope live_grep<CR>', ns)   -- Telescope find in files
+--keymap('n', '<Leader>K', ':Telescope grep_string<CR>', ns) -- Telescope find in files
+--keymap('n', '<leader>B', ':lua require("telescope.builtin").buffers()<CR>', ns)
+--
+keymap('n', '<C-p>', "<cmd>FzfLua files<CR>", ns)
+keymap('n', '<Leader>k', "<cmd>FzfLua live_grep<CR>", ns)
+keymap('n', '<Leader>K', '<cmd>FzfLua grep_cword<CR>', ns)
+keymap('n', '<leader>B', '<cmd>FzfLua buffers<CR>', ns)
 
 keymap('n', '<Leader>gs', ':G<CR>', ns)           -- Vim fugitive summary
 keymap('n', '<Leader>dq', '<C-W>k <C-W>o', ns)    -- Close compare buffs
