@@ -1,5 +1,5 @@
 [font]
-size = 10.0
+size=10.0
 
 [font.bold]
 family = "UbuntuMono Nerd Font"
@@ -20,7 +20,4 @@ style = "Italic"
 [font.normal]
 family = "UbuntuMono Nerd Font"
 style = "Regular"
-
-[font.offset]
-x = 0
-y = 0
+ 
