@@ -4,4 +4,4 @@ rofi/.local
 alacritty/.alacrittythemes/font.yml
 polybar/.config/polybar/ow_key
 polybar/.config/polybar/override.conf
-alacritty/.alacrittythemes/font.yml
+alacritty/.alacrittythemes/font.toml
