@@ -1,6 +1,7 @@
 return {
-    { "ellisonleao/gruvbox.nvim", priority = 1000,   config = true, opts = ... },
+    { "ellisonleao/gruvbox.nvim", priority = 1000,     config = true,  opts = ... },
     { "rose-pine/neovim",         name = "rose-pine" },
+    { "catppuccin/nvim",          name = "catppuccin", priority = 1000 },
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-surround',

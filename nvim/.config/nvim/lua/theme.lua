@@ -1,2 +1,2 @@
-vim.cmd.colorscheme "rose-pine"
+vim.cmd.colorscheme "catppuccin"
 vim.cmd "hi Normal ctermbg=NONE guibg=NONE"

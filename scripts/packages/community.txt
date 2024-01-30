@@ -52,7 +52,6 @@ ripgrep
 rofi
 rofi-emoji
 rust
-steam
 stow
 tldr
 tmux
