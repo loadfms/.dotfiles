@@ -1,2 +1,2 @@
 polybar.conf;.config/polybar/override.conf
-alacritty.yml;.alacrittythemes/font.yml
+alacritty.toml;.alacrittythemes/font.toml
