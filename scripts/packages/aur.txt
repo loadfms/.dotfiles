@@ -6,4 +6,5 @@ cider-polybar
 google-chrome
 pokemon-colorscripts-git
 rofi-greenclip
+slack-desktop
 yay
