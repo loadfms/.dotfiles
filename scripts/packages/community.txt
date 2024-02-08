@@ -22,6 +22,7 @@ i3-wm
 inetutils
 intel-ucode
 jq
+libappindicator-gtk3
 libpulse
 libva-mesa-driver
 linux
