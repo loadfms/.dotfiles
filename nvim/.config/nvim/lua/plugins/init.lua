@@ -1,13 +1,13 @@
 return {
     --theme
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { "catppuccin/nvim",   name = "catppuccin", priority = 1000 },
 
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim',     opts = {} },
+    { 'stevearc/oil.nvim', opts = {} },
     'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
@@ -226,7 +226,7 @@ return {
                 },
                 format_on_save = {
                     -- These options will be passed to conform.format()
-                    timeout_ms = 500,
+                    timeout_ms = 5000,
                     lsp_fallback = true,
                 },
             })
