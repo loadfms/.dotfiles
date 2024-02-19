@@ -1,4 +1,4 @@
-import = ["~/.alacrittythemes/catppuccin.toml", "~/.alacrittythemes/font.toml"]
+import = ["~/.alacrittythemes/poimandres.toml", "~/.alacrittythemes/font.toml"]
 live_config_reload = true
 
 [env]

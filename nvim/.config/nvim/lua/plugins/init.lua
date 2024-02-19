@@ -1,13 +1,13 @@
 return {
     --theme
-    { "catppuccin/nvim",   name = "catppuccin", priority = 1000 },
+    { "olivercederborg/poimandres.nvim", priority = 1000 },
 
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim', opts = {} },
+    { 'stevearc/oil.nvim',               opts = {} },
     'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
