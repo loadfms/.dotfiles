@@ -223,6 +223,7 @@ return {
                     css = { { "prettier" } },
                     scss = { { "prettier" } },
                     go = { "goimports", "gofmt" },
+                    rust = { "rustfmt" },
                 },
                 format_on_save = {
                     -- These options will be passed to conform.format()
