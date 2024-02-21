@@ -108,9 +108,6 @@ alias rgf='rg --files --no-ignore | rg -i '
 alias tmux='tmux attach -t TMUX || tmux new -s TMUX'
 alias dockerstart='sudo systemctl start docker.service'
 alias prj='list_projects'
-alias audio-handsfree='pacmd set-card-profile bluez_card.CC_98_8B_F5_5C_13 handsfree_head_unit'
-alias audio-quality='pacmd set-card-profile bluez_card.CC_98_8B_F5_5C_13 a2dp_sink'
-alias wifi-status="nmcli dev wifi list | awk '/\*/{if (NR!=1) {print \$3 \$4 \" - \" \$10}}'"
 alias mini-chrome="google-chrome-stable --new-window --app="
 alias cgpt='git commit -m "$(commitgpt)"'
 

@@ -1,6 +1,6 @@
 return {
     --theme
-{ "rose-pine/neovim", name = "rose-pine" },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
