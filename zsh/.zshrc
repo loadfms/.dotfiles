@@ -28,7 +28,7 @@ symbol(){
 
 # current directory, one level deep
 directory() {
-   echo "%B%{$fg[yellow]%}%1~%{$reset_color%}%b"
+   echo "%B%{$fg[blue]%}%1~%{$reset_color%}%b"
 }
 
 # returns  if there are errors, nothing otherwise
@@ -37,7 +37,7 @@ return_status() {
 }
 
 git_info(){
-    echo "%B%{$fg[cyan]%}$(git_prompt_info)%{$reset_color%}%b"
+    echo "%B%{$fg[yellow]%}$(git_prompt_info)%{$reset_color%}%b"
 }
 
 PROMPT='
