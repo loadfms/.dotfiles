@@ -101,7 +101,7 @@ alias git-lastag="git describe --abbrev=0 --tags"
 alias vim=nvim
 alias cpf="curl https://www.4devs.com.br/ferramentas_online.php --data-raw 'acao=gerar_cpf&pontuacao=S&cpf_estado=' -s | cut -d '%' -f 1 | pbcopy -selection clipboard"
 alias dotsync="sh ~/.dotfiles/scripts/revive-packages.sh && git -C ~/.dotfiles add . && git -C ~/.dotfiles commit -m 'feat: update' && git -C ~/.dotfiles push origin main"
-alias ls="eza --icons -ll --sort=type"
+alias ls="eza --icons -ll --sort=type --header"
 alias ps="procs"
 alias mypr="sh ~/.dotfiles/scripts/myprs.sh"
 alias rgf='rg --files --no-ignore | rg -i '

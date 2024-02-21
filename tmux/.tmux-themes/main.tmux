@@ -43,8 +43,10 @@ set-option -wg clock-mode-colour magenta
 
 # statusbar formatting
 # magenta MUST be in lowercase here (conflicts with statusline alias otherwise)
-set-option -g status-left "#[bg=white, fg=black]#{?client_prefix,#[bg=magenta],#[bg=white]} #{session_name} "
-set-option -g status-right "#[bg=black, fg=white] %Y-%m-%d %H:%M:%S #[bg=white, fg=black]#{?client_prefix,#[bg=magenta],#[bg=white]} #{host_short} "
+#set-option -g status-left "#[bg=white, fg=black]#{?client_prefix,#[bg=magenta],#[bg=white]} #{session_name} "
+#set-option -g status-right "#[bg=black, fg=white] %Y-%m-%d %H:%M:%S #[bg=white, fg=black]#{?client_prefix,#[bg=magenta],#[bg=white]} #{host_short} "
 
+set-option -g status-left "#[bg=white, fg=black]#{?client_prefix,#[bg=magenta],#[bg=white]} 󰯈  "
+set-option -g status-right "#[bg=white, fg=black]#{?client_prefix,#[bg=magenta],#[bg=white]} #{host_short} "
 set-option -wg window-status-current-format "#{?window_zoomed_flag,#[fg=default bold],#[fg=default]} #{window_index} #{window_name} "
 set-option -wg window-status-format "#{?window_zoomed_flag,#[fg=default bold],#[fg=default]} #{window_index} #{window_name} "
