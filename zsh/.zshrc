@@ -18,6 +18,15 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && uname | rg -q "Linux"; then
     fi
 fi
 
+
+###############################################################
+# => Start tmux
+###############################################################
+if [ -z "$TMUX" ]
+then
+    tmux attach -t TMUX || tmux new -s TMUX
+fi
+
 ###############################################################
 # => Theme
 ###############################################################
@@ -91,6 +100,16 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow -g '!{.git,node_modules,package-lock.json}/*' 2> /dev/null"
 export FZF_DEFAULT_OPTS="--height 96% --reverse --preview 'cat {}'"
 
+
+###############################################################
+# => pnpm
+###############################################################
+export PNPM_HOME="/home/load/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 ###############################################################
 # => Aliases
 ###############################################################
@@ -120,12 +139,9 @@ if uname | rg -q "Linux"; then
     alias cpf="curl https://www.4devs.com.br/ferramentas_online.php --data-raw 'acao=gerar_cpf&pontuacao=S&cpf_estado=' -s | cut -d '%' -f 1 | xclip -selection clipboard"
 fi
 
-pokemon-colorscripts -r 1 --no-title
 
-# pnpm
-export PNPM_HOME="/home/load/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end
+###############################################################
+# => Window top
+###############################################################
+#pokemon-colorscripts -r 1 --no-title
+neofetch
