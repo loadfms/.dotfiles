@@ -63,7 +63,7 @@ fi
 ###############################################################
 # => Plugins
 ###############################################################
-plugins=(git)
+plugins=(git aws)
 
 ZSH_DISABLE_COMPFIX=true
 source $ZSH/oh-my-zsh.sh
@@ -132,7 +132,8 @@ alias cgpt='git commit -m "$(commitgpt)"'
 
 list_projects() {
   local dir
-  dir=$(find ~/workspace -maxdepth 1 -type d -exec basename {} \; | rg -v workspace | fzf +m) && cd "$HOME/workspace/$dir"
+  dir=$(find ~/workspace -maxdepth 1 -type d -exec basename {} \; | rg -v workspace | fzf +m)
+  cd "$HOME/workspace/$dir"
 }
 
 if uname | rg -q "Linux"; then
