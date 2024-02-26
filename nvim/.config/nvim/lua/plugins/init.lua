@@ -7,7 +7,7 @@ return {
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim',               opts = {} },
+    { 'stevearc/oil.nvim',     opts = {} },
     'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
@@ -186,6 +186,7 @@ return {
     'hrsh7th/cmp-buffer',
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-nvim-lsp',
+    'hrsh7th/cmp-nvim-lsp-signature-help',
     {
         "L3MON4D3/LuaSnip",
         -- follow latest release.
