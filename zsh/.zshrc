@@ -151,7 +151,6 @@ aws_logs() {
     else
         echo "Invalid option"
     fi
-
 }
 
 if uname | rg -q "Linux"; then
