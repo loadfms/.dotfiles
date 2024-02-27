@@ -7,7 +7,7 @@ return {
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim',               opts = {} },
+    { 'stevearc/oil.nvim',     opts = {} },
     'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
@@ -224,6 +224,7 @@ return {
                     scss = { { "prettier" } },
                     go = { "goimports", "gofmt" },
                     rust = { "rustfmt" },
+                    python = { "black" },
                 },
                 format_on_save = {
                     -- These options will be passed to conform.format()
