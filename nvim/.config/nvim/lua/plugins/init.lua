@@ -1,6 +1,6 @@
 return {
     --theme
-{ "shaunsingh/nord.nvim" },
+    { "folke/tokyonight.nvim", lazy = false, priority = 1000, opts = {} },
 
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
