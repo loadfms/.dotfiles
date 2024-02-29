@@ -1,12 +1,11 @@
 #!/usr/bin/env bash
 
-CHOICE=`gh search prs --state=open --review-requested=@me | fzf`
+CHOICE=$(gh search prs --state=open --review-requested=@me | fzf)
 echo $CHOICE
 
-    if [ ! -z "$CHOICE" ]
-    then
-        URL=`echo $CHOICE | awk '{print "https://www.github.com/"$1"/pull/"$2}'`
-        echo $URL
-        prgpt -pr $URL
-        #google-chrome-stable $URL
-    fi
+if [ ! -z "$CHOICE" ]; then
+    URL=$(echo $CHOICE | awk '{print "https://www.github.com/"$1"/pull/"$2}')
+    echo $URL
+    #prgpt -pr $URL
+    google-chrome-stable $URL
+fi

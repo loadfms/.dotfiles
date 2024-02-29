@@ -1,7 +1,6 @@
 adobe-source-sans-fonts
 alacritty
 arc-gtk-theme
-aws-cli
 base
 base-devel
 composer
