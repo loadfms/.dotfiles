@@ -26,7 +26,7 @@ keymap('n', '<Leader>k', "<cmd>FzfLua live_grep<CR>", ns)
 keymap('n', '<Leader>K', '<cmd>FzfLua grep_cword<CR>', ns)
 keymap('n', '<leader>B', '<cmd>FzfLua buffers<CR>', ns)
 
-keymap('n', '<Leader>gs', ':G<CR>', ns)           -- Vim fugitive summary
+keymap('n', '<Leader>gs', ':G<CR>5j', ns)         -- Vim fugitive summary
 keymap('n', '<Leader>dq', '<C-W>k <C-W>o', ns)    -- Close compare buffs
 keymap('n', '<Leader>gp', ':G pull<CR>', ns)      -- Close compare buffs
 keymap('n', '<Leader>gP', ':G push<CR>', ns)      -- Close compare buffs
