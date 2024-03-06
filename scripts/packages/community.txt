@@ -4,6 +4,7 @@ arc-gtk-theme
 base
 base-devel
 composer
+conky
 delve
 discord
 dmidecode
@@ -12,6 +13,7 @@ dunst
 efibootmgr
 eza
 feh
+fontforge
 fzf
 git
 github-cli
