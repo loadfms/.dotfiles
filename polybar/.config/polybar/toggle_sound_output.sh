@@ -8,9 +8,9 @@ else
 fi
 
 if [ "$current_state" = "A" ]; then
-    echo "External"
+    echo "EXTERNAL"
 else
-    echo "Headset"
+    echo "HEADSET"
 fi
 
 

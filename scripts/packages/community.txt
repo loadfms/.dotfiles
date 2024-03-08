@@ -33,7 +33,6 @@ maim
 ncdu
 neofetch
 neovim
-noto-fonts
 noto-fonts-emoji
 npm
 ntfs-3g
