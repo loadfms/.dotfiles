@@ -7,7 +7,7 @@ return {
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim',        opts = {} },
+    { 'stevearc/oil.nvim',        opts = {} }, -- use g. to show hidden files
     'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
