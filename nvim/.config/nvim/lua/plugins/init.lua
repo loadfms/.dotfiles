@@ -7,7 +7,17 @@ return {
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim',     opts = {} },
+    {
+        'stevearc/oil.nvim',
+        opts = {},
+        config = function()
+            require("oil").setup({
+                view_options = {
+                    show_hidden = true,
+                }
+            })
+        end
+    },
     'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
