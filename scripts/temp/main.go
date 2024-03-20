@@ -32,7 +32,7 @@ func replaceStringsInFileServerless(filePath string) error {
 		}
 
 		if strings.Contains(line, "handler:") && handlerPath != "" {
-			line = "    handler: bootstrap\n    artifact: " + handlerPath + ".zip"
+			line = "    handler: bootstrap\n    package:\n        artifact: " + handlerPath + ".zip"
 			handlerPath = ""
 		}
 
