@@ -18,7 +18,7 @@ font pango:UbuntuMono Nerd Font 10
 # GET DEM BORDERS OUT OF HEREc:w
 #
 # Thanks Childz
-for_window [class="^.*"] border pixel 2
+for_window [class="^.*"] border pixel 3
 gaps inner 25
 gaps outer 0
 gaps top 0
@@ -158,9 +158,9 @@ bindsym $mod+Shift+Prior exec maim -s | xclip -selection clipboard -t image/png
 #bindsym $mod+Shift+a exec setxkbmap us
 
 # colour of border, background, text, indicator, and child_border
-client.focused              #dfbf8e #dfbf8e #dfbf8e #dfbf8e #dfbf8e
-client.focused_inactive     #665c54 #665c54 #665c54 #665c54 #665c54
-client.unfocused            #665c54 #665c54 #665c54 #665c54 #665c54
+client.focused              #7daea3 #7daea3 #7daea3 #7daea3 #7daea3
+client.focused_inactive     #dfbf8e #dfbf8e #dfbf8e #dfbf8e #dfbf8e
+client.unfocused            #dfbf8e #dfbf8e #dfbf8e #dfbf8e #dfbf8e
 client.urgent               #ea6962 #ea6962 #ea6962 #ea6962 #ea6962
 client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.background           #2f343f
