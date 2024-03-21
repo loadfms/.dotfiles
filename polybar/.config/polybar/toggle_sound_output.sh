@@ -8,9 +8,9 @@ else
 fi
 
 if [ "$current_state" = "A" ]; then
-    echo "%{B#282828} 󰽟  %{B-}"
+    echo "󰽟 "
 else
-    echo "%{B#282828} 󰋎  %{B-}"
+    echo "󰋎 "
 fi
 
 
