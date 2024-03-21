@@ -8,9 +8,9 @@ else
 fi
 
 if [ "$current_state" = "A" ]; then
-    echo "EXTERNAL"
+    echo "%{B#282828} 󰽟  %{B-}"
 else
-    echo "HEADSET"
+    echo "%{B#282828} 󰋎  %{B-}"
 fi
 
 

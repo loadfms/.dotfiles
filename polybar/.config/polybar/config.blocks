@@ -1,0 +1,291 @@
+;==========================================================
+;
+;
+;   ██████╗  ██████╗ ██╗  ██╗   ██╗██████╗  █████╗ ██████╗
+;   ██╔══██╗██╔═══██╗██║  ╚██╗ ██╔╝██╔══██╗██╔══██╗██╔══██╗
+;   ██████╔╝██║   ██║██║   ╚████╔╝ ██████╔╝███████║██████╔╝
+;   ██╔═══╝ ██║   ██║██║    ╚██╔╝  ██╔══██╗██╔══██║██╔══██╗
+;   ██║     ╚██████╔╝███████╗██║   ██████╔╝██║  ██║██║  ██║
+;   ╚═╝      ╚═════╝ ╚══════╝╚═╝   ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝
+;
+;
+;   To learn more about how to configure Polybar
+;   go to https://github.com/polybar/polybar
+;
+;   The README contains a lot of information
+;
+;==========================================================
+
+[colors]
+background=#00282828
+foreground=#dfbf8e
+blockbg=#282828
+blockbg-alt=#dfbf8e
+workspace-active=#7daea3
+blockfg=#dfbf8e
+blockfg-alt=#282828
+
+[bar/full]
+;override-redirect = false
+width = 100%
+offset-y = 5
+
+
+;height = 35
+;bottom = false
+height = 24pt
+background = ${colors.background}
+foreground = ${colors.foreground}
+modules-left = xworkspaces xwindow
+module-margin = 0
+modules-center = date-icon time-icon
+modules-right = ciderbar filesystem pulseaudio toggleoutputsound
+;fixed-center = true
+
+;[bar/bar-left]
+;override-redirect = true
+;width = 12%
+;height = 30
+;offset-x = 0.4%
+;offset-y = 0.5%
+
+;bottom = false
+;background = ${colors.background}
+;foreground = ${colors.foreground}
+;modules-center  = cpu filesystem memory 
+
+;[bar/bar-center]
+;override-redirect = true
+;bottom = false
+;fixed-center = true
+
+;width = 7%
+;height = 30
+;offset-x = 47.5%
+;offset-y = 0.5%
+
+;background = ${colors.background}
+;foreground = ${colors.foreground}
+
+;underline-size = 2
+;underline-color = ${colors.foreground}
+
+;border-size = 0
+;border-color = ${colors.foreground}
+
+;modules-center = xworkspaces
+
+;dim-value = 1.0
+
+;[bar/bar-right]
+;override-redirect = true
+;bottom = false
+;fixed-center = true
+
+;width = 12%
+;height = 30
+;offset-x = 87.6%
+;offset-y = 0.5%
+
+;background = ${colors.background}
+;foreground = ${colors.foreground}
+
+;underline-size = 2
+;underline-color = ${colors.foreground}
+
+;border-size = 0
+;border-color = ${colors.foreground}
+
+;modules-center =  pulseaudio time date 
+
+;dim-value = 1.0
+
+;wm-restack = bspwm
+
+
+[module/xworkspaces]
+type = internal/xworkspaces
+format = <label-state>
+;format-padding = 4
+format-background = ${colors.blockbg}
+label-active = %name%
+label-occupied = %name%
+label-monitor = %name%
+;label-active = "󰟟 "
+;label-occupied = "󰟠 "
+;label-urgent = 
+;label-empty = 
+label-active-background = ${colors.blockbg-alt}
+label-active-foreground = ${colors.blockfg-alt}
+label-active-padding = 1
+
+label-occupied-foreground = ${colors.blockfg}
+label-occupied-background = ${colors.blockbg}
+label-occupied-padding = 1
+;label-active-padding = 0
+;label-urgent-padding = 0
+;label-occupied-padding = 0
+;label-empty-padding = 0
+
+[module/xwindow]
+type = internal/xwindow
+label = " %title:0:60:...% "
+format-background = ${colors.blockbg}
+
+[module/pulseaudio]
+type = internal/pulseaudio
+label-volume = "%{F#282828}%{B#dfbf8e}   %{B-}%{F-}%{B#282828} %percentage%% %{B-}"
+label-muted = "%{F#282828}%{B#dfbf8e}   %{B-}%{F-}%{B#282828} 00% %{B-}"
+
+
+[module/time-icon]
+type = internal/date
+interval = 1.0
+time = %{F#282828}%{B#dfbf8e}   %{B-}%{F-}%{B#282828} %I:%M %{B-}
+label = %time% 
+
+
+[module/date-icon]
+type = internal/date
+interval = 1.0
+date = %{F#282828}%{B#dfbf8e}   %{B-}%{F-}%{B#282828} %d-%m-%y %{B-}
+label = %date% 
+
+
+[module/time]
+type = internal/date
+interval = 1.0
+time = " %I:%M"
+format = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+label = %time%
+
+[module/date-ubuntu]
+type = internal/date
+interval = 1.0
+time = %d-%m-%y %I:%M 
+time-alt = %B %d, %Y
+format = <label>
+label = %time%
+
+
+[module/date]
+type = internal/date
+interval = 1.0
+time = " %a, %d %b %Y" 
+format = <label>
+format-background = ${colors.background}
+format-foreground = ${colors.foreground}
+format-padding = 2
+label = %time%
+
+[module/spotifyicon]
+type = custom/text
+content = 
+content-background = ${colors.green}
+content-foreground = ${colors.base}
+content-padding = 4
+content-margin-left = 4
+
+[module/spotify]
+type = custom/script
+interval = 1
+format = <label>
+exec = python ~/.dotfiles/scripts/spotify_song.sh  -f '{artist}: {song}'
+label-background = ${colors.base}
+label-foreground = ${colors.green}
+label-padding = 4
+
+[module/cpu]
+type = internal/cpu
+interval = 1
+format = <label>
+format-prefix = ""
+format-background = ${colors.background}
+label = " %percentage%%"
+label-padding = 0
+
+
+[module/filesystem]
+type = internal/fs
+mount-0 = /
+interval = 30
+format-mounted = <label-mounted>
+format-mounted-prefix = "󰋊"
+format-mounted-prefix-background = ${colors.blockbg-alt}
+format-mounted-prefix-foreground = ${colors.blockfg-alt}
+format-mounted-prefix-padding = 2
+format-mounted-background = ${colors.blockbg}
+format-mounted-padding = 0
+format-unmounted = <label-unmounted>
+format-unmounted-prefix = " "
+format-unmounted-background = ${colors.background}
+format-unmounted-padding = 0
+label-mounted = " %percentage_used%% "
+label-unmounted = " %mountpoint%: not mounted"
+
+[module/memory]
+type = internal/memory
+interval = 1
+format-prefix = ""
+format-prefix-background = ${colors.blockbg-alt}
+format-prefix-foreground = ${colors.blockfg-alt}
+format-prefix-padding = 2
+format = <label>
+format-background = ${colors.background}
+label = " %percentage_used%%"
+label-padding = 0
+
+[module/network-publicip]
+type = custom/script
+exec = ~/.config/polybar/network-publicip.sh
+interval = 60
+
+[module/speed-test]
+type = custom/script
+exec = ~/.config/polybar/speed-test.sh
+interval = 60
+
+[module/battery]
+type = internal/battery
+full-at = 99
+low-at = 10
+battery = BAT0
+adapter = ADP1
+poll-interval = 5
+label-charging = 󱊥 %percentage%%
+label-discharging = 󱊢 %percentage%%
+label-low = 󰂎 %percentage%%
+label-full = 󱊣 %percentage%%
+
+[settings]
+screenchange-reload = false
+pseudo-transparency = false
+
+[module/openweathermap-simple]
+type = custom/script
+exec = ~/.config/polybar/open-weather.sh
+interval = 600
+
+[module/ciderbar]
+type = custom/script
+exec = cider-polybar -a get-currentmediaitem | awk -F"'" '{gsub(/:}|%{A}/, ""); print "󰝚  " $3}'
+interval = 0.3
+
+[module/toggleoutputsound]
+type = custom/script
+exec = ~/.config/polybar/toggle_sound_output.sh 
+click-left = ~/.config/polybar/toggle_sound_output.sh --toggle
+interval = 1
+
+[module/popup-calendar]
+type = custom/script
+exec = ~/.config/polybar/popup-calendar.sh
+interval = 5
+click-left = ~/.config/polybar/popup-calendar.sh --popup &
+
+[module/tray]
+type = internal/tray
+
+include-file = ~/.config/polybar/override.conf
