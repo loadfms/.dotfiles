@@ -1,9 +1,9 @@
 # See dunst(5) for all configuration options
 #
-
+#
 [urgency_normal]
-    background = "#282828"
-    foreground = "#dfbf8e"
+    background = "#191724"
+    foreground = "#e0def4"
     timeout = 3
     # Icon for notifications with normal urgency, uncomment to enable
     #new_icon = bell

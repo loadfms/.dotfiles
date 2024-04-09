@@ -9,6 +9,7 @@ export PATH="$GOPATH/bin:$PATH"
 
 KUBECONFIG=~/.kube/config
 
+
 ###############################################################
 # => Startx
 ###############################################################
@@ -17,7 +18,6 @@ if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && uname | rg -q "Linux"; then
         echo "Error occurred while running startx"
     fi
 fi
-
 
 ###############################################################
 # => Start tmux
@@ -37,7 +37,7 @@ symbol(){
 
 # current directory, one level deep
 directory() {
-   echo "%B%{$fg[blue]%}%1~%{$reset_color%}%b"
+   echo "%B%{$fg[red]%}%1~%{$reset_color%}%b"
 }
 
 # returns  if there are errors, nothing otherwise

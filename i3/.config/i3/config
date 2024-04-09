@@ -39,6 +39,9 @@ bindsym $mod+q kill
 # disable focus on mouse hover
 focus_follows_mouse no
 
+# disable sleep
+exec --no-startup-id xset s off
+exec --no-startup-id xset -dpms
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec --no-startup-id rofi -show drun
@@ -158,9 +161,5 @@ bindsym $mod+Shift+Prior exec maim -s | xclip -selection clipboard -t image/png
 #bindsym $mod+Shift+a exec setxkbmap us
 
 # colour of border, background, text, indicator, and child_border
-client.focused              #7daea3 #7daea3 #7daea3 #7daea3 #7daea3
-client.focused_inactive     #dfbf8e #dfbf8e #dfbf8e #dfbf8e #dfbf8e
-client.unfocused            #dfbf8e #dfbf8e #dfbf8e #dfbf8e #dfbf8e
-client.urgent               #ea6962 #ea6962 #ea6962 #ea6962 #ea6962
-client.placeholder          #2f343f #2f343f #d8dee8 #2f343f #2f343f
-client.background           #2f343f
+client.focused              #eb6f92 #eb6f92 #eb6f92 #eb6f92 #eb6f92
+client.unfocused            #6e6a86 #6e6a86 #6e6a86 #6e6a86 #6e6a86
