@@ -37,7 +37,7 @@ symbol(){
 
 # current directory, one level deep
 directory() {
-   echo "%B%{$fg[red]%}%1~%{$reset_color%}%b"
+   echo "%B%{$fg[magenta]%}%1~%{$reset_color%}%b"
 }
 
 # returns  if there are errors, nothing otherwise
