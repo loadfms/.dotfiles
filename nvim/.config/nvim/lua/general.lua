@@ -39,3 +39,4 @@ opt.relativenumber = true
 opt.scrolloff = 9999
 opt.guicursor = ""
 opt.termguicolors = true
+opt.fillchars = { eob = " " }
