@@ -1,13 +1,21 @@
 return {
     --theme
-{ "rose-pine/neovim", name = "rose-pine" },
+    { "rose-pine/neovim",  name = "rose-pine" },
+
+    {
+        'github/copilot.vim',
+        config = function()
+            vim.g.copilot_no_tab_map = true
+            vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
+        end
+    },
 
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim',        opts = {} }, -- use g. to show hidden files
+    { 'stevearc/oil.nvim', opts = {} }, -- use g. to show hidden files
     'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
