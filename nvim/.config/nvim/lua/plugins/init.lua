@@ -110,19 +110,14 @@ return {
                 sections = {
                     lualine_a = { 'mode' },
                     lualine_b = { 'branch', { 'diagnostics', always_visible = true } },
-                    lualine_c = {
-                        { 'buffers',
-                            use_mode_colors = true, show_modified_status = false,
-                            buffers_color = {
-                                active = { fg = "#ffffff" }, -- color for active buffer
-                            },
-                            symbols = {
-                                modified = ' ●', -- Text to show when the buffer is modified
-                                alternate_file = ' ', -- Text to show to identify the alternate file
-                                directory = '', -- Text to show when the buffer is a directory
-                            }
+                    lualine_c = { { 'filename', path = 1, file_status = true, newfile_status = false,
+                        symbols = {
+                            modified = '●', -- Text to show when the file is modified.
+                            readonly = '', -- Text to show when the file is non-modifiable or readonly.
+                            unnamed = '󰊠', -- Text to show for unnamed buffers.
+                            newfile = '', -- Text to show for newly created file before first write
                         }
-                    },
+                    } },
                     lualine_x = { 'encoding', 'fileformat', 'filetype' },
                     lualine_y = { 'progress' },
                     lualine_z = { 'location' }

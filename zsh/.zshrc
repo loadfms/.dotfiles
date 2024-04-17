@@ -1,4 +1,4 @@
-export TERM="xterm-256color"
+export TERM="screen-256color"
 export GOPATH="$HOME/go"
 export ZSH="$HOME/.oh-my-zsh"
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
@@ -46,7 +46,7 @@ return_status() {
 }
 
 git_info(){
-    echo "%B%{$fg[yellow]%}$(git_prompt_info)%{$reset_color%}%b"
+    echo "%B%{$fg[yellow]%}$(_omz_git_prompt_info)%{$reset_color%}%b"
 }
 
 PROMPT='
