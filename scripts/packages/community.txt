@@ -12,6 +12,7 @@ dunst
 efibootmgr
 eza
 feh
+firefox
 fontforge
 fzf
 gimp
@@ -53,6 +54,7 @@ ripgrep
 rofi
 rofi-emoji
 rust
+rxvt-unicode
 stow
 swaybg
 tldr

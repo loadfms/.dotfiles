@@ -1,5 +1,6 @@
 adwaita-dark
 apple-fonts
+aws-sam-cli
 cava
 cider
 cider-polybar
@@ -7,5 +8,6 @@ google-chrome
 pokemon-colorscripts-git
 rofi-greenclip
 slack-desktop
+spotify-player
 swayfx
 yay
