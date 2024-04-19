@@ -1,4 +1,4 @@
-export TERM="alacritty"
+export TERM="xterm-256color"
 export GOPATH="$HOME/go"
 export ZSH="$HOME/.oh-my-zsh"
 export LS_COLORS="$LS_COLORS:ow=1;34:tw=1;34:"
