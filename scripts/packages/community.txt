@@ -16,7 +16,6 @@ dunst
 efibootmgr
 eza
 feh
-firefox
 fontforge
 fzf
 gimp
