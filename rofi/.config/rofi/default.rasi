@@ -1,7 +1,7 @@
 * {
     bg-col:#333c43;
     bg-col-light:#333c43;
-    border-col:#333c43;
+    border-col:#a7c080;
     selected-col:#333c43;
     blue:#7fbbb3;
     fg-col:#7fbbb3;
@@ -18,7 +18,7 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 360px;
+    height: 460px;
     border: 3px;
     border-color: @border-col;
     background-color: @bg-col;
@@ -59,7 +59,7 @@ listview {
     border: 0px 0px 0px;
     padding: 6px 0px 0px;
     margin: 10px 0px 0px 20px;
-    columns: 2;
+    columns: 1;
     lines: 5;
     background-color: @bg-col;
 }
