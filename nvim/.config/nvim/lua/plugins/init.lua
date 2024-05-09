@@ -1,6 +1,6 @@
 return {
     --theme
-    { "rose-pine/neovim",  name = "rose-pine" },
+    {"neanias/everforest-nvim", version = false, lazy = false, priority = 1000 },
 
     {
         'github/copilot.vim',
@@ -9,7 +9,6 @@ return {
             vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
         end
     },
-
     'nvim-lua/plenary.nvim',
     'tpope/vim-fugitive',
     'tpope/vim-surround',

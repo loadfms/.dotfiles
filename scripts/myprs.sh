@@ -7,5 +7,5 @@ if [ ! -z "$CHOICE" ]; then
     URL=$(echo $CHOICE | awk '{print "https://www.github.com/"$1"/pull/"$2}')
     echo $URL
     #prgpt -pr $URL
-    google-chrome-stable $URL
+    firefox $URL
 fi

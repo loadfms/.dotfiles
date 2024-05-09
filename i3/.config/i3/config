@@ -161,5 +161,5 @@ bindsym $mod+Shift+Prior exec maim -s | xclip -selection clipboard -t image/png
 #bindsym $mod+Shift+a exec setxkbmap us
 
 # colour of border, background, text, indicator, and child_border
-client.focused              #eb6f92 #eb6f92 #eb6f92 #eb6f92 #eb6f92
-client.unfocused            #6e6a86 #6e6a86 #6e6a86 #6e6a86 #6e6a86
+client.focused              #a7c080 #a7c080 #a7c080 #a7c080 #a7c080
+client.unfocused            #4d5960 #4d5960 #4d5960 #4d5960 #4d5960

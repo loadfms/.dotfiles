@@ -130,6 +130,7 @@ alias prj='list_projects'
 alias mini-chrome="google-chrome-stable --new-window --app="
 alias cgpt='git commit -m "$(commitgpt)"'
 alias awslogs='aws_logs'
+alias connect-wifi='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 
 list_projects() {
   local dir
@@ -167,3 +168,5 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 ###############################################################
 #pokemon-colorscripts -r 1 --no-title
 neofetch
+
+export PATH=$PATH:/home/load/.spicetify
