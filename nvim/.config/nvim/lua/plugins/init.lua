@@ -1,6 +1,6 @@
 return {
     --theme
-    {"neanias/everforest-nvim", version = false, lazy = false, priority = 1000 },
+    { "catppuccin/nvim",   name = "catppuccin", priority = 1000 },
 
     {
         'github/copilot.vim',
@@ -14,7 +14,7 @@ return {
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim', opts = {} }, -- use g. to show hidden files
+    { 'stevearc/oil.nvim', opts = {} },       -- use g. to show hidden files
     'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
