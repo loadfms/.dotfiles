@@ -1,6 +1,6 @@
 return {
     --theme
-    { "catppuccin/nvim",   name = "catppuccin", priority = 1000 },
+    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
 
     {
         'github/copilot.vim',
@@ -14,7 +14,7 @@ return {
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim', opts = {} },       -- use g. to show hidden files
+    { 'stevearc/oil.nvim',        opts = {} }, -- use g. to show hidden files
     'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
@@ -140,7 +140,11 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         config = function()
             -- calling `setup` is optional for customization
-            require("fzf-lua").setup({})
+            require("fzf-lua").setup({
+                files = {
+                    fd_opts = [[--color=never --type f --hidden --follow --exclude .git -- exclude node_modules]],
+                },
+            })
         end
     },
     {
