@@ -33,6 +33,7 @@ keymap('n', '<Leader>gP', ':G push<CR>', ns)      -- Close compare buffs
 keymap('n', '<Leader>ga', ':G add .<CR>', ns)     -- Close compare buffs
 keymap('n', '<Leader>da', ':diffget //2<CR>', ns) -- Get content from left side
 keymap('n', '<Leader>dl', ':diffget //3<CR>', ns) -- Get content from right side
+keymap('n', '<Leader>gd', ':Gvdiffsplit!<CR>', ns)
 
 keymap('n', '<C-S-Left>', ':vertical resize +1<CR>', ns)
 keymap('n', '<C-S-Right>', ':vertical resize -1<CR>', ns)
@@ -42,7 +43,6 @@ keymap('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', ns)
 keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', ns)
 keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', ns)
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', ns)
-keymap('n', 'gt', '<cmd>Gitsigns diffthis<CR>', ns)
 
 keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', ns)
 keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', ns)
