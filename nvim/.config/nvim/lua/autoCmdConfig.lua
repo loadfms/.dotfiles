@@ -3,10 +3,10 @@
 --command = ":lua vim.lsp.buf.format()",
 --})
 
-vim.api.nvim_create_autocmd("BufWritePre", {
-    pattern = { "*.java" },
-    callback = function()
-        require 'jdtls'.organize_imports()
-        vim.lsp.buf.format()
-    end
-})
+--vim.api.nvim_create_autocmd("BufWritePre", {
+--pattern = { "*.java" },
+--callback = function()
+--require 'jdtls'.organize_imports()
+--vim.lsp.buf.format()
+--end
+--})
