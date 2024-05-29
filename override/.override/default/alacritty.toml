@@ -1,3 +1,6 @@
-font:
-  # Font size
-  #size: 9.0
+[font]
+    size = 18.0
+    normal = { family = "FantasqueSansM Nerd Font", style = "Regular" }  # Default for Linux/BSD: "monospace", Regular
+    bold = { style = "Regular" }  # Inherits family from normal, Default style: Bold
+    italic = { style = "Italic" }  # Inherits family from normal, Default style: Italic
+    bold_italic = { style = "Bold Italic" }  # Inherits family from normal, Default style: Bold Italic
