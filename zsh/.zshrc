@@ -51,7 +51,7 @@ git_info(){
 
 PROMPT='
 $(directory) $(git_info)
-%B󰅂%b '
+%{$fg[green]%}%B❯%b %{$reset_color%}'
 
 # Add extra space between symbol in Linux
 if uname | rg -q "Linux"; then
@@ -100,16 +100,6 @@ ZSH_THEME_GIT_PROMPT_CLEAN=""
 export FZF_DEFAULT_COMMAND="rg --files --no-ignore --hidden --follow -g '!{.git,node_modules,package-lock.json}/*' 2> /dev/null"
 export FZF_DEFAULT_OPTS="--height 96% --reverse --preview 'cat {}'"
 
-
-###############################################################
-# => pnpm
-###############################################################
-export PNPM_HOME="/home/load/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
 ###############################################################
 # => Aliases
 ###############################################################
@@ -131,6 +121,10 @@ alias mini-chrome="google-chrome-stable --new-window --app="
 alias cgpt='git commit -m "$(commitgpt)"'
 alias awslogs='aws_logs'
 alias connect-wifi='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
+
+checkdeploy() {
+    watch -n 60 --color --no-title 'curl -s https://shouldideploy.today/api?tz=America%2FSao_Paulo | jq -r '"'"'.shouldideploy as $shouldideploy | if $shouldideploy == false then "\u001b[31m\(.message)\u001b[0m" else "\u001b[32m\(.message)\u001b[0m" end'"'"
+}
 
 list_projects() {
   local dir
@@ -168,5 +162,3 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 ###############################################################
 #pokemon-colorscripts -r 1 --no-title
 neofetch
-
-export PATH=$PATH:/home/load/.spicetify
