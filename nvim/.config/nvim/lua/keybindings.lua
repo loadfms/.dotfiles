@@ -11,6 +11,8 @@ keymap('n', 'Q', '<Nop>', ns)                                               -- D
 keymap('n', '<Leader><CR>', ':noh<CR>', ns)                                 -- Clear highlight
 keymap('', ']b', ':bnext<CR>', ns)
 keymap('', '[b', ':bprevious<CR>', ns)
+keymap('', ']q', ':cnext<CR>', ns)
+keymap('', '[q', ':cprevious<CR>', ns)
 
 keymap('n', '-', '<CMD>Oil<CR>', ns)
 
@@ -34,6 +36,7 @@ keymap('n', '<Leader>ga', ':G add .<CR>', ns)     -- Close compare buffs
 keymap('n', '<Leader>da', ':diffget //2<CR>', ns) -- Get content from left side
 keymap('n', '<Leader>dl', ':diffget //3<CR>', ns) -- Get content from right side
 keymap('n', '<Leader>gd', ':Gvdiffsplit!<CR>', ns)
+keymap('n', '<Leader>gl', ':0GcLog<CR>', ns)
 
 keymap('n', '<C-S-Left>', ':vertical resize +1<CR>', ns)
 keymap('n', '<C-S-Right>', ':vertical resize -1<CR>', ns)
@@ -46,6 +49,12 @@ keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', ns)
 
 keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', ns)
 keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', ns)
+
+
+keymap('n', '<C-u>', '<cmd>call smooth_scroll#up(&scroll, 2, 2)<CR>', ns)
+keymap('n', '<C-d>', '<cmd>call smooth_scroll#down(&scroll, 2, 2)<CR>', ns)
+keymap('n', '<C-b>', '<cmd>call smooth_scroll#up(&scroll*2, 2, 4)<CR>', ns)
+keymap('n', '<C-f>', '<cmd>call smooth_scroll#down(&scroll*2, 2, 4)<CR>', ns)
 
 ---- Harpoon
 --keymap("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', ns)
