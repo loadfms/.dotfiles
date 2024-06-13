@@ -4,6 +4,9 @@ arc-gtk-theme
 base
 base-devel
 bat
+bind
+bluez
+bluez-utils
 calc
 composer
 delve
