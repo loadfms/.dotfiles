@@ -10,7 +10,7 @@ save_to_clipboard = true
 [window]
 dynamic_padding = false
 #startup_mode = "Fullscreen"
-decorations = "None"
+#decorations = "None"
 
 [window.padding]
 x = 10

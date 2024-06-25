@@ -6,6 +6,7 @@ export EDITOR="nvim"
 export HISTCONTROL=ignoreboth
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$GOPATH/bin:$PATH"
+export PATH="$PATH:/opt/local/bin"
 
 KUBECONFIG=~/.kube/config
 
