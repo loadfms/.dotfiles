@@ -1,6 +1,6 @@
 return {
     --theme
-    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
+    { "catppuccin/nvim",   name = "catppuccin", priority = 1000 },
 
     {
         'github/copilot.vim',
@@ -15,7 +15,7 @@ return {
     'tpope/vim-surround',
     'tpope/vim-repeat',
     'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim',        opts = {} }, -- use g. to show hidden files
+    { 'stevearc/oil.nvim', opts = {} },        -- use g. to show hidden files
     'nvim-tree/nvim-web-devicons',
     {
         'lewis6991/gitsigns.nvim',
@@ -122,7 +122,7 @@ return {
         config = function()
             require 'nvim-treesitter.configs'.setup {
                 ensure_installed = { "go", "lua", "javascript", "html", "typescript", "css", "scss", "terraform", "tsx",
-                    "bash" },
+                    "bash", "markdown" },
 
                 -- Install parsers synchronously (only applied to `ensure_installed`)
                 sync_install = false,

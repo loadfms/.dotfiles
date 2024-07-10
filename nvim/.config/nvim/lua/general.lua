@@ -1,6 +1,6 @@
 local g = vim.g
 local opt = vim.opt
-local cmd = vim.cmd
+local lsp = vim.lsp
 
 g.mapleader = ' '
 g.netrw_fastbrowse = 0
@@ -41,3 +41,19 @@ opt.guicursor = ""
 opt.termguicolors = true
 opt.fillchars = { eob = " " }
 opt.foldlevel = 99
+
+
+local make_client_capabilities = lsp.protocol.make_client_capabilities
+function lsp.protocol.make_client_capabilities()
+    local caps = make_client_capabilities()
+    if not (caps.workspace or {}).didChangeWatchedFiles then
+        vim.notify(
+            'lsp capability didChangeWatchedFiles is already disabled',
+            vim.log.levels.WARN
+        )
+    else
+        caps.workspace.didChangeWatchedFiles = nil
+    end
+
+    return caps
+end

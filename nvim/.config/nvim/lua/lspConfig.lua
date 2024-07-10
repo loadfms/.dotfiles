@@ -1,3 +1,5 @@
+local lsp = vim.lsp
+
 vim.api.nvim_create_autocmd('LspAttach', {
     desc = 'LSP actions',
     callback = function(event)
@@ -40,3 +42,9 @@ require('mason-lspconfig').setup_handlers({
 --local hl = "DiagnosticSign" .. type
 --vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = hl })
 --end
+--
+
+lsp.handlers["textDocument/hover"] = lsp.with(vim.lsp.handlers.hover, {
+    border = "rounded",
+    width = 80
+})
