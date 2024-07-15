@@ -1,8 +1,9 @@
 return {
     --theme
-    { "catppuccin/nvim",   name = "catppuccin", priority = 1000 },
+    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
 
     {
+        event = "VeryLazy",
         'github/copilot.vim',
         config = function()
             vim.g.copilot_no_tab_map = true
@@ -11,13 +12,23 @@ return {
     },
     "terryma/vim-smooth-scroll",
     'nvim-lua/plenary.nvim',
-    'tpope/vim-fugitive',
-    'tpope/vim-surround',
+    {
+        event = "VeryLazy",
+        'tpope/vim-fugitive',
+    },
     'tpope/vim-repeat',
-    'preservim/nerdcommenter',
-    { 'stevearc/oil.nvim', opts = {} },        -- use g. to show hidden files
+    {
+        event = "VeryLazy",
+        'preservim/nerdcommenter',
+    },
+    {
+        event = "VeryLazy",
+        'stevearc/oil.nvim',
+        opts = {}
+    }, -- use g. to show hidden files
     'nvim-tree/nvim-web-devicons',
     {
+        event = "VeryLazy",
         'lewis6991/gitsigns.nvim',
         config = function()
             require('gitsigns').setup {
@@ -63,6 +74,7 @@ return {
         end
     },
     {
+        event = "VeryLazy",
         'nvim-lualine/lualine.nvim',
         config = function()
             require('lualine').setup {
@@ -104,6 +116,7 @@ return {
         end
     },
     {
+        event = "VeryLazy",
         "ibhagwan/fzf-lua",
         -- optional for icon support
         dependencies = { "nvim-tree/nvim-web-devicons" },
@@ -117,6 +130,7 @@ return {
         end
     },
     {
+        event = "VeryLazy",
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
         config = function()
@@ -163,6 +177,7 @@ return {
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-nvim-lsp-signature-help',
     {
+        event = "VeryLazy",
         "L3MON4D3/LuaSnip",
         -- follow latest release.
         version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
@@ -171,6 +186,7 @@ return {
     },
     "onsails/lspkind.nvim",
     {
+        event = "VeryLazy",
         "j-hui/fidget.nvim",
         config = function()
             require("fidget").setup({
@@ -191,6 +207,7 @@ return {
         end,
     },
     {
+        event = "VeryLazy",
         'stevearc/conform.nvim',
         opts = {},
         config = function()
