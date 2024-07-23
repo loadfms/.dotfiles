@@ -16,7 +16,6 @@ return {
         event = "VeryLazy",
         'tpope/vim-fugitive',
     },
-    'tpope/vim-repeat',
     {
         event = "VeryLazy",
         'preservim/nerdcommenter',
