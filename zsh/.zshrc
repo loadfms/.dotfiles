@@ -114,7 +114,7 @@ alias dotsync="sh ~/.dotfiles/scripts/revive-packages.sh && git -C ~/.dotfiles a
 alias ls="eza --icons -ll --sort=type --header"
 alias ps="procs"
 alias mypr="sh ~/.dotfiles/scripts/myprs.sh"
-alias rgf='rg --files --no-ignore | rg -i '
+alias rgf='rg --files --no-ignore --hidden | rg -i '
 alias tmux='tmux attach -t TMUX || tmux new -s TMUX'
 alias dockerstart='sudo systemctl start docker.service'
 alias prj='list_projects'
