@@ -175,22 +175,24 @@ return {
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-nvim-lsp-signature-help',
-    {
-        event = "VeryLazy",
-        "L3MON4D3/LuaSnip",
-        -- follow latest release.
-        version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-        -- install jsregexp (optional!).
-        build = "make install_jsregexp"
-    },
+    --{
+    --event = "VeryLazy",
+    --"L3MON4D3/LuaSnip",
+    ---- follow latest release.
+    --version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+    ---- install jsregexp (optional!).
+    --build = "make install_jsregexp",
+    --},
     "onsails/lspkind.nvim",
     {
         event = "VeryLazy",
         "j-hui/fidget.nvim",
+        opts = {
+            -- options
+        },
         config = function()
             require("fidget").setup({
                 progress = {
-
                     display = {
                         done_icon = "",
                         progress_icon = -- Icon shown when LSP progress tasks are in progress
