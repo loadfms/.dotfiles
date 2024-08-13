@@ -175,14 +175,11 @@ return {
     'hrsh7th/cmp-path',
     'hrsh7th/cmp-nvim-lsp',
     'hrsh7th/cmp-nvim-lsp-signature-help',
-    --{
-    --event = "VeryLazy",
-    --"L3MON4D3/LuaSnip",
-    ---- follow latest release.
-    --version = "2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-    ---- install jsregexp (optional!).
-    --build = "make install_jsregexp",
-    --},
+    {
+        "L3MON4D3/LuaSnip",
+        version = "v2.*",
+        build = "make install_jsregexp"
+    },
     "onsails/lspkind.nvim",
     {
         event = "VeryLazy",

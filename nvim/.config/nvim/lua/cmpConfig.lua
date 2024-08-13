@@ -1,10 +1,11 @@
 local cmp = require 'cmp'
 local lspkind = require 'lspkind'
+local luasnip = require("luasnip")
 
 cmp.setup {
     snippet = {
         expand = function(args)
-            --require('luasnip').lsp_expand(args.body)
+            luasnip.lsp_expand(args.body)
         end
     },
     formatting = {
@@ -18,10 +19,19 @@ cmp.setup {
         })
     },
     mapping = {
-        ['<CR>'] = cmp.mapping.confirm {
-            behavior = cmp.ConfirmBehavior.Replace,
-            select = true,
-        },
+        ['<CR>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                if luasnip.expandable() then
+                    luasnip.expand()
+                else
+                    cmp.confirm({
+                        select = true,
+                    })
+                end
+            else
+                fallback()
+            end
+        end),
         ['<C-d>'] = cmp.mapping.scroll_docs(-4),
         ['<C-f>'] = cmp.mapping.scroll_docs(4),
         ['<C-Space>'] = cmp.mapping.complete(),
