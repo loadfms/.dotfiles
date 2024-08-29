@@ -122,6 +122,8 @@ alias mini-chrome="google-chrome-stable --new-window --app="
 alias cgpt='git commit -m "$(commitgpt)"'
 alias awslogs='aws_logs'
 alias connect-wifi='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_supplicant.conf'
+alias ssm-gen='sh ~/.dotfiles/scripts/ssm_gen.sh'
+alias ssm-get='sh ~/.dotfiles/scripts/get_ssm.sh'
 
 checkdeploy() {
     watch -n 60 --color --no-title 'curl -s https://shouldideploy.today/api?tz=America%2FSao_Paulo | jq -r '"'"'.shouldideploy as $shouldideploy | if $shouldideploy == false then "\u001b[31m\(.message)\u001b[0m" else "\u001b[32m\(.message)\u001b[0m" end'"'"
@@ -163,3 +165,4 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 ###############################################################
 #pokemon-colorscripts -r 1 --no-title
 neofetch
+export PATH="/usr/local/opt/mysql-client/bin:$PATH"
