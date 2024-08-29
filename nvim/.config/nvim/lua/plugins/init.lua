@@ -178,8 +178,7 @@ return {
     {
         "L3MON4D3/LuaSnip",
         version = "v2.*",
-        build = "make install_jsregexp",
-        dependencies = { "rafamadriz/friendly-snippets" },
+        build = "make install_jsregexp"
     },
     "onsails/lspkind.nvim",
     {
@@ -218,11 +217,11 @@ return {
                     rust = { "rustfmt" },
                     python = { "black" },
                 },
-                --format_on_save = {
-                ---- These options will be passed to conform.format()
-                --timeout_ms = 5000,
-                --lsp_fallback = true,
-                --},
+                format_on_save = {
+                    -- These options will be passed to conform.format()
+                    timeout_ms = 5000,
+                    lsp_fallback = true,
+                },
             })
         end
     }

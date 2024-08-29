@@ -125,10 +125,6 @@ alias connect-wifi='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_
 alias ssm-gen='sh ~/.dotfiles/scripts/ssm_gen.sh'
 alias ssm-get='sh ~/.dotfiles/scripts/get_ssm.sh'
 
-checkdeploy() {
-    watch -n 60 --color --no-title 'curl -s https://shouldideploy.today/api?tz=America%2FSao_Paulo | jq -r '"'"'.shouldideploy as $shouldideploy | if $shouldideploy == false then "\u001b[31m\(.message)\u001b[0m" else "\u001b[32m\(.message)\u001b[0m" end'"'"
-}
-
 list_projects() {
   local dir
   dir=$(find ~/workspace -maxdepth 1 -type d -exec basename {} \; | rg -v workspace | fzf +m)
@@ -164,5 +160,5 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 # => Window top
 ###############################################################
 #pokemon-colorscripts -r 1 --no-title
+
 neofetch
-export PATH="/usr/local/opt/mysql-client/bin:$PATH"
