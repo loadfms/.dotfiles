@@ -123,7 +123,8 @@ return {
             -- calling `setup` is optional for customization
             require("fzf-lua").setup({
                 files = {
-                    fd_opts = [[--color=never --type f --hidden --follow --exclude .git -- exclude node_modules]],
+                    fd_opts =
+                    [[--color=never --type f --hidden --follow --exclude .git --exclude node_modules ]],
                 },
             })
         end
