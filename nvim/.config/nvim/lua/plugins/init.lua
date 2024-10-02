@@ -1,6 +1,6 @@
 return {
     --theme
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { "rebelot/kanagawa.nvim" },
 
     {
         event = "VeryLazy",
