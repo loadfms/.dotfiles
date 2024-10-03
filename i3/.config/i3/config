@@ -137,7 +137,7 @@ bindsym $mod+Control Down        resize shrink height 5 px or 5 ppt
 # startup programs
 exec_always --no-startup-id $HOME/.config/polybar/launch.sh
 
-exec --no-startup-id feh --bg-fill ~/pictures/sakura.png
+exec --no-startup-id feh --bg-fill ~/pictures/kanagawa.png
 exec --no-startup-id picom
 exec --no-startup-id dunst
 exec --no-startup-id greenclip daemon
@@ -161,5 +161,5 @@ bindsym $mod+Shift+Prior exec maim -s | xclip -selection clipboard -t image/png
 #bindsym $mod+Shift+a exec setxkbmap us
 
 # colour of border, background, text, indicator, and child_border
-client.focused              #a7c080 #a7c080 #a7c080 #a7c080 #a7c080
+client.focused              #957fb8 #957fb8 #957fb8 #957fb8 #957fb8
 client.unfocused            #4d5960 #4d5960 #4d5960 #4d5960 #4d5960

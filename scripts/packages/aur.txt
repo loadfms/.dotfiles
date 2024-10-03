@@ -10,5 +10,4 @@ rofi-greenclip
 slack-desktop
 spicetify-cli
 spotify-player
-swayfx
 yay

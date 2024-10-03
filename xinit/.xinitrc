@@ -8,5 +8,7 @@ xset -b
 setxkbmap -layout us -variant altgr-intl
 #xmodmap -e "keycode 119 = grave asciitilde"
 
+xrdb -merge <<< "Xft.dpi: 120"
+
 # Start i3
 exec i3
