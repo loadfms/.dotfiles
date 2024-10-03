@@ -1,5 +1,4 @@
 adwaita-dark
-apple-fonts
 b43-firmware
 cava
 cider

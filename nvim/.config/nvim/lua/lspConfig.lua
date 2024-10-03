@@ -15,8 +15,7 @@ require('mason-lspconfig').setup({
         'jsonls',
         'lua_ls',
         'rust_analyzer',
-        'tailwindcss',
-        'tsserver',
+        'tailwindcss'
     }
 })
 
