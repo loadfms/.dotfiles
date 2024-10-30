@@ -122,6 +122,8 @@ alias connect-wifi='sudo wpa_supplicant -B -i wlp3s0 -c /etc/wpa_supplicant/wpa_
 alias ssm-gen='sh ~/.dotfiles/scripts/ssm_gen.sh'
 alias ssm-get='sh ~/.dotfiles/scripts/get_ssm.sh'
 
+alias fzf="fzf --preview='chafa {}'"
+
 list_projects() {
   local dir
   dir=$(find ~/workspace -maxdepth 1 -type d -exec basename {} \; | rg -v workspace | fzf +m)

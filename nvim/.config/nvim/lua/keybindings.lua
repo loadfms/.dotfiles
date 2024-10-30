@@ -14,7 +14,7 @@ keymap('', '[b', ':bprevious<CR>', ns)
 keymap('', ']q', ':cnext<CR>', ns)
 keymap('', '[q', ':cprevious<CR>', ns)
 
-keymap('n', '-', '<CMD>Oil<CR>', ns)
+keymap('n', '-', ':Explore<CR>', ns)
 
 --keymap('n', '<C-p>',
 --"<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
@@ -51,10 +51,10 @@ keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', ns)
 keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', ns)
 
 
-keymap('n', '<C-u>', '<cmd>call smooth_scroll#up(&scroll, 2, 2)<CR>', ns)
-keymap('n', '<C-d>', '<cmd>call smooth_scroll#down(&scroll, 2, 2)<CR>', ns)
-keymap('n', '<C-b>', '<cmd>call smooth_scroll#up(&scroll*2, 2, 4)<CR>', ns)
-keymap('n', '<C-f>', '<cmd>call smooth_scroll#down(&scroll*2, 2, 4)<CR>', ns)
+--keymap('n', '<C-u>', '<cmd>call smooth_scroll#up(&scroll, 2, 2)<CR>', ns)
+--keymap('n', '<C-d>', '<cmd>call smooth_scroll#down(&scroll, 2, 2)<CR>', ns)
+--keymap('n', '<C-b>', '<cmd>call smooth_scroll#up(&scroll*2, 2, 4)<CR>', ns)
+--keymap('n', '<C-f>', '<cmd>call smooth_scroll#down(&scroll*2, 2, 4)<CR>', ns)
 
 ---- Harpoon
 --keymap("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', ns)

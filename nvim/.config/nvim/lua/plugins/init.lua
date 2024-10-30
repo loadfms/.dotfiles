@@ -1,6 +1,6 @@
 return {
     --theme
-    { "rebelot/kanagawa.nvim" },
+    --{ "rebelot/kanagawa.nvim" },
 
     {
         event = "VeryLazy",
@@ -10,22 +10,21 @@ return {
             vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
         end
     },
-    "terryma/vim-smooth-scroll",
-    'nvim-lua/plenary.nvim',
-    {
-        event = "VeryLazy",
-        'tpope/vim-fugitive',
-    },
+    --"terryma/vim-smooth-scroll",
+    --'nvim-lua/plenary.nvim',
+    --{
+    --event = "VeryLazy",
+    --'tpope/vim-fugitive',
+    --},
     {
         event = "VeryLazy",
         'preservim/nerdcommenter',
     },
-    {
-        event = "VeryLazy",
-        'stevearc/oil.nvim',
-        opts = {}
-    }, -- use g. to show hidden files
-    'nvim-tree/nvim-web-devicons',
+    --{
+    --event = "VeryLazy",
+    --'stevearc/oil.nvim',
+    --opts = {}
+    --}, -- use g. to show hidden files
     {
         event = "VeryLazy",
         'lewis6991/gitsigns.nvim',
@@ -72,48 +71,48 @@ return {
             }
         end
     },
-    {
-        event = "VeryLazy",
-        'nvim-lualine/lualine.nvim',
-        config = function()
-            require('lualine').setup {
-                options = {
-                    icons_enabled = true,
-                    theme = 'auto',
-                    component_separators = { left = '', right = '' },
-                    section_separators = { left = '', right = '' },
-                    disabled_filetypes = {},
-                    always_divide_middle = false,
-                    globalstatus = true,
-                },
-                sections = {
-                    lualine_a = { 'mode' },
-                    lualine_b = { 'branch', { 'diagnostics', always_visible = true } },
-                    lualine_c = { { 'filename', path = 1, file_status = true, newfile_status = false,
-                        symbols = {
-                            modified = '●', -- Text to show when the file is modified.
-                            readonly = '', -- Text to show when the file is non-modifiable or readonly.
-                            unnamed = '󰊠', -- Text to show for unnamed buffers.
-                            newfile = '', -- Text to show for newly created file before first write
-                        }
-                    } },
-                    lualine_x = { 'encoding', 'fileformat', 'filetype' },
-                    lualine_y = { 'progress' },
-                    lualine_z = { 'location' }
-                },
-                inactive_sections = {
-                    lualine_a = {},
-                    lualine_b = {},
-                    lualine_c = {},
-                    lualine_x = {},
-                    lualine_y = {},
-                    lualine_z = {}
-                },
-                tabline = {},
-                extensions = {}
-            }
-        end
-    },
+    --{
+    --event = "VeryLazy",
+    --'nvim-lualine/lualine.nvim',
+    --config = function()
+    --require('lualine').setup {
+    --options = {
+    --icons_enabled = true,
+    --theme = 'auto',
+    --component_separators = { left = '', right = '' },
+    --section_separators = { left = '', right = '' },
+    --disabled_filetypes = {},
+    --always_divide_middle = false,
+    --globalstatus = true,
+    --},
+    --sections = {
+    --lualine_a = { 'mode' },
+    --lualine_b = { 'branch', { 'diagnostics', always_visible = true } },
+    --lualine_c = { { 'filename', path = 1, file_status = true, newfile_status = false,
+    --symbols = {
+    --modified = '●', -- Text to show when the file is modified.
+    --readonly = '', -- Text to show when the file is non-modifiable or readonly.
+    --unnamed = '󰊠', -- Text to show for unnamed buffers.
+    --newfile = '', -- Text to show for newly created file before first write
+    --}
+    --} },
+    --lualine_x = { 'encoding', 'fileformat', 'filetype' },
+    --lualine_y = { 'progress' },
+    --lualine_z = { 'location' }
+    --},
+    --inactive_sections = {
+    --lualine_a = {},
+    --lualine_b = {},
+    --lualine_c = {},
+    --lualine_x = {},
+    --lualine_y = {},
+    --lualine_z = {}
+    --},
+    --tabline = {},
+    --extensions = {}
+    --}
+    --end
+    --},
     {
         event = "VeryLazy",
         "ibhagwan/fzf-lua",
@@ -122,10 +121,17 @@ return {
         config = function()
             -- calling `setup` is optional for customization
             require("fzf-lua").setup({
-                files = {
+                files      = {
                     fd_opts =
                     [[--color=never --type f --hidden --follow --exclude .git --exclude node_modules ]],
                 },
+                previewers = {
+                    builtin = {
+                        extensions = {
+                            ["jpg"] = { "chafa", "{file}" },
+                        },
+                    }
+                }
             })
         end
     },
@@ -181,30 +187,30 @@ return {
         version = "v2.*",
         build = "make install_jsregexp"
     },
-    "onsails/lspkind.nvim",
-    {
-        event = "VeryLazy",
-        "j-hui/fidget.nvim",
-        opts = {
-            -- options
-        },
-        config = function()
-            require("fidget").setup({
-                progress = {
-                    display = {
-                        done_icon = "",
-                        progress_icon = -- Icon shown when LSP progress tasks are in progress
-                        { pattern = "grow_vertical", period = 1 },
-                    },
-                },
-                notification = {
-                    window = {
-                        winblend = 0,
-                    },
-                },
-            })
-        end,
-    },
+    --"onsails/lspkind.nvim",
+    --{
+    --event = "VeryLazy",
+    --"j-hui/fidget.nvim",
+    --opts = {
+    ---- options
+    --},
+    --config = function()
+    --require("fidget").setup({
+    --progress = {
+    --display = {
+    --done_icon = "",
+    --progress_icon = -- Icon shown when LSP progress tasks are in progress
+    --{ pattern = "grow_vertical", period = 1 },
+    --},
+    --},
+    --notification = {
+    --window = {
+    --winblend = 0,
+    --},
+    --},
+    --})
+    --end,
+    --},
     {
         event = "VeryLazy",
         'stevearc/conform.nvim',
