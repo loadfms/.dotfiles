@@ -12,10 +12,10 @@ return {
     },
     --"terryma/vim-smooth-scroll",
     --'nvim-lua/plenary.nvim',
-    --{
-    --event = "VeryLazy",
-    --'tpope/vim-fugitive',
-    --},
+    {
+        event = "VeryLazy",
+        'tpope/vim-fugitive',
+    },
     {
         event = "VeryLazy",
         'preservim/nerdcommenter',
