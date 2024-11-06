@@ -41,7 +41,6 @@ opt.guicursor = ""
 opt.termguicolors = true
 opt.fillchars = { eob = " " }
 opt.foldlevel = 99
-opt.autochdir = true
 
 --local make_client_capabilities = lsp.protocol.make_client_capabilities
 --function lsp.protocol.make_client_capabilities()
