@@ -1,6 +1,12 @@
 return {
     --theme
-    --{ "rebelot/kanagawa.nvim" },
+    {
+        "sainnhe/gruvbox-material",
+        config = function()
+            vim.g.gruvbox_material_background = 'hard'
+            vim.cmd('colorscheme gruvbox-material')
+        end
+    },
 
     {
         event = "VeryLazy",
