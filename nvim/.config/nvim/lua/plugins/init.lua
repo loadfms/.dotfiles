@@ -26,11 +26,11 @@ return {
         event = "VeryLazy",
         'preservim/nerdcommenter',
     },
-    --{
-    --event = "VeryLazy",
-    --'stevearc/oil.nvim',
-    --opts = {}
-    --}, -- use g. to show hidden files
+    {
+        event = "VeryLazy",
+        'stevearc/oil.nvim',
+        opts = {}
+    }, -- use g. to show hidden files
     {
         event = "VeryLazy",
         'lewis6991/gitsigns.nvim',

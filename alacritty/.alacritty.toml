@@ -11,7 +11,5 @@ save_to_clipboard = true
 dynamic_padding = false
 #startup_mode = "Fullscreen"
 #decorations = "None"
-
-[window.padding]
-x = 10
-y = 10
+opacity = 0.9
+padding = {x=10, y=10}

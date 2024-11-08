@@ -14,7 +14,7 @@ keymap('', '[b', ':bprevious<CR>', ns)
 keymap('', ']q', ':cnext<CR>', ns)
 keymap('', '[q', ':cprevious<CR>', ns)
 
-keymap('n', '-', ':Explore<CR>', ns)
+keymap('n', '-', ':Oil<CR>', ns)
 
 --keymap('n', '<C-p>',
 --"<cmd>lua require'telescope.builtin'.find_files({ find_command = {'rg', '--files', '--hidden', '-g', '!.git' }})<cr>",
