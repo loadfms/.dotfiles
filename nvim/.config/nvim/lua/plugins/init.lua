@@ -1,32 +1,8 @@
 return {
 
     --theme
-    {
-        'aliqyan-21/darkvoid.nvim',
-        config = function()
-            require('darkvoid').setup({
-                transparent = true,
-                glow = true,
-                show_end_of_buffer = true,
-            })
+    { "neanias/everforest-nvim", version = false, lazy = false, priority = 1000 },
 
-            vim.cmd('colorscheme darkvoid')
-        end
-    },
-    --{
-    --"sainnhe/gruvbox-material",
-    --config = function()
-    --vim.g.gruvbox_material_background = 'hard'
-    --vim.cmd('colorscheme gruvbox-material')
-    --end
-    --},
-
-    {
-        'norcalli/nvim-colorizer.lua',
-        config = function()
-            require 'colorizer'.setup()
-        end
-    },
     {
         event = "VeryLazy",
         'github/copilot.vim',

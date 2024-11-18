@@ -1,2 +1,2 @@
---vim.cmd.colorscheme "kanagawa"
---vim.cmd "hi Normal ctermbg=NONE guibg=NONE"
+vim.cmd.colorscheme "everforest"
+vim.cmd "hi Normal ctermbg=NONE guibg=NONE"
