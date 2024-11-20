@@ -9,7 +9,7 @@
     grey:#e0def4;
 
     width: 600;
-    font: "UbuntuMono Nerd Font 13";
+    font: "GohuFont 14 Nerd Font 14";
 }
 
 element-text, element-icon , mode-switcher {
