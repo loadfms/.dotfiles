@@ -1,9 +1,11 @@
 adobe-source-sans-fonts
+aircrack-ng
 alacritty
 arc-gtk-theme
 base
 base-devel
 bat
+bc
 bind
 bluez
 bluez-utils
@@ -33,9 +35,9 @@ iw
 jq
 libappindicator-gtk3
 libpulse
-libva-mesa-driver
 linux
 linux-firmware
+linux-headers
 luarocks
 lxappearance-gtk3
 maim
@@ -48,6 +50,7 @@ npm
 ntfs-3g
 openssh
 os-prober
+pacman-contrib
 pavucontrol
 pcsclite
 pdftk
@@ -62,10 +65,12 @@ python-pip
 ripgrep
 rofi
 rofi-emoji
+rtorrent
 rust
 rxvt-unicode
 spotify-launcher
 stow
+strace
 swaybg
 tldr
 tmux
@@ -76,6 +81,8 @@ ttf-ubuntu-mono-nerd
 unrar
 unzip
 vifm
+virtualbox
+virtualbox-host-modules-arch
 vulkan-radeon
 waybar
 whois

@@ -35,7 +35,7 @@ keymap('n', '<Leader>gP', ':G push<CR>', ns)      -- Close compare buffs
 keymap('n', '<Leader>ga', ':G add .<CR>', ns)     -- Close compare buffs
 keymap('n', '<Leader>da', ':diffget //2<CR>', ns) -- Get content from left side
 keymap('n', '<Leader>dl', ':diffget //3<CR>', ns) -- Get content from right side
-keymap('n', '<Leader>gd', ':Gvdiffsplit!<CR>', ns)
+keymap('n', '<Leader>gc', ':Gvdiffsplit!<CR>', ns)
 keymap('n', '<Leader>gl', ':0GcLog<CR>', ns)
 
 keymap('n', '<C-S-Left>', ':vertical resize +1<CR>', ns)

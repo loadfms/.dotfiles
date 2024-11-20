@@ -1,7 +1,7 @@
 return {
 
     --theme
-    { "neanias/everforest-nvim", version = false, lazy = false, priority = 1000 },
+{ "rose-pine/neovim", name = "rose-pine" },
 
     {
         event = "VeryLazy",
