@@ -1,7 +1,7 @@
 return {
 
     --theme
-{ "rose-pine/neovim", name = "rose-pine" },
+    { "rose-pine/neovim", name = "rose-pine" },
 
     {
         event = "VeryLazy",
@@ -188,30 +188,30 @@ return {
         version = "v2.*",
         build = "make install_jsregexp"
     },
-    --"onsails/lspkind.nvim",
-    --{
-    --event = "VeryLazy",
-    --"j-hui/fidget.nvim",
-    --opts = {
-    ---- options
-    --},
-    --config = function()
-    --require("fidget").setup({
-    --progress = {
-    --display = {
-    --done_icon = "",
-    --progress_icon = -- Icon shown when LSP progress tasks are in progress
-    --{ pattern = "grow_vertical", period = 1 },
-    --},
-    --},
-    --notification = {
-    --window = {
-    --winblend = 0,
-    --},
-    --},
-    --})
-    --end,
-    --},
+    "onsails/lspkind.nvim",
+    {
+        event = "VeryLazy",
+        "j-hui/fidget.nvim",
+        opts = {
+            -- options
+        },
+        config = function()
+            require("fidget").setup({
+                progress = {
+                    display = {
+                        done_icon = "",
+                        progress_icon = -- Icon shown when LSP progress tasks are in progress
+                        { pattern = "grow_vertical", period = 1 },
+                    },
+                },
+                notification = {
+                    window = {
+                        winblend = 0,
+                    },
+                },
+            })
+        end,
+    },
     {
         event = "VeryLazy",
         'stevearc/conform.nvim',
