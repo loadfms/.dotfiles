@@ -1,6 +1,6 @@
 [colors.primary]
 background = '#0e0024'
-foreground = '#D7D5DB'
+foreground = '#ffffff'
 
 [colors.normal]
 black =   '#0e0024'
