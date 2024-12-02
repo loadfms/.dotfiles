@@ -1,7 +1,7 @@
 return {
 
     --theme
-    { "rose-pine/neovim", name = "rose-pine" },
+    --{ "rose-pine/neovim", name = "rose-pine" },
 
     {
         event = "VeryLazy",
