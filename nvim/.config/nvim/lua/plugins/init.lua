@@ -1,7 +1,7 @@
 return {
 
     --theme
-{ "rose-pine/neovim", name = "rose-pine" },
+    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
 
     {
         event = "VeryLazy",
@@ -16,6 +16,11 @@ return {
     {
         event = "VeryLazy",
         'tpope/vim-fugitive',
+    },
+
+    {
+        event = "VeryLazy",
+        'tpope/vim-abolish'
     },
     {
         event = "VeryLazy",
