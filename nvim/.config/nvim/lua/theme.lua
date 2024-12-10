@@ -1,2 +1,2 @@
-vim.cmd.colorscheme "rose-pine-main"
+vim.cmd.colorscheme "gruvbox"
 vim.cmd "hi Normal ctermbg=NONE guibg=NONE"
