@@ -48,6 +48,7 @@ netctl
 noto-fonts-emoji
 npm
 ntfs-3g
+nvidia-open
 openssh
 os-prober
 pacman-contrib
