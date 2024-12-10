@@ -1,12 +1,12 @@
 * {
-    bg-col:#282828;
-    bg-col-light:#282828;
-    border-col:#282828;
-    selected-col:#282828;
-    blue:#7daea3;
-    fg-col:#7daea3;
-    fg-col2:#ea6962;
-    grey:#dfbf8e;
+    bg-col:#282a36;
+    bg-col-light:#282a36;
+    border-col:#282a36;
+    selected-col:#282a36;
+    blue:#bd93f9;
+    fg-col:#bd93f9;
+    fg-col2:#ff5555;
+    grey:#f8f8f2;
 
     width: 600;
     font: "GohuFont 14 Nerd Font 14";

@@ -1,4 +1,5 @@
-import = ["~/.alacrittythemes/everforest.toml", "~/.alacrittythemes/font.toml"]
+import = ["~/.alacrittythemes/everforest.toml"]
+
 live_config_reload = true
 
 [env]
@@ -13,3 +14,30 @@ dynamic_padding = false
 #decorations = "None"
 opacity = 0.9
 padding = {x=10, y=10}
+
+[font]
+size=14.0
+
+[font.bold]
+family = "GohuFont 14 Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "GohuFont 14 Nerd Font"
+style = "Italic"
+
+[font.offset]
+x = 0
+y = 2
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "GohuFont 14 Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "GohuFont 14 Nerd Font"
+style = "Regular"

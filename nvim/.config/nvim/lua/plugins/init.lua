@@ -1,7 +1,8 @@
 return {
 
     --theme
-    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
+    { "Mofiqul/dracula.nvim" },
+    { "Mofiqul/dracula.nvim" },
 
     {
         event = "VeryLazy",
