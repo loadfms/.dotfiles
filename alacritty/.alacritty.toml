@@ -1,7 +1,3 @@
-import = ["~/.alacrittythemes/everforest.toml"]
-
-live_config_reload = true
-
 [env]
 TERM = "xterm-256color"
 
@@ -12,32 +8,36 @@ save_to_clipboard = true
 dynamic_padding = false
 #startup_mode = "Fullscreen"
 #decorations = "None"
-opacity = 0.9
+opacity = 0.95
 padding = {x=10, y=10}
 
+[general]
+live_config_reload = true
+import = ["~/.alacrittythemes/dracula.toml"]
+
 [font]
-size=14.0
+size = 16.0
 
 [font.bold]
-family = "GohuFont 14 Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "GohuFont 14 Nerd Font"
+family = "Iosevka Nerd Font"
 style = "Italic"
+
+[font.italic]
+family = "Iosevka Nerd Font"
+style = "Italic"
+
+[font.normal]
+family = "Iosevka Nerd Font"
+style = "Regular"
 
 [font.offset]
 x = 0
-y = 2
+y = 0
 
 [font.glyph_offset]
 x = 0
 y = 0
-
-[font.italic]
-family = "GohuFont 14 Nerd Font"
-style = "Italic"
-
-[font.normal]
-family = "GohuFont 14 Nerd Font"
-style = "Regular"
