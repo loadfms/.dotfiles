@@ -14,11 +14,11 @@ KUBECONFIG=~/.kube/config
 ###############################################################
 # => Startx
 ###############################################################
-if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && uname | rg -q "Linux"; then
-    if ! startx; then
-        echo "Error occurred while running startx"
-    fi
-fi
+#if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ] && uname | rg -q "Linux"; then
+    #if ! startx; then
+        #echo "Error occurred while running startx"
+    #fi
+#fi
 
 ###############################################################
 # => Start tmux

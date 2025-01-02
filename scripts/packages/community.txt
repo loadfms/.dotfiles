@@ -14,6 +14,7 @@ composer
 delve
 dialog
 discord
+dkms
 dmidecode
 docker
 dosfstools
@@ -21,6 +22,7 @@ dunst
 efibootmgr
 eza
 feh
+firefox
 fontforge
 fzf
 gimp
@@ -28,11 +30,13 @@ git
 github-cli
 grub
 gst-plugin-pipewire
+hyprland
 i3-wm
 inetutils
 intel-ucode
 iw
 jq
+lib32-nvidia-utils
 libappindicator-gtk3
 libpulse
 linux
@@ -41,10 +45,12 @@ linux-headers
 luarocks
 lxappearance-gtk3
 maim
+mokutil
 ncdu
 neofetch
 neovim
 netctl
+networkmanager
 noto-fonts-emoji
 npm
 ntfs-3g
@@ -64,8 +70,8 @@ polybar
 procs
 python-pip
 ripgrep
-rofi
 rofi-emoji
+rofi-wayland
 rtorrent
 rust
 rxvt-unicode
@@ -81,6 +87,7 @@ ttf-hack-nerd
 ttf-ubuntu-mono-nerd
 unrar
 unzip
+usb_modeswitch
 vifm
 virtualbox
 virtualbox-host-modules-arch
