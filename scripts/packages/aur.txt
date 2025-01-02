@@ -8,4 +8,5 @@ rofi-greenclip
 slack-desktop
 spicetify-cli
 spotify-player
+wbg
 yay
