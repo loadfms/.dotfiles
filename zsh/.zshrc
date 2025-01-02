@@ -20,6 +20,16 @@ KUBECONFIG=~/.kube/config
     #fi
 #fi
 
+
+###############################################################
+# => Hyprland
+###############################################################
+if [[ $(hyprctl monitors) == "HYPRLAND_INSTANCE_SIGNATURE not set! (is hyprland running?)" ]]; then
+  if ! Hyprland; then
+        echo "Error occurred while running Hyprland"
+    fi
+fi
+
 ###############################################################
 # => Start tmux
 ###############################################################
