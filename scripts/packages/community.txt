@@ -25,7 +25,6 @@ feh
 firefox
 fontforge
 fzf
-gimp
 git
 github-cli
 grub
@@ -61,7 +60,6 @@ pacman-contrib
 pavucontrol
 pcsclite
 pdftk
-picom
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -84,6 +82,7 @@ tmux
 ttf-droid
 ttf-firacode-nerd
 ttf-hack-nerd
+ttf-iosevka-nerd
 ttf-ubuntu-mono-nerd
 unrar
 unzip

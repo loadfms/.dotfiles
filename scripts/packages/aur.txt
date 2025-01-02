@@ -2,7 +2,6 @@ adwaita-dark
 aws-cdk
 b43-firmware
 cava
-cider
 cider-polybar
 pokemon-colorscripts-git
 rofi-greenclip
