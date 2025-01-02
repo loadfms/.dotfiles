@@ -24,7 +24,7 @@ KUBECONFIG=~/.kube/config
 ###############################################################
 # => Hyprland
 ###############################################################
-if [[ $(hyprctl monitors) == "HYPRLAND_INSTANCE_SIGNATURE not set! (is hyprland running?)" ]]; then
+if uname | rg -q "Linux" && [[ $(hyprctl monitors) == "HYPRLAND_INSTANCE_SIGNATURE not set! (is hyprland running?)" ]]; then
   if ! Hyprland; then
         echo "Error occurred while running Hyprland"
     fi
