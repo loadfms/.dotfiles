@@ -13,7 +13,7 @@ padding = {x=10, y=10}
 
 [general]
 live_config_reload = true
-import = ["~/.alacrittythemes/dracula.toml"]
+import = ["~/.alacrittythemes/catppuccin.toml", "~/.alacrittythemes/font.toml"]
 
 [font]
 size = 14.0

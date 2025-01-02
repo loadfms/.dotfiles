@@ -1,8 +1,8 @@
 return {
 
     --theme
-    { "Mofiqul/dracula.nvim" },
-    { "norcalli/nvim-colorizer.lua" },
+    { "catppuccin/nvim",             name = "catppuccin",                                 priority = 1000 },
+    { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
 
     {
         event = "VeryLazy",
