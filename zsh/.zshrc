@@ -87,7 +87,7 @@ zplugin light agkozak/zsh-z
 ###############################################################
 # => Git
 ###############################################################
-ZSH_THEME_GIT_PROMPT_PREFIX="on  "
+ZSH_THEME_GIT_PROMPT_PREFIX="on   "
 ZSH_THEME_GIT_PROMPT_SUFFIX=" "
 ZSH_THEME_GIT_PROMPT_DIRTY=" "
 ZSH_THEME_GIT_PROMPT_CLEAN=""
