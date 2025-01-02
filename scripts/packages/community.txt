@@ -95,6 +95,7 @@ waybar
 whois
 wireless_tools
 wireplumber
+wl-clipboard
 wpa_supplicant
 xclip
 xdotool

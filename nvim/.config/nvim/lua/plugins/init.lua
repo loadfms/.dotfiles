@@ -2,7 +2,7 @@ return {
 
     --theme
     { "Mofiqul/dracula.nvim" },
-    { "Mofiqul/dracula.nvim" },
+    { "norcalli/nvim-colorizer.lua" },
 
     {
         event = "VeryLazy",
