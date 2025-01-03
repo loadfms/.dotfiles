@@ -128,7 +128,6 @@ alias prj='list_projects'
 alias mini-chrome="google-chrome-stable --new-window --app="
 alias cgpt='git commit -m "$(commitgpt)"'
 alias awslogs='aws_logs'
-alias connect-wifi='sudo wpa_supplicant -B -i wlp0s20f0u4 -c /etc/wpa_supplicant/wpa_supplicant.conf'
 alias ssm-gen='sh ~/.dotfiles/scripts/ssm_gen.sh'
 alias ssm-get='sh ~/.dotfiles/scripts/get_ssm.sh'
 
