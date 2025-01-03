@@ -2,7 +2,7 @@
 {
     // "layer": "top", // Waybar at top layer
     // "position": "bottom", // Waybar position (top|bottom|left|right)
-    "height": 30, // Waybar height (to be removed for auto height)
+    //"height": 30, // Waybar height (to be removed for auto height)
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
@@ -26,9 +26,9 @@
         "on-click": "activate",
         "format": "{icon}",
         "format-icons": {
-            "active": "<span color='#a6da95'></span>",
-            "empty": "<span></span>",
-            "persistent": "<span></span>"
+            "active": "<span color='#9fab62'></span>",
+            "empty": "",
+            "persistent": ""
         },
         "persistent-workspaces": {
             "*": 4
@@ -41,8 +41,7 @@
         "format": "󰥔  {:%H:%M}"
     },
     "cpu": {
-        "format": "  {usage}%",
-        "tooltip": false
+        "format": "  {usage}%"
     },
     "memory": {
         "format": "  {}%"
@@ -59,12 +58,13 @@
     },
     "network": {
         // "interface": "wlp2*", // (Optional) To force the use of this interface
-        "format-wifi": "  {ipaddr}/{cidr}",
+        //"format-wifi": "  {ipaddr}/{cidr}",
+        "format-wifi": " ",
         "format-ethernet": "{ipaddr}/{cidr}",
-        "tooltip-format": "{essid}",
+        "tooltip-format": "{essid} {ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP)",
         "format-disconnected": "disconnected",
-        "format-alt": "  {essid} ({signalStrength}%)"
+        //"format-alt": "  {essid} ({signalStrength}%)"
     },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float

@@ -3,12 +3,13 @@
 * {
   /* `otf-font-awesome` is required to be installed for icons */
   font-family: Iosevka Nerd Font;
-  font-size: 12px;
+  font-size: 13px;
   color: @text;
+  padding: 0;
+  margin: 0;
 }
 
 window#waybar {
-  /* you can also GTK3 CSS functions! */
   background-color: shade(@base, 0.9);
 }
 
@@ -16,56 +17,12 @@ window#waybar.hidden {
   opacity: 0.2;
 }
 
-/*
-window#waybar.empty {
-    background-color: transparent;
-}
-window#waybar.solo {
-    background-color: #FFFFFF;
-}
-*/
-
-/*window#waybar.termite {*/
-/*background-color: #3f3f3f;*/
-/*}*/
-
-/*window#waybar.chromium {*/
-/*background-color: #000000;*/
-/*border: none;*/
-/*}*/
-
-/* you can set a style on hover for any module like this */
-#pulseaudio:hover {
-  background-color: #a37800;
-}
-
 #workspaces {
   padding: 0 0.5rem;
   background-color: @surface0;
   color: @text;
-  margin: 0.25rem;
+  margin: 0.25rem 0;
   border-radius: 0.5rem;
-}
-
-#workspaces button {
-}
-
-#workspaces button.empty {
-  color: @overlay0;
-}
-
-#workspaces button.visible {
-  color: @blue;
-}
-
-#workspaces button.active {
-  color: #ff0000;
-}
-
-#workspaces button.urgent {
-  background-color: @red;
-  border-radius: 1rem;
-  color: @text;
 }
 
 #mode {
@@ -337,6 +294,6 @@ label:focus {
 
 #custom-logo {
   color: @text;
-  margin-left: 10px;
+  /*margin-left: 10px;*/
   padding: 0 1rem;
 }
