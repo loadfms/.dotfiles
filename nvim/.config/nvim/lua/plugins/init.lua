@@ -5,7 +5,6 @@ return {
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
 
     {
-        event = "VeryLazy",
         'github/copilot.vim',
         config = function()
             vim.g.copilot_no_tab_map = true
@@ -15,25 +14,20 @@ return {
     --"terryma/vim-smooth-scroll",
     --'nvim-lua/plenary.nvim',
     {
-        event = "VeryLazy",
         'tpope/vim-fugitive',
     },
 
     {
-        event = "VeryLazy",
         'tpope/vim-abolish'
     },
     {
-        event = "VeryLazy",
         'preservim/nerdcommenter',
     },
     {
-        event = "VeryLazy",
         'stevearc/oil.nvim',
         opts = {}
     }, -- use g. to show hidden files
     {
-        event = "VeryLazy",
         'lewis6991/gitsigns.nvim',
         config = function()
             require('gitsigns').setup {
@@ -142,7 +136,6 @@ return {
         end
     },
     {
-        event = "VeryLazy",
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
         config = function()
@@ -195,7 +188,6 @@ return {
     },
     "onsails/lspkind.nvim",
     {
-        event = "VeryLazy",
         "j-hui/fidget.nvim",
         opts = {
             -- options
@@ -218,7 +210,6 @@ return {
         end,
     },
     {
-        event = "VeryLazy",
         'stevearc/conform.nvim',
         opts = {},
         config = function()
