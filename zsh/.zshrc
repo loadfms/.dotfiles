@@ -115,6 +115,7 @@ alias git-oops="git commit --amend --no-edit"
 alias git-clean-branches="git branch --merged | grep -v \* | xargs git branch -D; git remote prune origin;"
 alias git-undo="git reset HEAD~1 --soft"
 alias git-lastag="git describe --abbrev=0 --tags"
+alias git-tag="git_release"
 alias vim=nvim
 alias cpf="curl https://www.4devs.com.br/ferramentas_online.php --data-raw 'acao=gerar_cpf&pontuacao=S&cpf_estado=' -s | cut -d '%' -f 1 | pbcopy -selection clipboard"
 alias dotsync="sh ~/.dotfiles/scripts/revive-packages.sh && git -C ~/.dotfiles add . && git -C ~/.dotfiles commit -m 'feat: update' && git -C ~/.dotfiles push origin main"
@@ -158,6 +159,13 @@ aws_logs() {
 if uname | rg -q "Linux"; then
     alias cpf="curl https://www.4devs.com.br/ferramentas_online.php --data-raw 'acao=gerar_cpf&pontuacao=S&cpf_estado=' -s | cut -d '%' -f 1 | xclip -selection clipboard"
 fi
+
+git_release() {
+    latest_tag=$(git -C . describe --abbrev=0 --tags)
+    IFS=. read -r major minor patch <<< $latest_tag
+    new_tag="$major.$minor.$((patch + 1))"
+    git -C . tag $new_tag && git -C . push origin $new_tag
+}
 
 # improve paste speed
 autoload -Uz bracketed-paste-magic
