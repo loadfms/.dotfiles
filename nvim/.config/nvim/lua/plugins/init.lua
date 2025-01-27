@@ -11,8 +11,10 @@ return {
             vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
         end
     },
-    --"terryma/vim-smooth-scroll",
-    --'nvim-lua/plenary.nvim',
+    {
+        "OXY2DEV/markview.nvim",
+        lazy = false
+    },
     {
         'tpope/vim-fugitive',
     },
