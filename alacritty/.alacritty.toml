@@ -13,7 +13,7 @@ padding = {x=10, y=10}
 
 [general]
 live_config_reload = true
-import = ["~/.alacrittythemes/gruvbox-material.toml"]
+import = ["~/.alacrittythemes/base2tone_suburb_dark.toml"]
 
 [font]
 size = 15.0
