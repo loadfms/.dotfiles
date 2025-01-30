@@ -116,6 +116,7 @@ alias git-clean-branches="git branch --merged | grep -v \* | xargs git branch -D
 alias git-undo="git reset HEAD~1 --soft"
 alias git-lastag="git describe --abbrev=0 --tags"
 alias git-tag="git_release"
+alias git-revert="sh ~/.dotfiles/scripts/git-revert.sh"
 alias vim=nvim
 alias cpf="curl https://www.4devs.com.br/ferramentas_online.php --data-raw 'acao=gerar_cpf&pontuacao=S&cpf_estado=' -s | cut -d '%' -f 1 | pbcopy -selection clipboard"
 alias dotsync="sh ~/.dotfiles/scripts/revive-packages.sh && git -C ~/.dotfiles add . && git -C ~/.dotfiles commit -m 'feat: update' && git -C ~/.dotfiles push origin main"
