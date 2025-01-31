@@ -145,7 +145,7 @@ label:focus {
 
 #network.disconnected {
   padding: 0 1rem;
-  background-color: @rosewater;
+  background-color: @red;
   color: @text;
   margin: 0.25rem;
   border-radius: 0.5rem;
