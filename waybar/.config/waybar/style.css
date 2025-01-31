@@ -1,4 +1,4 @@
-@import "./gruvbox-material.css";
+@import "./base2tone_suburb_dark.css";
 
 * {
   /* `otf-font-awesome` is required to be installed for icons */
@@ -10,7 +10,7 @@
 }
 
 window#waybar {
-  background-color: shade(@base, 0.9);
+  background-color: shade(@base, 0.8);
 }
 
 window#waybar.hidden {

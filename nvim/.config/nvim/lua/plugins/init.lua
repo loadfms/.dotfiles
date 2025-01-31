@@ -1,7 +1,7 @@
 return {
 
     --theme
-    { "sainnhe/gruvbox-material" },
+
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
     { "atelierbram/Base2Tone-nvim" },
 

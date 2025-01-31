@@ -2,8 +2,8 @@
 #
 #
 [urgency_normal]
-    background = "#282828"
-    foreground = "#d4be98"
+    background = "#1e202f"
+    foreground = "#878ba6"
     timeout = 3
     # Icon for notifications with normal urgency, uncomment to enable
     #new_icon = bell
