@@ -3,37 +3,34 @@ return {
     --theme
     { "sainnhe/gruvbox-material" },
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
+    { "atelierbram/Base2Tone-nvim" },
 
     {
-        event = "VeryLazy",
         'github/copilot.vim',
         config = function()
             vim.g.copilot_no_tab_map = true
             vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
         end
     },
-    --"terryma/vim-smooth-scroll",
-    --'nvim-lua/plenary.nvim',
     {
-        event = "VeryLazy",
+        "OXY2DEV/markview.nvim",
+        lazy = false
+    },
+    {
         'tpope/vim-fugitive',
     },
 
     {
-        event = "VeryLazy",
         'tpope/vim-abolish'
     },
     {
-        event = "VeryLazy",
         'preservim/nerdcommenter',
     },
     {
-        event = "VeryLazy",
         'stevearc/oil.nvim',
         opts = {}
     }, -- use g. to show hidden files
     {
-        event = "VeryLazy",
         'lewis6991/gitsigns.nvim',
         config = function()
             require('gitsigns').setup {
@@ -78,53 +75,59 @@ return {
             }
         end
     },
-    --{
-    --event = "VeryLazy",
-    --'nvim-lualine/lualine.nvim',
-    --config = function()
-    --require('lualine').setup {
-    --options = {
-    --icons_enabled = true,
-    --theme = 'auto',
-    --component_separators = { left = '', right = '' },
-    --section_separators = { left = '', right = '' },
-    --disabled_filetypes = {},
-    --always_divide_middle = false,
-    --globalstatus = true,
-    --},
-    --sections = {
-    --lualine_a = { 'mode' },
-    --lualine_b = { 'branch', { 'diagnostics', always_visible = true } },
-    --lualine_c = { { 'filename', path = 1, file_status = true, newfile_status = false,
-    --symbols = {
-    --modified = '●', -- Text to show when the file is modified.
-    --readonly = '', -- Text to show when the file is non-modifiable or readonly.
-    --unnamed = '󰊠', -- Text to show for unnamed buffers.
-    --newfile = '', -- Text to show for newly created file before first write
-    --}
-    --} },
-    --lualine_x = { 'encoding', 'fileformat', 'filetype' },
-    --lualine_y = { 'progress' },
-    --lualine_z = { 'location' }
-    --},
-    --inactive_sections = {
-    --lualine_a = {},
-    --lualine_b = {},
-    --lualine_c = {},
-    --lualine_x = {},
-    --lualine_y = {},
-    --lualine_z = {}
-    --},
-    --tabline = {},
-    --extensions = {}
-    --}
-    --end
-    --},
     {
         event = "VeryLazy",
+        'nvim-lualine/lualine.nvim',
+        config = function()
+            require('lualine').setup {
+                options = {
+                    icons_enabled = true,
+                    theme = 'auto',
+                    component_separators = { left = '', right = '' },
+                    section_separators = { left = '', right = '' },
+                    disabled_filetypes = {},
+                    always_divide_middle = false,
+                    globalstatus = true,
+                },
+                sections = {
+                    lualine_a = { 'mode' },
+                    lualine_b = { 'branch' },
+                    lualine_c = { { 'filename', path = 1, file_status = true, newfile_status = false,
+                        symbols = {
+                            modified = '●', -- Text to show when the file is modified.
+                            readonly = '', -- Text to show when the file is non-modifiable or readonly.
+                            unnamed = '󰊠', -- Text to show for unnamed buffers.
+                            newfile = '', -- Text to show for newly created file before first write
+                        }
+                    } },
+                    lualine_x = { 'encoding', 'fileformat', 'filetype' },
+                    lualine_y = { 'progress' },
+                    lualine_z = { 'location' }
+                },
+                inactive_sections = {
+                    lualine_a = {},
+                    lualine_b = {},
+                    lualine_c = {},
+                    lualine_x = {},
+                    lualine_y = {},
+                    lualine_z = {}
+                },
+                tabline = {},
+                extensions = {}
+            }
+        end
+    },
+    {
         "ibhagwan/fzf-lua",
         -- optional for icon support
         dependencies = { "nvim-tree/nvim-web-devicons" },
+        opts = {
+            previewers = {
+                builtin = {
+                    syntax_limit_b = 1024 * 100, -- 100KB
+                },
+            },
+        },
         config = function()
             -- calling `setup` is optional for customization
             require("fzf-lua").setup({
@@ -143,7 +146,6 @@ return {
         end
     },
     {
-        event = "VeryLazy",
         'nvim-treesitter/nvim-treesitter',
         build = ':TSUpdate',
         config = function()
@@ -196,7 +198,6 @@ return {
     },
     "onsails/lspkind.nvim",
     {
-        event = "VeryLazy",
         "j-hui/fidget.nvim",
         opts = {
             -- options
@@ -219,7 +220,6 @@ return {
         end,
     },
     {
-        event = "VeryLazy",
         'stevearc/conform.nvim',
         opts = {},
         config = function()
