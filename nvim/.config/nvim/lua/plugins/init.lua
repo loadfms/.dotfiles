@@ -1,7 +1,6 @@
 return {
 
     --theme
-
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
     { "atelierbram/Base2Tone-nvim" },
 
@@ -195,8 +194,8 @@ return {
                 },
                 format_on_save = {
                     -- These options will be passed to conform.format()
+                    lsp_format = "fallback",
                     timeout_ms = 5000,
-                    lsp_fallback = true,
                 },
             })
         end
