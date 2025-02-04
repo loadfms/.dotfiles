@@ -43,7 +43,7 @@ keymap('n', '<C-S-Right>', ':vertical resize -1<CR>', ns)
 
 keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', ns)
 keymap('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', ns)
-keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', ns)
+--keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', ns)
 keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', ns)
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', ns)
 keymap('n', '<Leader>xx', '<cmd>lua vim.diagnostic.setqflist()<CR>', ns)
