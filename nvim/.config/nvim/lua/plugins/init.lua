@@ -66,7 +66,7 @@ return {
                 max_file_length              = 40000, -- Disable if file is longer than this (in lines)
                 preview_config               = {
                     -- Options passed to nvim_open_win
-                    border = 'single',
+                    border = 'rounded',
                     style = 'minimal',
                     relative = 'cursor',
                     row = 0,
@@ -180,45 +180,7 @@ return {
             }
         end,
     },
-    {
-        "williamboman/mason.nvim",
-        build = ":MasonUpdate",
-    },
-    'williamboman/mason-lspconfig.nvim',
     'neovim/nvim-lspconfig',
-    'hrsh7th/nvim-cmp',
-    'hrsh7th/cmp-buffer',
-    'hrsh7th/cmp-path',
-    'hrsh7th/cmp-nvim-lsp',
-    'hrsh7th/cmp-nvim-lsp-signature-help',
-    {
-        "L3MON4D3/LuaSnip",
-        version = "v2.*",
-        build = "make install_jsregexp"
-    },
-    "onsails/lspkind.nvim",
-    {
-        "j-hui/fidget.nvim",
-        opts = {
-            -- options
-        },
-        config = function()
-            require("fidget").setup({
-                progress = {
-                    display = {
-                        done_icon = "",
-                        progress_icon = -- Icon shown when LSP progress tasks are in progress
-                        { pattern = "grow_vertical", period = 1 },
-                    },
-                },
-                notification = {
-                    window = {
-                        winblend = 0,
-                    },
-                },
-            })
-        end,
-    },
     {
         'stevearc/conform.nvim',
         opts = {},
@@ -242,5 +204,72 @@ return {
     {
         "sphamba/smear-cursor.nvim",
         opts = {},
+    },
+    {
+        'saghen/blink.cmp',
+        -- optional: provides snippets for the snippet source
+        dependencies = 'rafamadriz/friendly-snippets',
+
+        -- use a release tag to download pre-built binaries
+        version = '*',
+        -- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
+        -- build = 'cargo build --release',
+        -- If you use nix, you can build from source using latest nightly rust with:
+        -- build = 'nix run .#build-plugin',
+
+        ---@module 'blink.cmp'
+        ---@type blink.cmp.Config
+        opts = {
+            -- 'default' for mappings similar to built-in completion
+            -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
+            -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
+            -- See the full "keymap" documentation for information on defining your own keymap.
+            keymap = {
+                preset = 'enter',
+                cmdline = {
+                    preset = 'default'
+                },
+                ['<Tab>'] = { 'select_next', 'fallback' },
+                ['<S-Tab>'] = { 'select_prev', 'fallback' },
+                ['<Up>'] = { 'snippet_backward', 'fallback' },
+                ['<Down>'] = { 'snippet_forward', 'fallback' },
+            },
+
+            appearance = {
+                -- Sets the fallback highlight groups to nvim-cmp's highlight groups
+                -- Useful for when your theme doesn't support blink.cmp
+                -- Will be removed in a future release
+                use_nvim_cmp_as_default = true,
+                -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+                -- Adjusts spacing to ensure icons are aligned
+                nerd_font_variant = 'mono',
+            },
+            completion = {
+                menu = {
+                    --border = "rounded",
+                    --winblend = 0,
+                },
+                documentation = {
+                    window = {
+                        border = "rounded",
+                        winblend = 0,
+                    },
+                },
+            },
+            signature = {
+                enabled = true,
+                window = {
+                    border = "rounded",
+                    winblend = 0,
+                },
+            },
+
+            -- Default list of enabled providers defined so that you can extend it
+            -- elsewhere in your config, without redefining it, due to `opts_extend`
+            sources = {
+                default = { 'lsp', 'path', 'snippets', 'buffer' },
+            },
+        },
+        opts_extend = { "sources.default" }
     }
 }
