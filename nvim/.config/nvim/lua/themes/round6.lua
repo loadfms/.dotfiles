@@ -80,6 +80,7 @@ M.setup = function()
         QuickFixLine = { bg = colors.keyword },
         DiagnosticWarn = { fg = colors.warning2 },
         DiagnosticError = { fg = colors.warning, bg = colors.bg2 },
+        GitSignsAdd = { fg = colors.func },
     }
 
     -- Apply the highlight groups
