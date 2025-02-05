@@ -1,10 +1,6 @@
 return {
 
     --theme
-    {
-        "rktjmp/lush.nvim",
-        lazy = false, -- Load it immediately
-    },
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
     { "atelierbram/Base2Tone-nvim" },
 
@@ -56,7 +52,7 @@ return {
                 attach_to_untracked          = false,
                 current_line_blame           = true, -- Toggle with `:Gitsigns toggle_current_line_blame`
                 current_line_blame_opts      = {
-                    virt_text = true,
+                    virt_text = false,
                     virt_text_pos = 'eol', -- 'eol' | 'overlay' | 'right_align'
                     delay = 1000,
                     ignore_whitespace = false,
@@ -81,6 +77,7 @@ return {
     {
         event = "VeryLazy",
         'nvim-lualine/lualine.nvim',
+        dependencies = { 'arkav/lualine-lsp-progress' },
         config = function()
             require('lualine').setup {
                 options = {
@@ -103,7 +100,7 @@ return {
                             newfile = '', -- Text to show for newly created file before first write
                         }
                     } },
-                    lualine_x = { 'encoding', 'fileformat', 'filetype' },
+                    lualine_x = { 'encoding', 'fileformat', 'filetype', 'lsp_progress' },
                     lualine_y = { 'progress' },
                     lualine_z = { 'location' }
                 },

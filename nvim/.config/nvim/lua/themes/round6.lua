@@ -63,7 +63,7 @@ M.setup = function()
         Identifier = { fg = colors.type, italic = true },
         Keyword = { fg = colors.keyword, bold = true },
         Label = { fg = colors.var },
-        NonText = { fg = colors.bg4, bg = colors.bg2 },
+        NonText = { fg = colors.comment, bg = colors.bg2 },
         Number = { fg = colors.const },
         Operator = { fg = colors.keyword },
         PreProc = { fg = colors.keyword },
@@ -79,7 +79,7 @@ M.setup = function()
         Underlined = { underline = true },
         QuickFixLine = { bg = colors.keyword },
         DiagnosticWarn = { fg = colors.warning2 },
-        DiagnosticError = { fg = colors.warning },
+        DiagnosticError = { fg = colors.warning, bg = colors.bg2 },
     }
 
     -- Apply the highlight groups
