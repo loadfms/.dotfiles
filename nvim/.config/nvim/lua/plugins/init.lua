@@ -1,6 +1,10 @@
 return {
 
     --theme
+    {
+        "rktjmp/lush.nvim",
+        lazy = false, -- Load it immediately
+    },
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
     { "atelierbram/Base2Tone-nvim" },
 

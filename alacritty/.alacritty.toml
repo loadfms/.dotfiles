@@ -13,10 +13,10 @@ padding = {x=10, y=10}
 
 [general]
 live_config_reload = true
-import = ["~/.alacrittythemes/base2tone_suburb_dark.toml"]
+import = ["~/.alacrittythemes/round6.toml"]
 
 [font]
-size = 13.0
+size = 14.0
 
 [font.bold]
 family = "Iosevka Nerd Font"
