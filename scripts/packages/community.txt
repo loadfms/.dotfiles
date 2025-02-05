@@ -42,6 +42,7 @@ libpulse
 linux
 linux-firmware
 linux-headers
+lua-language-server
 luarocks
 lxappearance-gtk3
 maim
