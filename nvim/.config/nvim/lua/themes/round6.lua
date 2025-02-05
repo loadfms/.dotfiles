@@ -4,7 +4,7 @@ M.setup = function()
     -- Define reusable color variables
     local colors = {
         bg = "#080808",
-        fg = "#ffffff",
+        fg = "#F8F8FF",
         fg2 = "#f5f5f5",
         fg3 = "#ebebeb",
         fg4 = "#e0e0e0",

@@ -57,7 +57,7 @@ return_status() {
 }
 
 git_info(){
-    echo "%B%{$fg[yellow]%}$(_omz_git_prompt_info)%{$reset_color%}%b"
+    echo "%B%{$fg[white]%}$(_omz_git_prompt_info)%{$reset_color%}%b"
 }
 
 PROMPT='

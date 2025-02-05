@@ -1,39 +1,17 @@
 [colors.primary]
 background = '#080808'  # Pure black for contrast
-foreground = '#ffffff'  # White for higher contrast
+foreground = '#F8F8FF'  # White for higher contrast
 
 [colors.normal]
 black   = '#080808'  # Pure black for deep contrast
 red     = '#ed1b76'  # Bright pink (keyword, warning)
-green   = '#ffffff'  # White to match the aesthetic
+green   = '#F8F8FF'  # White to match the aesthetic
 yellow  = '#f44786'  # Softer pink for accents (builtin, warning2)
 blue    = '#f15599'  # White for text contrast
 magenta = '#ed1b76'  # Stronger neon pink (keyword, warning)
-cyan    = '#ffffff'  # Pure white for strong contrast
-white   = '#ffffff'  # Pure white for strong contrast
+cyan    = '#F8F8FF'  # Pure white for strong contrast
+white   = '#F8F8FF'  # Pure white for strong contrast
 
 [colors.cursor]
 text   = '#000000'  # Black text for cursor
 cursor = '#ed1b76'  # Matching bright pink for cursor
-
-
-
-
-        #bg = "#080808",
-        #fg = "#ffffff",
-        #fg2 = "#ebebeb",
-        #fg3 = "#d6d6d6",
-        #fg4 = "#c2c2c2",
-        #bg2 = "#1c1c1c",
-        #bg3 = "#303030",
-        #bg4 = "#434343",
-        #keyword = "#ed1b76",
-        #builtin = "#f44786",
-        #const = "#ffffff",
-        #comment = "#9f9f9f",
-        #func = "#F7A1C6",
-        #str = "#ffffff",
-        #type = "#f15599",
-        #var = "#ffffff",
-        #warning = "#ed1b76",
-        #warning2 = "#f44786"

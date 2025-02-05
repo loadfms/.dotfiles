@@ -75,6 +75,7 @@ rtorrent
 rust
 rxvt-unicode
 spotify-launcher
+spotify-player
 stow
 strace
 swaybg
