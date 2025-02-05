@@ -178,5 +178,5 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 ###############################################################
 #pokemon-colorscripts -r 1 --no-title
 
-sh ~/.dotfiles/scripts/set_secrets.sh
+source ~/.dotfiles/scripts/set_secrets.sh
 neofetch

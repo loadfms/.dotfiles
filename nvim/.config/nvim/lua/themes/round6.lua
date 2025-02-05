@@ -14,7 +14,7 @@ M.setup = function()
         keyword = "#ed1b76",
         builtin = "#f44786",
         const = "#ffffff",
-        comment = "#434343",
+        comment = "#999999",
         func = "#f7a1c6",
         str = "#ffffff",
         type = "#f15599",
@@ -46,9 +46,6 @@ M.setup = function()
         Directory = { fg = colors.const },
         Folded = { fg = colors.fg4, bg = colors.bg },
         WildMenu = { fg = colors.str, bg = colors.bg },
-
-        -- Define more highlight groups...
-
         Boolean = { fg = colors.const },
         Character = { fg = colors.const },
         Comment = { fg = colors.comment },
@@ -79,7 +76,10 @@ M.setup = function()
         Title = { fg = colors.fg, bold = true },
         Todo = { fg = colors.fg2, bold = true, reverse = true },
         Type = { fg = colors.type },
-        Underlined = { underline = true }
+        Underlined = { underline = true },
+        QuickFixLine = { bg = colors.keyword },
+        DiagnosticWarn = { fg = colors.warning2 },
+        DiagnosticError = { fg = colors.warning },
     }
 
     -- Apply the highlight groups
