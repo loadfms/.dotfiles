@@ -5,24 +5,23 @@ M.setup = function()
     local colors = {
         bg = "#080808",
         fg = "#ffffff",
-        fg2 = "#ebebeb",
-        fg3 = "#d6d6d6",
-        fg4 = "#c2c2c2",
+        fg2 = "#f5f5f5",
+        fg3 = "#ebebeb",
+        fg4 = "#e0e0e0",
         bg2 = "#080808",
         bg3 = "#141414",
-        bg4 = "#434343",
+        bg4 = "#1f1f1f",
         keyword = "#ed1b76",
         builtin = "#f44786",
         const = "#ffffff",
-        comment = "#c4d3dc",
-        func = "#F7A1C6",
+        comment = "#434343",
+        func = "#f7a1c6",
         str = "#ffffff",
         type = "#f15599",
         var = "#ffffff",
         warning = "#ed1b76",
         warning2 = "#f44786",
-        cursorline = "#292929",
-        red = "#ff0000",
+        cursorline = "#292929"
     }
 
     -- Apply highlights
