@@ -9,7 +9,7 @@ M.setup = function()
         fg3 = "#d6d6d6",
         fg4 = "#c2c2c2",
         bg2 = "#080808",
-        bg3 = "#303030",
+        bg3 = "#141414",
         bg4 = "#434343",
         keyword = "#ed1b76",
         builtin = "#f44786",
@@ -21,7 +21,8 @@ M.setup = function()
         var = "#ffffff",
         warning = "#ed1b76",
         warning2 = "#f44786",
-        cursorline = "#0d2d3e"
+        cursorline = "#292929",
+        red = "#ff0000",
     }
 
     -- Apply highlights
@@ -31,15 +32,15 @@ M.setup = function()
         CursorLine = { bg = colors.cursorline },
         CursorLineNr = { fg = colors.str, bg = colors.bg },
         CursorColumn = { bg = colors.bg2 },
-        ColorColumn = { bg = colors.bg2 },
+        ColorColumn = { bg = colors.bg3 },
         FoldColumn = { fg = colors.comment, bg = colors.bg2 },
         SignColumn = { fg = colors.comment, bg = colors.bg2 },
         LineNr = { fg = colors.fg2, bg = colors.bg2 },
         VertSplit = { fg = colors.fg3, bg = colors.bg3 },
         MatchParen = { fg = colors.warning2, underline = true },
         StatusLine = { fg = colors.fg2, bg = colors.bg3, bold = true },
-        Pmenu = { fg = colors.fg, bg = colors.bg2 },
-        PmenuSel = { bg = colors.bg3 },
+        Pmenu = { fg = colors.fg, bg = colors.bg3 },
+        PmenuSel = { bg = colors.keyword, fg = colors.bg },
         IncSearch = { fg = colors.bg, bg = colors.keyword },
         Search = { underline = true },
         Directory = { fg = colors.const },
