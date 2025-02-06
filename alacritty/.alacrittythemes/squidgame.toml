@@ -13,12 +13,12 @@ foreground = '#F8F8FF'  # White for higher contrast
 #white   = '#F8F8FF'  
 
 black   = '#080808'  
-green   = '#ed1b76'  
-red     = '#81173C'  
-yellow  = '#B16E86'  
+red     = '#ed1b76'  
+green   = '#f7a1c6'  
+cyan    = '#5E082D'  
 blue    = '#963F5E'  
-magenta = '#A0506D'  
-cyan    = '#8C2C4E'  
+yellow  = '#f15599'  
+magenta = '#8C2C4E'  
 white   = '#F8F8FF'  
 
 [colors.cursor]
