@@ -14,14 +14,14 @@ M.setup = function()
         keyword = "#ed1b76",
         builtin = "#f44786",
         const = "#ffffff",
-        comment = "#999999",
+        comment = "#5C5C5C",
         func = "#f7a1c6",
         str = "#ffffff",
         type = "#f15599",
         var = "#ffffff",
         warning = "#ed1b76",
         warning2 = "#f44786",
-        cursorline = "#292929"
+        cursorline = "#5E082D"
     }
 
     -- Apply highlights
@@ -52,10 +52,10 @@ M.setup = function()
         Conditional = { fg = colors.keyword },
         Constant = { fg = colors.const },
         Define = { fg = colors.keyword },
-        DiffAdd = { fg = "#fafafa", bg = "#123d0f", bold = true },
+        DiffAdd = { fg = colors.bg, bg = colors.keyword, bold = true },
         DiffDelete = { bg = colors.bg2 },
-        DiffChange = { bg = "#151b3c", fg = "#fafafa" },
-        DiffText = { fg = "#ffffff", bg = "#ff0000", bold = true },
+        DiffChange = { bg = colors.func, fg = colors.fg },
+        DiffText = { fg = colors.fg, bg = colors.keyword, bold = true },
         ErrorMsg = { fg = colors.warning, bg = colors.bg2, bold = true },
         WarningMsg = { fg = colors.fg, bg = colors.warning2 },
         Float = { fg = colors.const },
@@ -80,7 +80,9 @@ M.setup = function()
         QuickFixLine = { bg = colors.keyword },
         DiagnosticWarn = { fg = colors.warning2 },
         DiagnosticError = { fg = colors.warning, bg = colors.bg2 },
-        GitSignsAdd = { fg = colors.func },
+        GitSignsAdd = { fg = colors.keyword },
+        GitSignsChange = { fg = colors.keyword },
+        GitSignsDelete = { fg = colors.keyword },
     }
 
     -- Apply the highlight groups
