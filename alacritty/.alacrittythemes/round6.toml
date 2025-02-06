@@ -5,14 +5,13 @@ foreground = '#F8F8FF'  # White for higher contrast
 [colors.normal]
 black   = '#080808'  # Pure black for deep contrast
 red     = '#ed1b76'  # Bright pink (keyword, warning)
-green   = '#F0428D'  # White to match the aesthetic
-#yellow  = '#F368A4'  # Softer pink for accents (builtin, warning2)
+green   = '#f44786'  # White to match the aesthetic
 yellow  = '#F8F8F8'  # Softer pink for accents (builtin, warning2)
-blue    = '#F68EBB'  # White for text contrast
-magenta = '#F9B4D2'  # Stronger neon pink (keyword, warning)
+blue    = '#f15599'  # White for text contrast
+magenta = '#f15599'  # Stronger neon pink (keyword, warning)
 cyan    = '#FCD9E8'  # Pure white for strong contrast
 white   = '#F8F8FF'  # Pure white for strong contrast
 
 [colors.cursor]
-text   = '#000000'  # Black text for cursor
+text   = '#080808'  # Black text for cursor
 cursor = '#ed1b76'  # Matching bright pink for cursor
