@@ -1,6 +1,6 @@
 local lsp = require('lspconfig')
 
--- add icons to diagnostics
+-- add customization to diagnostics
 vim.diagnostic.config({
     float = { border = "solid" },
     signs = {

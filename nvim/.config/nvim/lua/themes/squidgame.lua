@@ -10,10 +10,10 @@ M.setup = function()
         cursorline = "#81173C",
         secondary = "#f15599",
         func = "#f7a1c6",
-        var = "#ffffff",
-        const = "#ffffff",
-        comment = "#5C5C5C",
-        str = "#ffffff",
+        var = "#F8F8FF",
+        const = "#F8F8FF",
+        comment = "#999999",
+        str = "#F8F8FF",
         error = "#ed1b76",
     }
 
@@ -77,6 +77,7 @@ M.setup = function()
         GitSignsAdd = { fg = colors.primary },
         GitSignsChange = { fg = colors.primary },
         GitSignsDelete = { fg = colors.primary },
+        Visual = { fg = colors.black, bg = colors.primary },
     }
 
     -- Apply the highlight groups
