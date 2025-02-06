@@ -1,17 +1,8 @@
 [colors.primary]
-background = '#080808'  # Pure black for contrast
-foreground = '#F8F8FF'  # White for higher contrast
+background = '#080808'  
+foreground = '#F8F8FF' 
 
 [colors.normal]
-#black   = '#080808'  
-#red     = '#ed1b76'  
-#green   = '#f44786'  
-#yellow  = '#F8F8F8'  
-#blue    = '#f15599'  
-#magenta = '#f15599'  
-#cyan    = '#FCD9E8'  
-#white   = '#F8F8FF'  
-
 black   = '#080808'  
 red     = '#ed1b76'  
 green   = '#f7a1c6'  
@@ -22,5 +13,5 @@ magenta = '#8C2C4E'
 white   = '#F8F8FF'  
 
 [colors.cursor]
-text   = '#080808'  # Black text for cursor
-cursor = '#ed1b76'  # Matching bright pink for cursor
+text   = '#080808'  
+cursor = '#ed1b76' 
