@@ -1,16 +1,8 @@
 local lsp = require('lspconfig')
 
---add borders to floating windows
-local orig_util_open_floating_preview = vim.lsp.util.open_floating_preview
-function vim.lsp.util.open_floating_preview(contents, syntax, opts, ...)
-    opts = opts or {}
-    opts.border = "rounded"
-    return orig_util_open_floating_preview(contents, syntax, opts, ...)
-end
-
--- add icons to diagnostics
+-- add customization to diagnostics
 vim.diagnostic.config({
-    float = { border = "rounded" },
+    float = { border = "solid" },
     signs = {
         text = {
             [vim.diagnostic.severity.ERROR] = '',

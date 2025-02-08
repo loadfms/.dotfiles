@@ -48,7 +48,7 @@ symbol(){
 
 # current directory, one level deep
 directory() {
-   echo "%B%{$fg[blue]%}%1~%{$reset_color%}%b"
+   echo "%B%{$fg[white]%}%1~%{$reset_color%}%b"
 }
 
 # returns  if there are errors, nothing otherwise
@@ -57,18 +57,18 @@ return_status() {
 }
 
 git_info(){
-    echo "%B%{$fg[white]%}$(_omz_git_prompt_info)%{$reset_color%}%b"
+    echo "%B%{$fg[red]%}$(_omz_git_prompt_info)%{$reset_color%}%b"
 }
 
 PROMPT='
 $(directory) $(git_info)
-%{$fg[green]%}%B❯%b %{$reset_color%}'
+%{$fg[red]%}%B%b %{$reset_color%}'
 
 # Add extra space between symbol in Linux
 if uname | rg -q "Linux"; then
     PROMPT='
 $(directory) $(git_info)
-%B󰅂%b '
+%B%{%fg[red]%}%%{$reset_color%}%b '
 fi
 
 ###############################################################

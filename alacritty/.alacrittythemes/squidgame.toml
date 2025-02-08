@@ -1,0 +1,17 @@
+[colors.primary]
+background = '#080808'  
+foreground = '#F8F8FF' 
+
+[colors.normal]
+black   = '#080808'  
+red     = '#ed1b76'  
+green   = '#f7a1c6'  
+cyan    = '#BE879B'  
+blue    = '#963F5E'  
+yellow  = '#f15599'  
+magenta = '#8C2C4E'  
+white   = '#F8F8FF'  
+
+[colors.cursor]
+text   = '#080808'  
+cursor = '#ed1b76' 
