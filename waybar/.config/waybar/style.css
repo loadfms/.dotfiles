@@ -1,4 +1,4 @@
-@import "./base2tone_suburb_dark.css";
+@import "./nvim.css";
 
 * {
   /* `otf-font-awesome` is required to be installed for icons */
@@ -146,7 +146,7 @@ label:focus {
 #network.disconnected {
   padding: 0 1rem;
   background-color: @red;
-  color: @text;
+  color: @base;
   margin: 0.25rem;
   border-radius: 0.5rem;
 }

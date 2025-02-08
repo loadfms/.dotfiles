@@ -1,11 +1,11 @@
 * {
-    bg-col:#1e202f;
-    bg-col-light:#1e202f;
-    border-col:#1e202f;
-    selected-col:#1e202f;
-    blue:#8696fd;
-    fg-col:#8696fd;
-    fg-col2:#fe81b5;
+    bg-col:#14161b;
+    bg-col-light:#14161b;
+    border-col:#95C5E5;
+    selected-col:#A6DBFF;
+    highlight:#95C5E5;
+    fg-col:#E0E2EA;
+    fg-col2:#14161b;
     grey:#878ba6;
 
     width: 600;
@@ -37,7 +37,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @blue;
+    background-color: @highlight;
     padding: 6px;
     text-color: @bg-col;
     border-radius: 3px;
@@ -94,5 +94,5 @@ button {
 
 button selected {
   background-color: @bg-col;
-  text-color: @blue;
+  text-color: @highlight;
 }

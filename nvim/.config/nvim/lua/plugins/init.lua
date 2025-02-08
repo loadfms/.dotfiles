@@ -185,8 +185,8 @@ return {
         config = function()
             require("conform").setup({
                 formatters_by_ft = {
-                    css = { { "prettier" } },
-                    scss = { { "prettier" } },
+                    javascript = { "prettier", stop_after_first = true },
+                    scss = { "prettier", stop_after_first = true },
                     go = { "goimports", "gofmt" },
                     rust = { "rustfmt" },
                     python = { "black" },

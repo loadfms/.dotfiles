@@ -67,6 +67,7 @@ pipewire-alsa
 pipewire-jack
 pipewire-pulse
 polybar
+prettier
 procs
 python-pip
 ripgrep
