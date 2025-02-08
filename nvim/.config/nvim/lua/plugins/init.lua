@@ -2,8 +2,6 @@ return {
 
     --theme
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
-    { "atelierbram/Base2Tone-nvim" },
-
     {
         'github/copilot.vim',
         config = function()

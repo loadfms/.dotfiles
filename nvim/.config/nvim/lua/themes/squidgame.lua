@@ -55,6 +55,8 @@ M.setup = function()
         FzfLuaNormal = { fg = colors.white, bg = colors.black },
         FzfLuaTabTitle = { fg = colors.primary, bg = colors.black },
         FzfLuaBorder = { fg = colors.primary, bg = colors.black },
+        FzfLuaBufFlagAlt = { fg = colors.primary, bg = colors.black },
+        FzfLuaPathColNr = { fg = colors.primary, bg = colors.black },
         Float = { fg = colors.white, bg = colors.black_fade },
         Function = { fg = colors.func },
         Identifier = { fg = colors.secondary, italic = true },

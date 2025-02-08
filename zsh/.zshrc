@@ -65,11 +65,11 @@ $(directory) $(git_info)
 %{$fg[red]%}%B%b %{$reset_color%}'
 
 # Add extra space between symbol in Linux
-if uname | rg -q "Linux"; then
-    PROMPT='
-$(directory) $(git_info)
-%B%{%fg[red]%}%%{$reset_color%}%b '
-fi
+#if uname | rg -q "Linux"; then
+    #PROMPT='
+#$(directory) $(git_info)
+#%{$fg[red]%}%B%b %{$reset_color%}'
+#fi
 
 ###############################################################
 # => Plugins
