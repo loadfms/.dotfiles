@@ -46,6 +46,7 @@ lua-language-server
 luarocks
 lxappearance-gtk3
 maim
+mitmproxy
 mokutil
 ncdu
 neofetch

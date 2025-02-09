@@ -3,7 +3,7 @@
     bg-col-light:#14161b;
     border-col:#95C5E5;
     selected-col:#A6DBFF;
-    highlight:#95C5E5;
+    highlight:#2c2e33;
     fg-col:#E0E2EA;
     fg-col2:#14161b;
     grey:#878ba6;
@@ -37,7 +37,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @highlight;
+    background-color: @selected-col;
     padding: 6px;
     text-color: @bg-col;
     border-radius: 3px;
