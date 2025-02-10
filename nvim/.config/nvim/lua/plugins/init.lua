@@ -39,8 +39,8 @@ return {
                     changedelete = { text = '~' },
                     untracked    = { text = '┆' },
                 },
-                signcolumn                   = true, -- Toggle with `:Gitsigns toggle_signs`
-                numhl                        = true, -- Toggle with `:Gitsigns toggle_numhl`
+                signcolumn                   = true,  -- Toggle with `:Gitsigns toggle_signs`
+                numhl                        = true,  -- Toggle with `:Gitsigns toggle_numhl`
                 linehl                       = false, -- Toggle with `:Gitsigns toggle_linehl`
                 word_diff                    = false, -- Toggle with `:Gitsigns toggle_word_diff`
                 watch_gitdir                 = {
@@ -59,7 +59,7 @@ return {
                 current_line_blame_formatter = '<author>, <author_time:%Y-%m-%d> - <summary>',
                 sign_priority                = 6,
                 update_debounce              = 100,
-                status_formatter             = nil, -- Use default
+                status_formatter             = nil,   -- Use default
                 max_file_length              = 40000, -- Disable if file is longer than this (in lines)
                 preview_config               = {
                     -- Options passed to nvim_open_win
@@ -132,6 +132,10 @@ return {
                 files      = {
                     rg_opts = [[--files --hidden --glob !.git --glob !node_modules]]
                 },
+                grep       = {
+                    rg_opts =
+                    "--color=never --no-heading --with-filename --line-number --column --smart-case --glob !node_modules",
+                },
                 previewers = {
                     builtin = {
                         extensions = {
@@ -186,6 +190,7 @@ return {
                 formatters_by_ft = {
                     javascript = { "prettier", stop_after_first = true },
                     scss = { "prettier", stop_after_first = true },
+                    typescriptreact = { "prettier", stop_after_first = true },
                     go = { "goimports", "gofmt" },
                     rust = { "rustfmt" },
                     python = { "black" },
