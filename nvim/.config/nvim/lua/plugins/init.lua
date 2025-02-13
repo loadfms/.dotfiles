@@ -10,10 +10,6 @@ return {
         end
     },
     {
-        "OXY2DEV/markview.nvim",
-        lazy = false
-    },
-    {
         'tpope/vim-fugitive',
     },
 
@@ -181,7 +177,7 @@ return {
             }
         end,
     },
-    'neovim/nvim-lspconfig',
+    { 'neovim/nvim-lspconfig' },
     {
         'stevearc/conform.nvim',
         opts = {},

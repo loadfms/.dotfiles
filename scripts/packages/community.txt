@@ -26,6 +26,7 @@ feh
 firefox
 fontforge
 fzf
+geckodriver
 git
 github-cli
 grim
@@ -70,6 +71,7 @@ pipewire-pulse
 polybar
 prettier
 procs
+python-black
 python-pip
 ripgrep
 rofi-emoji
