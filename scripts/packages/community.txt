@@ -28,6 +28,7 @@ fontforge
 fzf
 git
 github-cli
+grim
 grub
 gst-plugin-pipewire
 hyprland
@@ -45,7 +46,6 @@ linux-headers
 lua-language-server
 luarocks
 lxappearance-gtk3
-maim
 mitmproxy
 mokutil
 ncdu
@@ -77,6 +77,7 @@ rofi-wayland
 rtorrent
 rust
 rxvt-unicode
+slurp
 spotify-launcher
 spotify-player
 stow
