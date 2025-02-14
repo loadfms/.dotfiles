@@ -1,299 +1,134 @@
-@import "./nvim.css";
+@import url("./nvim.css");
 
 * {
-  /* `otf-font-awesome` is required to be installed for icons */
-  font-family: Iosevka Nerd Font;
-  font-size: 13px;
+  font-family: "Iosevka Nerd Font";
+  font-size: 17px;
+  min-height: 0;
+}
+
+#waybar {
+  background: transparent;
   color: @text;
-  padding: 0;
-  margin: 0;
-}
-
-window#waybar {
-  background-color: shade(@base, 0.8);
-}
-
-window#waybar.hidden {
-  opacity: 0.2;
+  margin: 5px 5px;
 }
 
 #workspaces {
-  padding: 0 0.5rem;
+  border-radius: 1rem;
+  margin: 5px;
   background-color: @surface0;
-  color: @text;
-  margin: 0.25rem 0;
-  border-radius: 0.5rem;
+  margin-left: 1rem;
 }
 
-#mode {
-  background-color: #64727d;
-  box-shadow: inset 0 -3px #ffffff;
+#workspaces button {
+  color: @lavender;
+  border-radius: 1rem;
+  padding: 0.4rem;
 }
 
+#workspaces button.active {
+  color: @sky;
+  border-radius: 1rem;
+}
+
+#workspaces button:hover {
+  color: @sapphire;
+  border-radius: 1rem;
+}
+
+#custom-music,
+#tray,
+#backlight,
 #clock,
 #battery,
-#cpu,
-#memory,
-#disk,
-#temperature,
-#backlight,
-#network,
 #pulseaudio,
-#wireplumber,
-#custom-media,
-#tray,
-#mode,
-#idle_inhibitor,
-#scratchpad,
-#power-profiles-daemon,
-#mpd {
-  padding: 0 10px;
-  color: #ffffff;
+#custom-lock,
+#language,
+#temperature,
+#memory,
+#network,
+#cpu,
+#custom-power {
+  background-color: @surface0;
+  padding: 0.5rem 1rem;
+  margin: 5px 0;
 }
 
 #clock {
-  padding: 0 1rem;
-  background-color: @surface0;
-  color: @text;
-  margin: 0.25rem;
-  border-radius: 0.5rem;
+  color: @blue;
+  border-radius: 0px 1rem 1rem 0rem;
+  margin-right: 1rem;
 }
 
 #battery {
-  background-color: #ffffff;
-  color: #000000;
+  color: @green;
 }
 
-#battery.charging,
-#battery.plugged {
-  color: #ffffff;
-  background-color: #26a65b;
+#battery.charging {
+  color: @green;
 }
 
-@keyframes blink {
-  to {
-    background-color: #ffffff;
-    color: #000000;
-  }
-}
-
-/* Using steps() instead of linear as a timing function to limit cpu usage */
-#battery.critical:not(.charging) {
-  background-color: #f53c3c;
-  color: #ffffff;
-  animation-name: blink;
-  animation-duration: 0.5s;
-  animation-timing-function: steps(12);
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-#power-profiles-daemon {
-  padding-right: 15px;
-}
-
-#power-profiles-daemon.performance {
-  background-color: #f53c3c;
-  color: #ffffff;
-}
-
-#power-profiles-daemon.balanced {
-  background-color: #2980b9;
-  color: #ffffff;
-}
-
-#power-profiles-daemon.power-saver {
-  background-color: #2ecc71;
-  color: #000000;
-}
-
-label:focus {
-  background-color: #000000;
-}
-
-#cpu {
-  padding: 0 1rem;
-  background-color: @surface0;
-  color: @text;
-  margin: 0.25rem;
-  border-radius: 0.5rem;
-}
-
-#memory {
-  padding: 0 1rem;
-  background-color: @surface0;
-  color: @text;
-  margin: 0.25rem;
-  border-radius: 0.5rem;
-}
-
-#disk {
-  background-color: #964b00;
+#battery.warning:not(.charging) {
+  color: @red;
 }
 
 #backlight {
-  background-color: #90b1b1;
+  color: @yellow;
 }
 
-#network {
-  padding: 0 1rem;
-  background-color: @surface0;
-  color: @text;
-  margin: 0.25rem;
-  border-radius: 0.5rem;
-}
-
-#network.disconnected {
-  padding: 0 1rem;
-  background-color: @red;
-  color: @base;
-  margin: 0.25rem;
-  border-radius: 0.5rem;
+#backlight,
+#battery {
+  border-radius: 0;
 }
 
 #pulseaudio {
-  background-color: @yellow;
-  color: @base;
+  color: @maroon;
+  border-radius: 1rem 0px 0px 1rem;
+  margin-left: 1rem;
 }
 
-#pulseaudio.muted {
-  background-color: #90b1b1;
-  color: #2a5c45;
-}
-
-#wireplumber {
-  background-color: #fff0f5;
-  color: #000000;
-}
-
-#wireplumber.muted {
-  background-color: #f53c3c;
-}
-
-#custom-media {
-  background-color: #66cc99;
-  color: #2a5c45;
-  min-width: 100px;
-}
-
-#custom-media.custom-spotify {
-  background-color: #66cc99;
-}
-
-#custom-media.custom-vlc {
-  background-color: #ffa000;
+#memory {
+  color: @mauve;
+  border-radius: 0rem 1rem 1rem 0rem;
+  margin-right: 1rem;
 }
 
 #temperature {
-  padding: 0 1rem;
-  background-color: @surface0;
-  color: @text;
-  margin: 0.25rem;
-  border-radius: 0.5rem;
+  color: @peach;
+  border-radius: 0rem;
 }
 
-#temperature.critical {
-  padding: 0 1rem;
-  background-color: @red;
-  color: @text;
-  margin: 0.25rem;
-  border-radius: 0.5rem;
+#network {
+  color: @sky;
+  border-radius: 1rem 0px 0px 1rem;
 }
 
-#tray {
-  background-color: #2980b9;
+#cpu {
+  color: @green;
+  border-radius: 0rem 0px 0px 0rem;
 }
 
-#tray > .passive {
-  -gtk-icon-effect: dim;
-}
-
-#tray > .needs-attention {
-  -gtk-icon-effect: highlight;
-  background-color: #eb4d4b;
-}
-
-#idle_inhibitor {
-  background-color: #2d3436;
-}
-
-#idle_inhibitor.activated {
-  background-color: #ecf0f1;
-  color: #2d3436;
-}
-
-#mpd {
-  background-color: #66cc99;
-  color: #2a5c45;
-}
-
-#mpd.disconnected {
-  background-color: #f53c3c;
-}
-
-#mpd.stopped {
-  background-color: #90b1b1;
-}
-
-#mpd.paused {
-  background-color: #51a37a;
+#custom-music {
+  color: @mauve;
+  border-radius: 1rem;
 }
 
 #language {
-  background: #00b093;
-  color: #740864;
-  padding: 0 5px;
-  margin: 0 5px;
-  min-width: 16px;
+  border-radius: 1rem 0px 0px 1rem;
+  color: @lavender;
 }
 
-#keyboard-state {
-  background: #97e1ad;
-  color: #000000;
-  padding: 0 0px;
-  margin: 0 5px;
-  min-width: 16px;
+#custom-power {
+  margin-right: 1rem;
+  border-radius: 0px 1rem 1rem 0px;
+  color: @red;
 }
 
-#keyboard-state > label {
-  padding: 0 5px;
+#tray {
+  margin-right: 1rem;
+  border-radius: 1rem;
 }
 
-#keyboard-state > label.locked {
-  background: rgba(0, 0, 0, 0.2);
+#workspaces button.urgent {
+  color: @red;
 }
 
-#scratchpad {
-  background: rgba(0, 0, 0, 0.2);
-}
-
-#scratchpad.empty {
-  background-color: transparent;
-}
-
-#privacy {
-  padding: 0;
-}
-
-#privacy-item {
-  padding: 0 5px;
-  color: white;
-}
-
-#privacy-item.screenshare {
-  background-color: #cf5700;
-}
-
-#privacy-item.audio-in {
-  background-color: #1ca000;
-}
-
-#privacy-item.audio-out {
-  background-color: #0069d4;
-}
-
-#custom-logo {
-  color: @text;
-  /*margin-left: 10px;*/
-  padding: 0 1rem;
-}
