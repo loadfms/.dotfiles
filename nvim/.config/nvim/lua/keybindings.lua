@@ -43,13 +43,15 @@ keymap('n', '<C-S-Right>', ':vertical resize -1<CR>', ns)
 
 keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', ns)
 keymap('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', ns)
---keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', ns)
 keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', ns)
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', ns)
 keymap('n', '<Leader>xx', '<cmd>lua vim.diagnostic.setqflist()<CR>', ns)
 
 keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', ns)
 keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', ns)
+
+keymap("n", "<leader>cc", "gcip", { desc = "Toggle comment" })
+keymap("v", "<leader>cc", "gc", { desc = "Toggle comment" })
 
 
 --keymap('n', '<C-u>', '<cmd>call smooth_scroll#up(&scroll, 2, 2)<CR>', ns)

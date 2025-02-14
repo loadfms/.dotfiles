@@ -17,9 +17,6 @@ return {
         'tpope/vim-abolish'
     },
     {
-        'preservim/nerdcommenter',
-    },
-    {
         'stevearc/oil.nvim',
         opts = {}
     }, -- use g. to show hidden files
