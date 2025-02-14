@@ -1,6 +1,7 @@
 return {
 
     --theme
+    { "catppuccin/nvim",             name = "catppuccin",                                 priority = 1000 },
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
     {
         'github/copilot.vim',
