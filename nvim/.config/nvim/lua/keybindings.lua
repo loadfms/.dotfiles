@@ -30,12 +30,9 @@ keymap('n', '<leader>B', '<cmd>FzfLua buffers<CR>', ns)
 
 keymap('n', '<Leader>gs', ':G<CR>5j', ns)         -- Vim fugitive summary
 keymap('n', '<Leader>dq', '<C-W>k <C-W>o', ns)    -- Close compare buffs
-keymap('n', '<Leader>gp', ':G pull<CR>', ns)      -- Close compare buffs
-keymap('n', '<Leader>gP', ':G push<CR>', ns)      -- Close compare buffs
-keymap('n', '<Leader>ga', ':G add .<CR>', ns)     -- Close compare buffs
 keymap('n', '<Leader>da', ':diffget //2<CR>', ns) -- Get content from left side
 keymap('n', '<Leader>dl', ':diffget //3<CR>', ns) -- Get content from right side
-keymap('n', '<Leader>gc', ':Gvdiffsplit!<CR>', ns)
+keymap('n', '<Leader>dv', ':Gvdiffsplit!<CR>', ns)
 keymap('n', '<Leader>gl', ':0GcLog<CR>', ns)
 
 keymap('n', '<C-S-Left>', ':vertical resize +1<CR>', ns)

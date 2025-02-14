@@ -12,14 +12,10 @@ return {
     {
         'tpope/vim-fugitive',
     },
-
-    {
-        'tpope/vim-abolish'
-    },
     {
         'stevearc/oil.nvim',
         opts = {}
-    }, -- use g. to show hidden files
+    },
     {
         'lewis6991/gitsigns.nvim',
         config = function()
@@ -27,7 +23,7 @@ return {
                 signs                        = {
                     add          = { text = '┃' },
                     change       = { text = '┃' },
-                    delete       = { text = '_' },
+                    delete       = { text = '┃' },
                     topdelete    = { text = '‾' },
                     changedelete = { text = '~' },
                     untracked    = { text = '┆' },
@@ -222,7 +218,7 @@ return {
             keymap = {
                 preset = 'enter',
                 cmdline = {
-                    preset = 'default'
+                    preset = 'super-tab'
                 },
                 ['<Tab>'] = { 'select_next', 'fallback' },
                 ['<S-Tab>'] = { 'select_prev', 'fallback' },
