@@ -23,10 +23,10 @@
         "format": "{icon}",
         "all-outputs": true,
         "format-icons": {
-            "1": "󰖟",
-            "2": "",
-            "3": "",
-            "4": "󰎉",
+            "1": "",
+            "2": "",
+            "3": "",
+            "4": "󰎇",
             "default": ""
         }
     },
@@ -35,11 +35,11 @@
         "spacing": 10
     },
     "custom/music": {
-        "format": " {}",
+        "format": "  {}",
         "escape": true,
         "interval": 5,
         "tooltip": false,
-        "exec": "playerctl metadata --format='{{ title }}'",
+        "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
         "on-click": "playerctl play-pause",
         "max-length": 50
     },
