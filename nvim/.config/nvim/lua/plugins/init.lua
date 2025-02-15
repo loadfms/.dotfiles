@@ -24,7 +24,7 @@ return {
                 signs                        = {
                     add          = { text = '┃' },
                     change       = { text = '┃' },
-                    delete       = { text = '┃' },
+                    delete       = { text = '-' },
                     topdelete    = { text = '‾' },
                     changedelete = { text = '~' },
                     untracked    = { text = '┆' },
@@ -215,11 +215,14 @@ return {
             -- 'super-tab' for mappings similar to vscode (tab to accept, arrow keys to navigate)
             -- 'enter' for mappings similar to 'super-tab' but with 'enter' to accept
             -- See the full "keymap" documentation for information on defining your own keymap.
+            cmdline = {
+                keymap = {
+                    preset = 'enter',
+                    ['<CR>'] = { 'accept_and_enter', 'fallback' },
+                },
+            },
             keymap = {
                 preset = 'enter',
-                cmdline = {
-                    preset = 'super-tab'
-                },
                 ['<Tab>'] = { 'select_next', 'fallback' },
                 ['<S-Tab>'] = { 'select_prev', 'fallback' },
                 ['<Up>'] = { 'snippet_backward', 'fallback' },
