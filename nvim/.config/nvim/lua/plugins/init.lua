@@ -1,7 +1,7 @@
 return {
 
     --theme
-    { "catppuccin/nvim",             name = "catppuccin",                                 priority = 1000 },
+    { "sainnhe/gruvbox-material",    priority = 1000 },
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
     {
         "zbirenbaum/copilot.lua",
@@ -77,7 +77,7 @@ return {
             require('lualine').setup {
                 options = {
                     icons_enabled = true,
-                    theme = 'iceberg_dark',
+                    theme = 'auto',
                     component_separators = { left = '', right = '' },
                     section_separators = { left = '', right = '' },
                     disabled_filetypes = {},
@@ -224,10 +224,10 @@ return {
             -- See the full "keymap" documentation for information on defining your own keymap.
             cmdline = {
                 keymap = {
-                    preset = 'enter',
-                    ['<CR>'] = { 'accept_and_enter', 'fallback' },
-                    ['<Tab>'] = { 'select_next', 'fallback' },
-                    ['<S-Tab>'] = { 'select_prev', 'fallback' },
+                    preset = 'default',
+                    -- ['<CR>'] = { 'accept_and_enter', 'fallback' },
+                    -- ['<Tab>'] = { 'select_next', 'fallback' },
+                    -- ['<S-Tab>'] = { 'select_prev', 'fallback' },
                 },
             },
             keymap = {

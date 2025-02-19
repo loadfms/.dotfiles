@@ -1,134 +1,134 @@
-@import url("./mocha.css");
+/*--------------------------------------------------------------------------------
+ *    Colors 
+ *-------------------------------------------------------------------------------*/
 
-* {
-  font-family: "Iosevka Nerd Font";
-  font-size: 17px;
-  min-height: 0;
+@define-color background            #282828;
+@define-color hard_background       #1B1B1B;
+@define-color second_background     #45403D;
+@define-color foreground            #EBDBB2;
+@define-color selection_foreground  #D8A657;
+@define-color selection_background  #3c3836;
+@define-color color_blue            #7DAEA3;
+@define-color color_green           #A9B665;
+@define-color color_yellow          #D8A657;
+@define-color color_red        	    #EA6962;
+@define-color color_purple          #d3869B;
+@define-color color_aqua            #89B482;
+@define-color color_grey            #7C6F64;
+@define-color color_white           #A89984;
+
+
+
+/*--------------------------------------------------------------------------------
+ *    General 
+ *-------------------------------------------------------------------------------*/
+
+*{
+    font-family: Iosevka Nerd Font;
+    font-size: 14px;
 }
 
-#waybar {
-  background: transparent;
-  color: @text;
-  margin: 5px 5px;
+window#waybar {
+    background-color: @background;
+    color: @foreground;
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    border-color: @hard_background;
 }
+
+
+
+/*--------------------------------------------------------------------------------
+ *    Sections 
+ *-------------------------------------------------------------------------------*/
+
+.modules-right {
+    border-top: 3px solid;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    border-color: @hard_background;
+
+}
+
+.modules-center {
+    border-top: 3px solid;
+    border-bottom: 3px solid;
+    border-color: @hard_background;
+}
+
+.modules-left {
+    background-color: @background;
+    border-top: 3px solid;
+    border-left: 3px solid;
+    border-bottom: 3px solid;
+    border-color: @hard_background;
+}
+
+
+
+/*--------------------------------------------------------------------------------
+ *    Left Modules 
+ *-------------------------------------------------------------------------------*/
 
 #workspaces {
-  border-radius: 1rem;
-  margin: 5px;
-  background-color: @surface0;
-  margin-left: 1rem;
+    background-color: @background;
+    color: @foreground;
+    padding-left: 1em;
 }
-
 #workspaces button {
-  color: @lavender;
-  border-radius: 1rem;
-  padding: 0.4rem;
+    color: @foreground;
+    padding: 0 6px;
 }
-
-#workspaces button.active {
-  color: @sky;
-  border-radius: 1rem;
-}
-
 #workspaces button:hover {
-  color: @sapphire;
-  border-radius: 1rem;
+    background-color: @color_aqua;
+    color: #000000;
 }
-
-#custom-music,
-#tray,
-#backlight,
-#clock,
-#battery,
-#pulseaudio,
-#custom-lock,
-#language,
-#temperature,
-#memory,
-#network,
-#cpu,
-#custom-power {
-  background-color: @surface0;
-  padding: 0.5rem 1rem;
-  margin: 5px 0;
+#workspaces button.active {
+    color: @color_red;
+}
+#workspaces button.active:hover {
+    background-color: @color_aqua;
+    color: #000000;
 }
 
 #clock {
-  color: @blue;
-  border-radius: 0px 1rem 1rem 0rem;
-  margin-right: 1rem;
+    background-color: @background;
+    padding-right: 1em; 
+    padding-left: 1em;
+    border-right: 3px;
+    border-right-style: solid;
+    border-right-color: @color_yellow;
 }
 
-#battery {
-  color: @green;
-}
 
-#battery.charging {
-  color: @green;
-}
 
-#battery.warning:not(.charging) {
-  color: @red;
-}
+/*--------------------------------------------------------------------------------
+ *    Right Modules 
+ *-------------------------------------------------------------------------------*/
 
-#backlight {
-  color: @yellow;
-}
-
-#backlight,
-#battery {
-  border-radius: 0;
-}
-
-#pulseaudio {
-  color: @maroon;
-  border-radius: 1rem 0px 0px 1rem;
-  margin-left: 1rem;
+#temperature {
+    padding-left: 1em;
+    padding-right: 0.5em;
 }
 
 #memory {
-  color: @mauve;
-  border-radius: 0rem 1rem 1rem 0rem;
-  margin-right: 1rem;
-}
-
-#temperature {
-  color: @peach;
-  border-radius: 0rem;
-}
-
-#network {
-  color: @sky;
-  border-radius: 1rem 0px 0px 1rem;
+    padding-left: 1em;
+    padding-right: 0.5em;
+    margin-right: 1em;
 }
 
 #cpu {
-  color: @green;
-  border-radius: 0rem 0px 0px 0rem;
+    padding-right: 0.5em;
+    padding-left: 1em;
+    border-left: 3px;
+    border-left-style: solid;
+    border-left-color: @color_green;
 }
 
-#custom-music {
-  color: @mauve;
-  border-radius: 1rem;
+#network {
+    padding-right: 2em;
+    padding-left: 1em;
 }
 
-#language {
-  border-radius: 1rem 0px 0px 1rem;
-  color: @lavender;
+#network.disconnected {
 }
-
-#custom-power {
-  margin-right: 1rem;
-  border-radius: 0px 1rem 1rem 0px;
-  color: @red;
-}
-
-#tray {
-  margin-right: 1rem;
-  border-radius: 1rem;
-}
-
-#workspaces button.urgent {
-  color: @red;
-}
-

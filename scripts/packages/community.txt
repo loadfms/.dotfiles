@@ -10,7 +10,9 @@ bind
 blueberry
 bluez
 bluez-utils
+btop
 calc
+chafa
 composer
 delve
 dialog
@@ -22,6 +24,7 @@ dosfstools
 dunst
 efibootmgr
 eza
+fastfetch
 feh
 firefox
 fontforge
@@ -38,6 +41,7 @@ inetutils
 intel-ucode
 iw
 jq
+kitty
 lib32-nvidia-utils
 libappindicator-gtk3
 libpulse

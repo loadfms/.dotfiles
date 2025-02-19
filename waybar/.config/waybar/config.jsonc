@@ -1,91 +1,90 @@
 {
+    //--------------------------------------------------------------------------------
+    //    General
+    //--------------------------------------------------------------------------------
     "layer": "top",
     "position": "top",
+    "height": 36,
+    "spacing": 0,
+    "margin-top": 7,
+    "margin-left": 50,
+    "margin-bottom": 1,
+    "margin-right": 50,
+    //--------------------------------------------------------------------------------
+    //    Left Modules
+    //--------------------------------------------------------------------------------
     "modules-left": [
+        "clock",
         "hyprland/workspaces"
     ],
+    //--------------------------------------------------------------------------------
+    //    Center Modules
+    //--------------------------------------------------------------------------------
     "modules-center": [
         "custom/music"
     ],
+    //--------------------------------------------------------------------------------
+    //    Right Modules
+    //--------------------------------------------------------------------------------
     "modules-right": [
+        "pulseaudio",
         "network",
         "cpu",
         "temperature",
-        "memory",
-        "pulseaudio",
-        "clock",
-        "tray"
+        "memory"
     ],
+    //--------------------------------------------------------------------------------
+    //    Left Configuration
+    //--------------------------------------------------------------------------------
     "hyprland/workspaces": {
-        "on-click": "activate",
-        "on-scroll-up": "hyprctl dispatch workspace e-1",
-        "on-scroll-down": "hyprctl dispatch workspace e+1",
-        "format": "{icon}",
+        "disable-scroll": true,
+        "disable-select-unfocused": true,
         "all-outputs": true,
+        "warp-on-scroll": false,
+        "format": "{icon}",
         "format-icons": {
-            "1": "",
-            "2": "",
-            "3": "",
-            "4": "󰎇",
-            "default": ""
+            "1": "一",
+            "2": "二",
+            "3": "三",
+            "4": "四",
+            "5": "五",
+            "6": "六",
+            "7": "七",
+            "8": "八",
+            "9": "九",
+            "10": "十"
         }
     },
-    "tray": {
-        "icon-size": 21,
-        "spacing": 10
-    },
-    "custom/music": {
-        "format": "  {}",
-        "escape": true,
-        "interval": 5,
-        "tooltip": false,
-        "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
-        "on-click": "playerctl play-pause",
-        "max-length": 50
-    },
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format-alt": " {:%d/%m/%Y}",
-        "format": " {:%H:%M}"
+        "format": "{:%d-%m-%Y  | %I:%M}",
+        "tooltip-format": "{:%A}",
+        "on-click": "galendae"
     },
-    "backlight": {
-        "device": "nvidia_0",
-        "format": "{icon}",
-        "on-scroll-up": "brightnessctl s '+10%'",
-        "on-scroll-down": "brightnessctl s '10%-'",
-        "on-click": "((( $(brightnessctl g) == 100 )) && brightnessctl s '0') || (brightnessctl s '+10%')",
+    //--------------------------------------------------------------------------------
+    //    Right Configuration
+    //--------------------------------------------------------------------------------
+    "memory": {
+        "interval": 1,
+        "format": "{}% "
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "interval": 1
+    },
+    "temperature": {
+        "interval": 1,
+        "format": "{temperatureC}°C {icon}",
         "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            "",
-            ""
+            ""
         ]
     },
-    "battery": {
-        "states": {
-            "warning": 30,
-            "critical": 15
-        },
-        "format": "{icon}",
-        "format-charging": "󰂄",
-        "format-plugged": "",
-        "format-alt": "{icon}",
-        "format-icons": [
-            "",
-            "",
-            "",
-            "",
-            ""
-        ]
+    "network": {
+        "format-wifi": "",
+        "format-disconnected": "󱘖",
+        "tooltip-format": "{essid} {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        // "scroll-step": 1, // %, can be a float
-        "format": "{icon} {volume}%",
+        "format": "{icon}",
         "format-muted": "",
         "format-icons": {
             "default": [
@@ -96,45 +95,13 @@
         },
         "on-click": "pavucontrol"
     },
-    "custom/lock": {
+    "custom/music": {
+        "format": "音楽  {}",
+        "escape": true,
+        "interval": 5,
         "tooltip": false,
-        "on-click": "hyprlock &",
-        "format": ""
-    },
-    "custom/power": {
-        "tooltip": false,
-        "on-click": "wlogout &",
-        "format": "⏻"
-    },
-    "hyprland/language": {
-        "format": " {}",
-        "format-en": "en",
-        "format-fa": "fa",
-        "interval": 1,
-        "keyboard-name": "gaming-keyboard",
-        "on-click": "hyprctl switchxkblayout gaming-keyboard next"
-    },
-    "network": {
-        "format-wifi": "  {signalStrength}%",
-        "format-ethernet": "{ipaddr}/{cidr}",
-        "tooltip-format": "{essid} {ipaddr}/{cidr}",
-        "format-linked": "{ifname} (No IP)",
-        "format-disconnected": "󱘖"
-    },
-    "memory": {
-        "format": "  {}%"
-    },
-    "temperature": {
-        "critical-threshold": 80,
-        "format": "{icon} {temperatureC}°C",
-        "format-icons": [
-            ""
-        ]
-    },
-    "cpu": {
-        "format": " {usage}%"
-    },
-    "custom/logo": {
-        "format": "󰣇 "
+        "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
+        "on-click": "playerctl play-pause",
+        "max-length": 50
     }
 }
