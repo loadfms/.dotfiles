@@ -2,6 +2,11 @@ return {
 
     --theme
     { "sainnhe/gruvbox-material",    priority = 1000 },
+    {
+        "ThePrimeagen/harpoon",
+        branch = "harpoon2",
+        dependencies = { "nvim-lua/plenary.nvim" }
+    },
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
     {
         "zbirenbaum/copilot.lua",
@@ -224,10 +229,10 @@ return {
             -- See the full "keymap" documentation for information on defining your own keymap.
             cmdline = {
                 keymap = {
-                    preset = 'default',
+                    preset = 'enter',
                     -- ['<CR>'] = { 'accept_and_enter', 'fallback' },
-                    -- ['<Tab>'] = { 'select_next', 'fallback' },
-                    -- ['<S-Tab>'] = { 'select_prev', 'fallback' },
+                    ['<Tab>'] = { 'select_next', 'fallback' },
+                    ['<S-Tab>'] = { 'select_prev', 'fallback' },
                 },
             },
             keymap = {
@@ -236,6 +241,7 @@ return {
                 ['<S-Tab>'] = { 'select_prev', 'fallback' },
                 ['<Up>'] = { 'snippet_backward', 'fallback' },
                 ['<Down>'] = { 'snippet_forward', 'fallback' },
+                ['<C-Space>'] = { 'show' }
             },
 
             appearance = {
@@ -251,6 +257,9 @@ return {
                 menu = {
                     --border = "rounded",
                     --winblend = 0,
+                    auto_show = function(ctx)
+                        return ctx.mode ~= "cmdline" or not vim.tbl_contains({ '/', '?' }, vim.fn.getcmdtype())
+                    end,
                 },
                 documentation = {
                     window = {

@@ -57,8 +57,8 @@ keymap("v", "<leader>cc", "gc", { desc = "Toggle comment" })
 --keymap('n', '<C-f>', '<cmd>call smooth_scroll#down(&scroll*2, 2, 4)<CR>', ns)
 
 ---- Harpoon
---keymap("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', ns)
---keymap("n", "<leader>h", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', ns)
+-- keymap("n", "<leader>a", ':lua require("harpoon.mark").add_file()<CR>', ns)
+-- keymap("n", "<leader>h", ':lua require("harpoon.ui").toggle_quick_menu()<CR>', ns)
 --keymap("n", "<C-h>", ':lua require("harpoon.ui").nav_file(1)<CR>', ns)
 --keymap("n", "<C-j>", ':lua require("harpoon.ui").nav_file(2)<CR>', ns)
 --keymap("n", "<C-k>", ':lua require("harpoon.ui").nav_file(3)<CR>', ns)
