@@ -4,11 +4,18 @@ return {
     { "catppuccin/nvim",             name = "catppuccin",                                 priority = 1000 },
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
     {
-        'github/copilot.vim',
+        "zbirenbaum/copilot.lua",
+        cmd = "Copilot",
+        event = "InsertEnter",
         config = function()
-            vim.g.copilot_no_tab_map = true
-            vim.api.nvim_set_keymap("i", "<C-J>", 'copilot#Accept("<CR>")', { silent = true, expr = true })
-        end
+            require("copilot").setup({
+                suggestion = { enabled = false },
+                panel = { enabled = false },
+            })
+        end,
+    },
+    {
+        "giuxtaposition/blink-cmp-copilot",
     },
     {
         'tpope/vim-fugitive',
@@ -219,6 +226,8 @@ return {
                 keymap = {
                     preset = 'enter',
                     ['<CR>'] = { 'accept_and_enter', 'fallback' },
+                    ['<Tab>'] = { 'select_next', 'fallback' },
+                    ['<S-Tab>'] = { 'select_prev', 'fallback' },
                 },
             },
             keymap = {
@@ -261,7 +270,15 @@ return {
             -- Default list of enabled providers defined so that you can extend it
             -- elsewhere in your config, without redefining it, due to `opts_extend`
             sources = {
-                default = { 'lsp', 'path', 'snippets', 'buffer' },
+                default = { 'lsp', 'path', 'snippets', 'buffer', 'buffer', 'copilot' },
+                providers = {
+                    copilot = {
+                        name = "copilot",
+                        module = "blink-cmp-copilot",
+                        score_offset = 100,
+                        async = true,
+                    },
+                },
             },
         },
         opts_extend = { "sources.default" }
