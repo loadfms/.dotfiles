@@ -102,6 +102,6 @@
         "tooltip": false,
         "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
         "on-click": "playerctl play-pause",
-        "max-length": 50
+        "max-length": 100
     }
 }

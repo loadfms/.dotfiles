@@ -27,6 +27,7 @@ keymap('n', '<C-p>', "<cmd>FzfLua files<CR>", ns)
 keymap('n', '<Leader>k', "<cmd>FzfLua live_grep<CR>", ns)
 keymap('n', '<Leader>K', '<cmd>FzfLua grep_cword<CR>', ns)
 keymap('n', '<leader>B', '<cmd>FzfLua buffers<CR>', ns)
+keymap('n', '<leader>M', '<cmd>FzfLua marks<CR>', ns)
 
 keymap('n', '<Leader>gs', ':G<CR>5j', ns)         -- Vim fugitive summary
 keymap('n', '<Leader>dq', '<C-W>k <C-W>o', ns)    -- Close compare buffs
@@ -49,7 +50,6 @@ keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', ns)
 
 keymap("n", "<leader>cc", "gcip", { desc = "Toggle comment" })
 keymap("v", "<leader>cc", "gc", { desc = "Toggle comment" })
-
 
 --keymap('n', '<C-u>', '<cmd>call smooth_scroll#up(&scroll, 2, 2)<CR>', ns)
 --keymap('n', '<C-d>', '<cmd>call smooth_scroll#down(&scroll, 2, 2)<CR>', ns)

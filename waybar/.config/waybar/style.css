@@ -31,9 +31,9 @@
 window#waybar {
     background-color: @background;
     color: @foreground;
-    border-top: 3px solid;
-    border-bottom: 3px solid;
-    border-color: @hard_background;
+    /*border-top: 3px solid;*/
+    /*border-bottom: 3px solid;*/
+    /*border-color: @hard_background;*/
 }
 
 
