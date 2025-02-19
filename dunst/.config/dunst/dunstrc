@@ -1,11 +1,12 @@
 [global]
+    font = Iosevka Nerd Font 12 
     allow_markup = yes
     format = "<b>%s %p</b>\n%b"
     sort = yes
     indicate_hidden = true
     idle_threshold = 0
     width = 300
-    alignment = center
+    alignment = left
     show_age_threshold = 60
     sticky_history = yes
     follow = mouse
