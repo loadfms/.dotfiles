@@ -1,7 +1,7 @@
 return {
 
     --theme
-    { "catppuccin/nvim",             name = "catppuccin",                                 priority = 1000 },
+    { "sainnhe/gruvbox-material",    priority = 1000 },
     { "norcalli/nvim-colorizer.lua", config = function() require("colorizer").setup() end },
     {
         'github/copilot.vim',
@@ -70,7 +70,7 @@ return {
             require('lualine').setup {
                 options = {
                     icons_enabled = true,
-                    theme = 'iceberg_dark',
+                    theme = 'auto',
                     component_separators = { left = '', right = '' },
                     section_separators = { left = '', right = '' },
                     disabled_filetypes = {},

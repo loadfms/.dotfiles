@@ -3,6 +3,7 @@ aws-cdk
 b43-firmware
 cava
 cider-polybar
+galendae-git
 pokemon-colorscripts-git
 rofi-greenclip
 slack-desktop
