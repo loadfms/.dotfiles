@@ -41,6 +41,7 @@ inetutils
 intel-ucode
 iw
 jq
+kitty
 lib32-nvidia-utils
 libappindicator-gtk3
 libpulse
