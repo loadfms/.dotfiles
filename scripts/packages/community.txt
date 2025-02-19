@@ -10,6 +10,7 @@ bind
 blueberry
 bluez
 bluez-utils
+btop
 calc
 composer
 delve

@@ -217,8 +217,8 @@ return {
             -- See the full "keymap" documentation for information on defining your own keymap.
             cmdline = {
                 keymap = {
-                    preset = 'enter',
-                    ['<CR>'] = { 'accept_and_enter', 'fallback' },
+                    preset = 'default',
+                    -- ['<CR>'] = { 'accept_and_enter', 'fallback' },
                 },
             },
             keymap = {
