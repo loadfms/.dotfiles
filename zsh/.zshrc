@@ -179,4 +179,4 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 #pokemon-colorscripts -r 1 --no-title
 
 source ~/.dotfiles/scripts/set_secrets.sh
-neofetch
+fastfetch -c ~/.config/fastfetch/config.jsonrc

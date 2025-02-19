@@ -12,6 +12,7 @@ bluez
 bluez-utils
 btop
 calc
+chafa
 composer
 delve
 dialog
@@ -23,6 +24,7 @@ dosfstools
 dunst
 efibootmgr
 eza
+fastfetch
 feh
 firefox
 fontforge
