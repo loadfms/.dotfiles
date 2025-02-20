@@ -68,7 +68,7 @@
         "format": "{}% "
     },
     "cpu": {
-        "format": "{usage}% ",
+        "format": "{usage:3}% ",
         "interval": 1
     },
     "temperature": {
@@ -84,12 +84,10 @@
         "tooltip-format": "{essid} {ipaddr}/{cidr}"
     },
     "pulseaudio": {
-        "format": "{icon}",
+        "format": "{icon} {volume:3}%",
         "format-muted": "",
         "format-icons": {
             "default": [
-                "",
-                "",
                 " "
             ]
         },

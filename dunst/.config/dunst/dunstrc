@@ -5,7 +5,7 @@
     sort = yes
     indicate_hidden = true
     idle_threshold = 0
-    width = 300
+    width = 400
     alignment = left
     show_age_threshold = 60
     sticky_history = yes
@@ -15,7 +15,7 @@
     horizontal_padding = 10
     separator_color = "#1B1B1B"
     monitor = 0
-    frame_width = 3
+    frame_width = 2
 
 [urgency_low]
     background = "#282828"
