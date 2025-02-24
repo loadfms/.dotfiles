@@ -252,14 +252,26 @@ return {
                 -- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
                 -- Adjusts spacing to ensure icons are aligned
                 nerd_font_variant = 'mono',
+                kind_icons = {
+                    Copilot = "",
+                },
             },
             completion = {
                 menu = {
+                    auto_show = false,
                     --border = "rounded",
                     --winblend = 0,
-                    auto_show = function(ctx)
-                        return ctx.mode ~= "cmdline" or not vim.tbl_contains({ '/', '?' }, vim.fn.getcmdtype())
-                    end,
+                    -- auto_show = function(ctx)
+                    --     return ctx.mode ~= "cmdline" or not vim.tbl_contains({ '/', '?' }, vim.fn.getcmdtype())
+                    -- end,
+
+                    draw = {
+                        columns = {
+                            { "label",     "label_description", gap = 1 },
+                            { "kind_icon", "kind",              gap = 2 }
+                        },
+                    },
+
                 },
                 documentation = {
                     window = {
@@ -286,9 +298,19 @@ return {
                         module = "blink-cmp-copilot",
                         score_offset = 100,
                         async = true,
+                        transform_items = function(_, items)
+                            local CompletionItemKind = require("blink.cmp.types").CompletionItemKind
+                            local kind_idx = #CompletionItemKind + 1
+                            CompletionItemKind[kind_idx] = "Copilot"
+                            for _, item in ipairs(items) do
+                                item.kind = kind_idx
+                            end
+                            return items
+                        end,
                     },
                 },
             },
+
         },
         opts_extend = { "sources.default" }
     }
