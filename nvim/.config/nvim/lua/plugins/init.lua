@@ -195,6 +195,7 @@ return {
                     go = { "goimports", "gofmt" },
                     rust = { "rustfmt" },
                     python = { "black" },
+                    cpp = { "clang-formatter" },
                 },
                 format_on_save = {
                     -- These options will be passed to conform.format()
