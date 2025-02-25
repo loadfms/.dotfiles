@@ -33,7 +33,7 @@ keymap('n', '<Leader>gs', ':G<CR>5j', ns)         -- Vim fugitive summary
 keymap('n', '<Leader>dq', '<C-W>k <C-W>o', ns)    -- Close compare buffs
 keymap('n', '<Leader>da', ':diffget //2<CR>', ns) -- Get content from left side
 keymap('n', '<Leader>dl', ':diffget //3<CR>', ns) -- Get content from right side
-keymap('n', '<Leader>dv', ':Gvdiffsplit!<CR>', ns)
+keymap('n', '<Leader>diff', ':Gvdiffsplit!<CR>', ns)
 keymap('n', '<Leader>gl', ':0GcLog<CR>', ns)
 
 keymap('n', '<C-S-Left>', ':vertical resize +1<CR>', ns)
