@@ -104,6 +104,7 @@ virtualbox
 virtualbox-host-modules-arch
 vulkan-radeon
 waybar
+wget
 whois
 wireless_tools
 wireplumber
