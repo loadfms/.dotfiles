@@ -168,6 +168,15 @@ git_release() {
     git -C . tag $new_tag && git -C . push origin $new_tag
 }
 
+set_pokemon_logo() {
+    if [ -z "$1" ]; then
+        echo "Usage: set_pokemon_logo <pokemon_name>"
+        return 1
+    fi
+    pokemon-colorscripts --name "$1" --no-title > ~/.config/fastfetch/logo.txt
+    echo "Pokémon '$1' set as Fastfetch logo!"
+}
+
 # improve paste speed
 autoload -Uz bracketed-paste-magic
 zle -N bracketed-paste bracketed-paste-magic
