@@ -62,7 +62,7 @@ git_info(){
 
 PROMPT='
 $(directory) $(git_info)
-%{$fg[white]%}%B %b %{$reset_color%}'
+%{$fg[255]%}%B %b %{$reset_color%}'
 
 # Add extra space between symbol in Linux
 #if uname | rg -q "Linux"; then

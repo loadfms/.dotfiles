@@ -41,7 +41,7 @@ set-option -wg clock-mode-colour red
     set-option -wg copy-mode-current-match-style "bg=red,fg=black"
 %endif
 
-set-option -g status-left "#[bg=white, fg=black]#{?client_prefix,#[bg=red],#[bg=white]} 󰯈  "
+set-option -g status-left "#[bg=white, fg=black]#{?client_prefix,#[bg=red],#[bg=white]}   "
 set-option -g status-right "#[bg=white, fg=black]#{?client_prefix,#[bg=red],#[bg=white]} #{host_short} "
 set-option -wg window-status-current-format "#{?window_zoomed_flag,#[fg=default bold],#[fg=default]} #{window_index} #{window_name} "
 set-option -wg window-status-format "#{?window_zoomed_flag,#[fg=default bold],#[fg=default]} #{window_index} #{window_name} "
