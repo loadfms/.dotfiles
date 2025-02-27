@@ -44,6 +44,7 @@ keymap('n', '<Leader>rn', '<cmd>lua vim.lsp.buf.rename()<CR>', ns)
 keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', ns)
 keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', ns)
 keymap('n', '<Leader>xx', '<cmd>lua vim.diagnostic.setqflist()<CR>', ns)
+keymap("n", "<leader>ca", '<cmd>lua vim.lsp.buf.code_action()<CR>', ns)
 
 keymap('n', '[d', '<cmd>lua vim.diagnostic.goto_prev()<CR>', ns)
 keymap('n', ']d', '<cmd>lua vim.diagnostic.goto_next()<CR>', ns)
