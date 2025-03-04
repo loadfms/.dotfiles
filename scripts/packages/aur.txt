@@ -6,7 +6,6 @@ cider-polybar
 galendae-git
 pokemon-colorscripts-git
 rofi-greenclip
-slack-desktop
 spicetify-cli
 wbg
 yay
