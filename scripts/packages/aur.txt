@@ -5,6 +5,7 @@ cava
 cider-polybar
 galendae-git
 pokemon-colorscripts-git
+raylib-cpp-git
 rofi-greenclip
 spicetify-cli
 wbg
