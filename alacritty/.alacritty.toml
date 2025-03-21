@@ -16,7 +16,7 @@ live_config_reload = true
 import = ["~/.alacrittythemes/gruvbox-material.toml"]
 
 [font]
-size = 12.0
+size = 15.0
 
 [font.bold]
 family = "Iosevka Nerd Font"
