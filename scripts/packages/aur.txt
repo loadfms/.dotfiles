@@ -1,7 +1,6 @@
 adwaita-dark
 aws-cdk
 b43-firmware
-cava
 cider-polybar
 galendae-git
 pokemon-colorscripts-git

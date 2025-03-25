@@ -15,6 +15,7 @@ boost
 boost-libs
 btop
 calc
+cava
 chafa
 composer
 delve
@@ -38,6 +39,7 @@ github-cli
 grim
 grub
 gst-plugin-pipewire
+guvcview
 hyprland
 i3-wm
 inetutils
