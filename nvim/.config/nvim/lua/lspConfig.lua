@@ -14,12 +14,8 @@ vim.diagnostic.config({
 })
 
 -- Setup LSP servers
-lsp.gopls.setup({})
-lsp.html.setup({})
-lsp.jsonls.setup({})
-lsp.lua_ls.setup({})
-lsp.rust_analyzer.setup({})
-lsp.tailwindcss.setup({})
-lsp.ts_ls.setup({})
-lsp.pyright.setup({})
-lsp.clangd.setup({})
+local servers = { "gopls", "html", "jsonls", "lua_ls", "rust_analyzer", "tailwindcss", "ts_ls", "pyright", "clangd" }
+
+for _, server in ipairs(servers) do
+    lsp[server].setup({})
+end

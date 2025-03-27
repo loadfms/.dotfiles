@@ -259,7 +259,7 @@ return {
             },
             completion = {
                 menu = {
-                    auto_show = false,
+                    auto_show = true,
                     --border = "rounded",
                     --winblend = 0,
                     -- auto_show = function(ctx)
