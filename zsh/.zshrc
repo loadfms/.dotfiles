@@ -132,6 +132,7 @@ alias cgpt='git commit -m "$(commitgpt)"'
 alias awslogs='aws_logs'
 alias ssm-gen='sh ~/.dotfiles/scripts/ssm_gen.sh'
 alias ssm-get='sh ~/.dotfiles/scripts/get_ssm.sh'
+alias reset-wifi='nmcli --ask connection up internet-5g'
 
 alias fzf="fzf --preview='chafa {}'"
 
