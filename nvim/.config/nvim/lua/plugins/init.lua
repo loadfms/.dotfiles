@@ -1,5 +1,4 @@
 return {
-
     --theme
     { "sainnhe/gruvbox-material" },
     {
@@ -76,7 +75,6 @@ return {
     },
     {
         "ibhagwan/fzf-lua",
-        -- optional for icon support
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {
             previewers = {
@@ -86,7 +84,6 @@ return {
             },
         },
         config = function()
-            -- calling `setup` is optional for customization
             require("fzf-lua").setup({
                 files      = {
                     rg_opts = [[--files --hidden --glob !.git --glob !node_modules]]
