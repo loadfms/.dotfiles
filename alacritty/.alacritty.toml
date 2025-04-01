@@ -9,7 +9,7 @@ dynamic_padding = false
 #startup_mode = "Fullscreen"
 #decorations = "None"
 opacity = 1
-padding = {x=10, y=10}
+padding = {x=20, y=20}
 
 [general]
 live_config_reload = true

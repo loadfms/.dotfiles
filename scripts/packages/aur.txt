@@ -8,5 +8,6 @@ pokemon-colorscripts-git
 raylib-cpp-git
 rofi-greenclip
 spicetify-cli
+thundery
 wbg
 yay

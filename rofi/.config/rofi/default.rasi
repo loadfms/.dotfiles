@@ -2,13 +2,19 @@
     background:     	#282828FF;
     background-alt: 	#1B1B1BFF;
 
-    foreground:     	#EBDBB2FF;
+    foreground:     	#D4BE98FF;
 
     blue:       	#7DAEA3FF;
     orange:             #D8A657FF;
     green:         	#A9B665FF;
     red:         	#EA6962FF;
     aqua:		#89b482FF;
+
+    borderradius : 0px;
+    bordersize: 1px;
+    bordercolor: #D4BE98FF;
+
+    highlightcolor: #D4BE98FF;
 
     width: 600;
     font: "Iosevka Nerd Font 10";
@@ -21,10 +27,10 @@ element-text, element-icon , mode-switcher {
 
 window {
     height: 360px;
-    border: 3px;
-    border-color: @background-alt;
+    border: @bordersize;
+    border-color: @bordercolor;
     background-color: @background;
-    border-radius: 10px;
+    border-radius: @borderradius;
 }
 
 mainbox {
@@ -39,7 +45,7 @@ inputbar {
 }
 
 prompt {
-    background-color: @red;
+    background-color: @highlightcolor;
     padding: 6px;
     text-color: @background;
     border-radius: 3px;
@@ -79,7 +85,7 @@ element-icon {
 
 element selected {
     background-color:  @background-alt ;
-    text-color: @red;
+    text-color: @highlightcolor;
 }
 
 mode-switcher {
@@ -96,5 +102,5 @@ button {
 
 button selected {
   background-color: @background;
-  text-color: @red;
+  text-color: @highlightcolor;
 }

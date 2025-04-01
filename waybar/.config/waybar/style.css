@@ -3,19 +3,19 @@
  *-------------------------------------------------------------------------------*/
 
 @define-color background            #282828;
-@define-color hard_background       #1B1B1B;
-@define-color second_background     #45403D;
-@define-color foreground            #EBDBB2;
-@define-color selection_foreground  #D8A657;
-@define-color selection_background  #3c3836;
+@define-color hard_background       #282828;
+@define-color second_background     #282828;
+@define-color foreground            #D4BE98;
+@define-color selection_foreground  #D4BE98;
+@define-color selection_background  #D4BE98;
 @define-color color_blue            #7DAEA3;
-@define-color color_green           #A9B665;
-@define-color color_yellow          #D8A657;
+@define-color color_green           #D4BE98;
+@define-color color_yellow          #D4BE98;
 @define-color color_red        	    #EA6962;
-@define-color color_purple          #d3869B;
-@define-color color_aqua            #89B482;
-@define-color color_grey            #7C6F64;
-@define-color color_white           #A89984;
+@define-color color_purple          #D4BE98;
+@define-color color_aqua            #D4BE98;
+@define-color color_grey            #D4BE98;
+@define-color color_white           #D4BE98;
 
 
 
@@ -84,7 +84,7 @@ window#waybar {
     color: #000000;
 }
 #workspaces button.active {
-    color: @color_red;
+    color: @color_blue;
 }
 #workspaces button.active:hover {
     background-color: @color_aqua;

@@ -1,6 +1,7 @@
 return {
     --theme
     { "sainnhe/gruvbox-material" },
+    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
     {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
@@ -85,6 +86,12 @@ return {
         },
         config = function()
             require("fzf-lua").setup({
+                winopts    = {
+                    border  = "single",
+                    preview = {
+                        border = "single",
+                    },
+                },
                 files      = {
                     rg_opts = [[--files --hidden --glob !.git --glob !node_modules]]
                 },

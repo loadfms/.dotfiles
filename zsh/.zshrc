@@ -189,4 +189,5 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 #pokemon-colorscripts -r 1 --no-title
 
 source ~/.dotfiles/scripts/set_secrets.sh
-fastfetch -c ~/.config/fastfetch/config.jsonrc
+# fastfetch -c ~/.config/fastfetch/config.jsonrc
+thundery
