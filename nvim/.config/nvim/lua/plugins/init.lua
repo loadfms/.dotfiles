@@ -1,7 +1,6 @@
 return {
     --theme
     { "sainnhe/gruvbox-material" },
-    { "ellisonleao/gruvbox.nvim", priority = 1000, config = true, opts = ... },
     {
         "zbirenbaum/copilot.lua",
         cmd = "Copilot",
@@ -166,10 +165,10 @@ return {
             })
         end
     },
-    {
-        "sphamba/smear-cursor.nvim",
-        opts = {},
-    },
+    -- {
+    --     "sphamba/smear-cursor.nvim",
+    --     opts = {},
+    -- },
 }
 
 --temporary removed
