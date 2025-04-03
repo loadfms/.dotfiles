@@ -1,7 +1,6 @@
 adobe-source-sans-fonts
 aircrack-ng
 alacritty
-arc-gtk-theme
 asio
 base
 base-devel
@@ -20,7 +19,6 @@ chafa
 composer
 delve
 dialog
-discord
 dkms
 dmidecode
 docker
@@ -46,7 +44,6 @@ inetutils
 intel-ucode
 iw
 jq
-kitty
 lib32-nvidia-utils
 libappindicator-gtk3
 libpulse
