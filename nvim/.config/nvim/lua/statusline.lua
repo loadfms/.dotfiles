@@ -19,17 +19,17 @@ M.get_mode = function()
     return mode_map[vim.api.nvim_get_mode().mode] or "UNKNOWN"
 end
 
-M.get_git_branch = function()
-    local branch = vim.fn.systemlist("git branch --show-current 2>/dev/null")[1]
-    local icon = "  "
-    return branch and #branch > 0 and (icon .. branch) or "No Git"
-end
+-- M.get_git_branch = function()
+--     local branch = vim.fn.systemlist("git branch --show-current 2>/dev/null")[1]
+--     local icon = "  "
+--     return branch and #branch > 0 and (icon .. branch) or "No Git"
+-- end
 
 function M.setup()
     vim.o.statusline = table.concat({
         "%#ModeMsg# ", "%{v:lua.require'statusline'.get_mode()} ",
 
-        "%#StatusLine# ", "%{v:lua.require'statusline'.get_git_branch()} ",
+        -- "%#StatusLine# ", "%{v:lua.require'statusline'.get_git_branch()} ",
         "%#StatusLine# %f%{&modified ? ' ●' : ''}%{&readonly ? ' ' : ''}%{&buftype == 'nofile' ? ' 󰊠' : ''} ",
         "%=%#StatusLine# [%{&fileencoding}] [%{&fileformat}] %y ",
 
