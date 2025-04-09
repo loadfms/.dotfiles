@@ -23,6 +23,7 @@ return {
     },
     {
         'tpope/vim-fugitive',
+        cmd = "Git"
     },
     {
         'stevearc/oil.nvim',
