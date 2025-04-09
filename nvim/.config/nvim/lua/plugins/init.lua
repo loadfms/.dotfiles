@@ -165,10 +165,6 @@ return {
             })
         end
     },
-    -- {
-    --     "sphamba/smear-cursor.nvim",
-    --     opts = {},
-    -- },
 }
 
 --temporary removed
@@ -327,4 +323,9 @@ return {
 --             extensions = {}
 --         }
 --     end
+-- },
+--
+-- {
+--     "sphamba/smear-cursor.nvim",
+--     opts = {},
 -- },
