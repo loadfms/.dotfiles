@@ -22,11 +22,11 @@ dialog
 dkms
 dmidecode
 docker
+docker-compose
 dosfstools
 dunst
 efibootmgr
 eza
-fastfetch
 feh
 firefox
 fontforge
