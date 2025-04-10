@@ -81,7 +81,7 @@
     "network": {
         "format-wifi": "",
         "format-disconnected": "󱘖",
-        "tooltip-format": "{essid} {ipaddr}/{cidr}"
+        "tooltip-format": "{essid} {ipaddr}/{cidr} "
     },
     "pulseaudio": {
         "format": "{icon} {volume:3}%",
