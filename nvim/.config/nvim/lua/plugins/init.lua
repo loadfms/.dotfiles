@@ -2,7 +2,6 @@ return {
     -- Theme
     { "sainnhe/gruvbox-material" },
 
-
     -- Copilot (AI suggestions)
     {
         "zbirenbaum/copilot.lua",
@@ -28,7 +27,7 @@ return {
     -- Git Integration
     {
         'tpope/vim-fugitive',
-        cmd = "Git"
+        cmd = { 'G', 'Git' }, -- make sure these are registered
     },
     {
         'lewis6991/gitsigns.nvim',
@@ -150,7 +149,7 @@ return {
     },
 
     -- LSP
-    { 'neovim/nvim-lspconfig',   event = "BufReadPre" },
+    -- { 'neovim/nvim-lspconfig',   event = "BufReadPre" },
 
     -- Formatter
     {
