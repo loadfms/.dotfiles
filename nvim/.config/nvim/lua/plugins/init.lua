@@ -28,7 +28,7 @@ return {
     -- Git Integration
     {
         'tpope/vim-fugitive',
-        cmd = "Git"
+        cmd = { 'G', 'Git' }, -- make sure these are registered
     },
     {
         'lewis6991/gitsigns.nvim',
