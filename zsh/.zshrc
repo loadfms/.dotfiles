@@ -190,3 +190,11 @@ zstyle ':bracketed-paste-magic' active-widgets '.self-*'
 
 source ~/.dotfiles/scripts/set_secrets.sh
 neofetch
+
+# pnpm
+export PNPM_HOME="/home/load/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
