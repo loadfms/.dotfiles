@@ -2,7 +2,6 @@ return {
     -- Theme
     { "sainnhe/gruvbox-material" },
 
-
     -- Copilot (AI suggestions)
     {
         "zbirenbaum/copilot.lua",
@@ -150,7 +149,7 @@ return {
     },
 
     -- LSP
-    { 'neovim/nvim-lspconfig',   event = "BufReadPre" },
+    -- { 'neovim/nvim-lspconfig',   event = "BufReadPre" },
 
     -- Formatter
     {

@@ -1,7 +1,6 @@
 require('general')
 require('lazyInstall')
 require('keybindings')
-require('lspConfig')
--- require('harpoonConfig')
+require("lspConfig")
 require('theme')
 require('statusline').setup()

@@ -1,64 +1,75 @@
-local lsp = require('lspconfig')
+local lsp = vim.lsp
+local o = vim.o
+local diagnostic = vim.diagnostic
+local api = vim.api
+
+lsp.enable('clangd')
+lsp.enable('gopls')
+lsp.enable('html')
+lsp.enable('jsonls')
+lsp.enable('luals')
+lsp.enable('pyright')
+lsp.enable('rust_analyzer')
+lsp.enable('tailwindcss')
+lsp.enable('ts_ls')
 
 -- completion options
-vim.o.completeopt = "menu,noinsert,popup,fuzzy"
+o.completeopt = "menu,noinsert,popup,fuzzy"
 
--- add customization to diagnostics
-vim.diagnostic.config({
+diagnostic.config({
     float = { border = "solid" },
     signs = {
         text = {
-            [vim.diagnostic.severity.ERROR] = '',
-            [vim.diagnostic.severity.WARN] = '',
-            [vim.diagnostic.severity.HINT] = '󱠂',
-            [vim.diagnostic.severity.INFO] = '󰋼',
+            [diagnostic.severity.ERROR] = '',
+            [diagnostic.severity.WARN] = '',
+            [diagnostic.severity.HINT] = '󱠂',
+            [diagnostic.severity.INFO] = '󰋼',
         },
     },
 })
 
+-- Autocommand to run when LSP attaches to a buffer
+api.nvim_create_autocmd('LspAttach', {
+    group = api.nvim_create_augroup('user.lsp', { clear = true }),
+    callback = function(args)
+        local client = lsp.get_client_by_id(args.data.client_id)
+        local bufnr = args.buf
 
--- Remap Enter, Tab and Shift-Tab for navigation
+        -- Sanity check
+        if not client then return end
+
+        -- Custom trigger characters for completion
+        if client.server_capabilities.completionProvider then
+            client.server_capabilities.completionProvider.triggerCharacters =
+                vim.split("qwertyuiopasdfghjklzxcvbnm. ", "")
+        end
+
+        -- Enable completion
+        lsp.completion.enable(true, client.id, bufnr, {
+            autotrigger = true,
+            convert = function(item)
+                return { abbr = item.label:gsub('%b()', '') }
+            end,
+        })
+    end
+})
+
+-- Remap Enter, Tab, and Shift-Tab for popup menu navigation
 local pumMaps = {
     ['<Tab>'] = '<C-n>',
     ['<S-Tab>'] = '<C-p>',
     ['<CR>'] = '<C-y>',
 }
+
 for insertKmap, pumKmap in pairs(pumMaps) do
     vim.keymap.set('i', insertKmap, function()
         return vim.fn.pumvisible() == 1 and pumKmap or insertKmap
-    end, { expr = true })
+    end, { expr = true, silent = true })
 end
 
--- Enable Ctrl-Space to manually trigger completion
-vim.keymap.set('i', '<c-space>', function()
-    vim.lsp.completion.get()
-end)
-
--- Setup LSP servers
-local servers = { "gopls", "html", "jsonls", "lua_ls", "rust_analyzer", "tailwindcss", "ts_ls", "pyright", "clangd" }
-
--- Function to enable LSP completion
-local on_attach = function(client, bufnr)
-    -- Ensure client exists
-    if not client then return end
-
-    -- Modify triggerCharacters for autocompletion
-    if client.server_capabilities.completionProvider then
-        client.server_capabilities.completionProvider.triggerCharacters =
-            vim.split("qwertyuiopasdfghjklzxcvbnm. ", "")
+-- Use <C-Space> to manually trigger completion
+vim.keymap.set('i', '<C-Space>', function()
+    if vim.fn.pumvisible() == 0 then
+        vim.fn.feedkeys(api.nvim_replace_termcodes('<C-x><C-o>', true, true, true), 'n')
     end
-
-    -- Enable completion
-    vim.lsp.completion.enable(true, client.id, bufnr, {
-        autotrigger = true,
-        convert = function(item)
-            return { abbr = item.label:gsub('%b()', '') }
-        end,
-    })
-end
-
-for _, server in ipairs(servers) do
-    lsp[server].setup({
-        on_attach = on_attach,
-    })
-end
+end, { silent = true })
