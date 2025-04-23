@@ -29,30 +29,31 @@ diagnostic.config({
 })
 
 -- Autocommand to run when LSP attaches to a buffer
-api.nvim_create_autocmd('LspAttach', {
-    group = api.nvim_create_augroup('user.lsp', { clear = true }),
-    callback = function(args)
-        local client = lsp.get_client_by_id(args.data.client_id)
-        local bufnr = args.buf
+-- api.nvim_create_autocmd('LspAttach', {
+--     group = api.nvim_create_augroup('user.lsp', { clear = true }),
+--     callback = function(args)
+--         local client = lsp.get_client_by_id(args.data.client_id)
+--         local bufnr = args.buf
 
-        -- Sanity check
-        if not client then return end
+-- Sanity check
+-- if not client then return end
 
-        -- Custom trigger characters for completion
-        if client.server_capabilities.completionProvider then
-            client.server_capabilities.completionProvider.triggerCharacters =
-                vim.split("qwertyuiopasdfghjklzxcvbnm. ", "")
-        end
+-- Custom trigger characters for completion
+-- if client.server_capabilities.completionProvider then
+--     local existing = client.server_capabilities.completionProvider.triggerCharacters or {}
+--     vim.list_extend(existing, vim.split("abcdefghijklmnopqrstuvwxyz. ", ""))
+--     client.server_capabilities.completionProvider.triggerCharacters = existing
+-- end
 
-        -- Enable completion
-        lsp.completion.enable(true, client.id, bufnr, {
-            autotrigger = true,
-            convert = function(item)
-                return { abbr = item.label:gsub('%b()', '') }
-            end,
-        })
-    end
-})
+-- Enable completion
+-- lsp.completion.enable(true, client.id, bufnr, {
+--     autotrigger = true,
+--     convert = function(item)
+--         return { abbr = item.label:gsub('%b()', '') }
+--     end,
+-- })
+--     end
+-- })
 
 -- Remap Enter, Tab, and Shift-Tab for popup menu navigation
 local pumMaps = {

@@ -165,9 +165,6 @@ return {
         end,
     },
 
-    -- LSP
-    -- { 'neovim/nvim-lspconfig',   event = "BufReadPre" },
-
     -- Formatter
     {
         'stevearc/conform.nvim',
@@ -192,4 +189,67 @@ return {
             })
         end
     },
+    {
+        'saghen/blink.cmp',
+        event = "InsertEnter", -- Load when entering Insert mode
+        version = '*',
+        opts = {
+            cmdline = {
+                keymap = {
+                    preset = 'enter', -- preset for enter-based completion acceptance
+                    ['<Tab>'] = { 'select_next', 'fallback' },
+                    ['<S-Tab>'] = { 'select_prev', 'fallback' },
+                    ['<C-Space>'] = { 'show', 'fallback' }, -- explicitly trigger completion if not visible
+                },
+            },
+            keymap = {
+                preset = 'enter',
+                ['<Tab>'] = { 'select_next', 'fallback' },
+                ['<S-Tab>'] = { 'select_prev', 'fallback' },
+                ['<Up>'] = { 'snippet_backward', 'fallback' },
+                ['<Down>'] = { 'snippet_forward', 'fallback' },
+                ['<C-Space>'] = { 'show', 'fallback' }, -- same here for general completion
+                ['<Enter>'] = { 'accept', 'fallback' }, -- ensure enter directly accepts
+            },
+
+            appearance = {
+                use_nvim_cmp_as_default = false,
+                nerd_font_variant = 'mono',
+            },
+
+            completion = {
+                menu = {
+                    auto_show = true,
+                    draw = {
+                        columns = {
+                            { "label",     "label_description", gap = 1 },
+                            { "kind_icon", "kind",              gap = 2 },
+                        },
+                    },
+                },
+                documentation = {
+                    window = {
+                        border = "rounded",
+                        winblend = 0,
+                        max_width = 80,  -- limit max width of the documentation window for better readability
+                        max_height = 20, -- limit max height for documentation window
+                    },
+                },
+            },
+
+            signature = {
+                enabled = true,
+                window = {
+                    border = "rounded",
+                    winblend = 0,
+                },
+            },
+
+            sources = {
+                default = { 'lsp', 'path', 'buffer' },
+                providers = {},
+            },
+        },
+        opts_extend = { "sources.default" }
+    }
 }
