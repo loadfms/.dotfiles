@@ -79,14 +79,14 @@ window#waybar {
 }
 #workspaces button:hover {
     background-color: @color_aqua;
-    color: #000000;
+    color: #FFFFFF;
 }
 #workspaces button.active {
     color: @color_blue;
 }
 #workspaces button.active:hover {
     background-color: @color_aqua;
-    color: #000000;
+    color: #FFFFFF;
 }
 
 #clock {
