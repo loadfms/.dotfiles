@@ -6,7 +6,7 @@ if [ -f ~/.config/secrets/gh_token ]; then
 fi
 
 if [ -f ~/.config/secrets/open_ai_cp ]; then
-    OPENAI_API_KEY=$(<~/.config/secrets/open_ai_cp)
+    OPENAI_API_KEY=$(<~/.config/secrets/open_ai)
     export OPENAI_API_KEY="$OPENAI_API_KEY"
 fi
 

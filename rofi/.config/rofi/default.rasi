@@ -17,7 +17,7 @@
     highlightcolor: #D4BE98FF;
 
     width: 600;
-    font: "Iosevka Nerd Font 10";
+    font: "Maple Mono NF 10";
 }
 
 element-text, element-icon , mode-switcher {

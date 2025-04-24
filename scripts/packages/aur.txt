@@ -5,6 +5,8 @@ b43-firmware
 cbonsai-git
 cider-polybar
 galendae-git
+maplemono-nf-unhinted
+mycli
 pokemon-colorscripts-git
 raylib-cpp-git
 rofi-greenclip

@@ -16,22 +16,22 @@ live_config_reload = true
 import = ["~/.alacrittythemes/gruvbox-material.toml"]
 
 [font]
-size = 14.0
+size = 12.0
 
 [font.bold]
-family = "Iosevka Nerd Font"
+family = "Maple Mono NF"
 style = "Bold"
 
 [font.bold_italic]
-family = "Iosevka Nerd Font"
+family = "Maple Mono NF"
 style = "Italic"
 
 [font.italic]
-family = "Iosevka Nerd Font"
+family = "Maple Mono NF"
 style = "Italic"
 
 [font.normal]
-family = "Iosevka Nerd Font"
+family = "Maple Mono NF"
 style = "Regular"
 
 [font.offset]
