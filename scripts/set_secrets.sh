@@ -5,7 +5,7 @@ if [ -f ~/.config/secrets/gh_token ]; then
     export GITHUB_TOKEN="$GH_TOKEN"
 fi
 
-if [ -f ~/.config/secrets/open_ai_cp ]; then
+if [ -f ~/.config/secrets/open_ai ]; then
     OPENAI_API_KEY=$(<~/.config/secrets/open_ai)
     export OPENAI_API_KEY="$OPENAI_API_KEY"
 fi
