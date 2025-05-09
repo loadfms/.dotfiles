@@ -128,5 +128,7 @@ window#waybar {
     padding-left: 1em;
 }
 
-#network.disconnected {
+#pulseaudio{
+    padding-left: 1em;
 }
+

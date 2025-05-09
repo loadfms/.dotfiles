@@ -22,7 +22,6 @@ dialog
 dkms
 dmidecode
 docker
-docker-compose
 dosfstools
 dunst
 efibootmgr
@@ -80,6 +79,7 @@ procs
 python-black
 python-pip
 raylib
+reflector
 ripgrep
 rofi-emoji
 rofi-wayland

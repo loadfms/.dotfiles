@@ -14,6 +14,7 @@
     //    Left Modules
     //--------------------------------------------------------------------------------
     "modules-left": [
+        "custom/luck",
         "clock",
         "hyprland/workspaces"
     ],
@@ -21,12 +22,13 @@
     //    Center Modules
     //--------------------------------------------------------------------------------
     "modules-center": [
-        "custom/music"
+        "custom/kuwabara"
     ],
     //--------------------------------------------------------------------------------
     //    Right Modules
     //--------------------------------------------------------------------------------
     "modules-right": [
+        "custom/music",
         "pulseaudio",
         "network",
         "cpu",
@@ -94,12 +96,17 @@
         "on-click": "pavucontrol"
     },
     "custom/music": {
-        "format": "音楽  {}",
+        "format": "{}",
         "escape": true,
         "interval": 5,
         "tooltip": false,
         "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
         "on-click": "playerctl play-pause",
         "max-length": 100
+    },
+    "custom/kuwabara": {
+        "exec": "echo 'くわばらくわばら'",
+        "interval": 999999,
+        "tooltip": false
     }
 }
