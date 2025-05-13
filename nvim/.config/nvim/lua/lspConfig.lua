@@ -12,6 +12,7 @@ lsp.enable('pyright')
 lsp.enable('rust_analyzer')
 lsp.enable('tailwindcss')
 lsp.enable('ts_ls')
+lsp.enable('jdtls')
 
 diagnostic.config({
     float = { border = "solid" },

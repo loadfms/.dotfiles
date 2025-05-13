@@ -96,13 +96,13 @@
         "on-click": "pavucontrol"
     },
     "custom/music": {
-        "format": "{}",
+        "format": "うた {}",
         "escape": true,
         "interval": 5,
         "tooltip": false,
-        "exec": "playerctl metadata --format='{{ artist }} - {{ title }}'",
+        "exec": "playerctl metadata --format '{{ artist }} - {{ title }}'",
         "on-click": "playerctl play-pause",
-        "max-length": 100
+        "max-length": 30
     },
     "custom/kuwabara": {
         "exec": "echo 'くわばらくわばら'",

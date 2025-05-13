@@ -22,6 +22,7 @@ dialog
 dkms
 dmidecode
 docker
+docker-compose
 dosfstools
 dunst
 efibootmgr
@@ -42,6 +43,7 @@ i3-wm
 inetutils
 intel-ucode
 iw
+jdk21-openjdk
 jq
 lib32-nvidia-utils
 libappindicator-gtk3
@@ -52,6 +54,7 @@ linux-headers
 lua-language-server
 luarocks
 lxappearance-gtk3
+maven
 mitmproxy
 mokutil
 ncdu
