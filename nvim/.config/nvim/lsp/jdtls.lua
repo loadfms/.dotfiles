@@ -2,8 +2,6 @@ local cwd = vim.fn.getcwd()
 local home = os.getenv("HOME")
 local lombok_path = home .. "/Downloads/lombok.jar"
 
-
-
 -- Traverse upwards to find root marker
 local function find_root()
     local root_markers = {

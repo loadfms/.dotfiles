@@ -58,7 +58,6 @@ maven
 mitmproxy
 mokutil
 ncdu
-neofetch
 neovim
 netctl
 networkmanager

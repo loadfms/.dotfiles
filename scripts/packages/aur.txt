@@ -8,6 +8,7 @@ galendae-git
 jdtls
 maplemono-nf-unhinted
 mycli
+neofetch
 pokemon-colorscripts-git
 raylib-cpp-git
 rofi-greenclip

@@ -28,7 +28,7 @@
     //    Right Modules
     //--------------------------------------------------------------------------------
     "modules-right": [
-        "custom/music",
+        // "custom/music",
         "pulseaudio",
         "network",
         "cpu",
