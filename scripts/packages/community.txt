@@ -45,6 +45,7 @@ intel-ucode
 iw
 jdk21-openjdk
 jq
+lazygit
 lib32-nvidia-utils
 libappindicator-gtk3
 libpulse
