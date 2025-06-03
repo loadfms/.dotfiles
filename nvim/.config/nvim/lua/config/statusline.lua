@@ -27,7 +27,7 @@ end
 
 function M.setup()
     vim.o.statusline = table.concat({
-        "%#ModeMsg# ", "%{v:lua.require'statusline'.get_mode()} ",
+        "%#ModeMsg# ", "%{v:lua.require'config.statusline'.get_mode()} ",
 
         -- "%#StatusLine# ", "%{v:lua.require'statusline'.get_git_branch()} ",
         "%#StatusLine# %f%{&modified ? ' ●' : ''}%{&readonly ? ' ' : ''}%{&buftype == 'nofile' ? ' 󰊠' : ''} ",
