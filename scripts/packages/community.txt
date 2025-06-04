@@ -16,7 +16,9 @@ btop
 calc
 cava
 chafa
+clinfo
 composer
+cuda
 delve
 dialog
 dkms
@@ -38,6 +40,7 @@ grim
 grub
 gst-plugin-pipewire
 guvcview
+hashcat
 hyprland
 i3-wm
 inetutils
@@ -66,6 +69,7 @@ noto-fonts-emoji
 npm
 ntfs-3g
 nvidia-open
+opencl-nvidia
 openssh
 os-prober
 pacman-contrib
@@ -105,6 +109,7 @@ unzip
 usb_modeswitch
 valgrind
 vifm
+vim
 virtualbox
 virtualbox-host-modules-arch
 vulkan-radeon

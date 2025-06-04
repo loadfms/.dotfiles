@@ -4,6 +4,7 @@ aws-cdk
 b43-firmware
 cbonsai-git
 cider-polybar
+crunch
 galendae-git
 jdtls
 maplemono-nf-unhinted
