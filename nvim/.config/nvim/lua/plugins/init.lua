@@ -1,6 +1,6 @@
 return {
     -- Theme
-    { "sainnhe/gruvbox-material" },
+    { "rebelot/kanagawa.nvim" },
 
     -- Copilot (AI suggestions)
     {
@@ -44,7 +44,7 @@ return {
     -- Git Integration
     {
         'tpope/vim-fugitive',
-        cmd = { 'G', 'Git', 'Gdiffsplit', 'Gvdiffsplit' },    -- lazy-load on Git commands }, -- make sure these are registered
+        cmd = { 'G', 'Git', 'Gdiffsplit', 'Gvdiffsplit' }, -- lazy-load on Git commands }, -- make sure these are registered
     },
     {
         'lewis6991/gitsigns.nvim',
@@ -104,10 +104,11 @@ return {
         dependencies = { "nvim-tree/nvim-web-devicons" },
         opts = {
             winopts    = {
-                border  = "single",
-                preview = {
+                border   = "single",
+                preview  = {
                     border = "single",
                 },
+                backdrop = 100,
             },
             files      = {
                 rg_opts = [[--files --hidden --glob !.git --glob !node_modules]]
