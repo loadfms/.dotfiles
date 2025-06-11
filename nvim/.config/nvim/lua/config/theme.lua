@@ -1,3 +1,3 @@
-vim.cmd.colorscheme "kanagawa-wave"
+vim.cmd.colorscheme "catppuccin"
 --vim.cmd "hi Normal ctermbg=NONE guibg=NONE"
 --require("themes.squidgame").setup()

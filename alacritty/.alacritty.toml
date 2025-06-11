@@ -13,7 +13,7 @@ padding = {x=20, y=20}
 
 [general]
 live_config_reload = true
-import = ["~/.alacrittythemes/kanagawa.toml"]
+import = ["~/.alacrittythemes/catppuccin.toml"]
 
 [font]
 size = 12.0
