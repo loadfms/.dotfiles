@@ -1,6 +1,6 @@
 return {
     -- Theme
-    { "catppuccin/nvim", name = "catppuccin", priority = 1000 },
+    { "sainnhe/gruvbox-material" },
 
     -- Copilot (AI suggestions)
     {
