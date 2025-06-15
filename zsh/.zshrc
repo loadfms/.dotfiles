@@ -178,6 +178,10 @@ set_pokemon_logo() {
     echo "Pokémon '$1' set as Fastfetch logo!"
 }
 
+hex2str() {
+  echo "$1" | xxd -r -p
+}
+
 # improve paste speed
 autoload -Uz bracketed-paste-magic
 zle -N bracketed-paste bracketed-paste-magic

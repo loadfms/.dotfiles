@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # CONFIGURATION
-INTERFACE="wlp0s20f0u1"         # Change to your wireless interface
+INTERFACE="wlp0s20f0u9"         # Change to your wireless interface
 DUMPFILE="capture.pcapng"
 HASHFILE="hashes.22000"
 
