@@ -1,26 +1,22 @@
 * {
-    background:     	#282828FF;
-    background-alt: 	#1B1B1BFF;
+    bg:            #2d353b;
+    fg:            #d3c6aa;
+    bg-alt:        #a7c080;
+    accent:        #D8A657;
 
-    foreground:     	#D4BE98FF;
+    borderradius:  0px;
+    bordersize:    1px;
+    bordercolor:   @fg;
 
-    blue:       	#7DAEA3FF;
-    orange:             #D8A657FF;
-    green:         	#A9B665FF;
-    red:         	#EA6962FF;
-    aqua:		#89b482FF;
-
-    borderradius : 0px;
-    bordersize: 1px;
-    bordercolor: #D4BE98FF;
-
-    highlightcolor: #D4BE98FF;
+    highlight:     #475258;
 
     width: 600;
     font: "Maple Mono NF 10";
 }
 
-element-text, element-icon , mode-switcher {
+element-text,
+element-icon,
+mode-switcher {
     background-color: inherit;
     text-color:       inherit;
 }
@@ -29,25 +25,25 @@ window {
     height: 360px;
     border: @bordersize;
     border-color: @bordercolor;
-    background-color: @background;
+    background-color: @bg;
     border-radius: @borderradius;
 }
 
 mainbox {
-    background-color: @background;
+    background-color: @bg;
 }
 
 inputbar {
-    children: [prompt,entry];
-    background-color: @background;
+    children: [prompt, entry];
+    background-color: @bg;
     border-radius: 5px;
     padding: 2px;
 }
 
 prompt {
-    background-color: @highlightcolor;
+    background-color: @highlight;
     padding: 6px;
-    text-color: @background;
+    text-color: @bg;
     border-radius: 3px;
     margin: 20px 0px 0px 20px;
 }
@@ -59,24 +55,24 @@ textbox-prompt-colon {
 
 entry {
     padding: 6px;
-    margin: 20px 0px 0px 10px;
-    text-color: @foreground;
-    background-color: @background;
+    margin: 20px 0px 0px 20px;
+    text-color: @fg;
+    background-color: @bg;
 }
 
 listview {
-    border: 0px 0px 0px;
-    padding: 6px 0px 0px;
-    margin: 10px 0px 0px 20px;
+    border: 0;
+    padding: 6px;
+    margin: 10px 20px;
     columns: 1;
     lines: 5;
-    background-color: @background;
+    background-color: @bg;
 }
 
 element {
     padding: 5px;
-    background-color: @background;
-    text-color: @foreground;
+    background-color: @bg;
+    text-color: @fg;
 }
 
 element-icon {
@@ -84,23 +80,23 @@ element-icon {
 }
 
 element selected {
-    background-color:  @background-alt ;
-    text-color: @highlightcolor;
+    background-color: @bg-alt;
+    text-color: @highlight;
 }
 
 mode-switcher {
     spacing: 0;
-  }
+}
 
 button {
     padding: 10px;
-    background-color: @background;
-    text-color: @orange;
-    vertical-align: 0.5; 
+    background-color: @bg;
+    text-color: @accent;
+    vertical-align: 0.5;
     horizontal-align: 0.5;
 }
 
 button selected {
-  background-color: @background;
-  text-color: @highlightcolor;
+    background-color: @bg;
+    text-color: @highlight;
 }

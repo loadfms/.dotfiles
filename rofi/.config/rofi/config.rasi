@@ -1,7 +1,6 @@
 configuration{
     modi: "drun";
     lines: 5;
-    font: "Iosevka Nerd Font 12";
     show-icons: false;
     location: 0;
     disable-history: false;
