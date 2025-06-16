@@ -1,134 +1,108 @@
 /*--------------------------------------------------------------------------------
- *    Colors 
+ * Colors 
  *-------------------------------------------------------------------------------*/
 
-@define-color background            #282828;
-@define-color hard_background       #282828;
-@define-color second_background     #282828;
-@define-color foreground            #D4BE98;
-@define-color selection_foreground  #D4BE98;
-@define-color selection_background  #D4BE98;
-@define-color color_blue            #7DAEA3;
-@define-color color_green           #D4BE98;
-@define-color color_yellow          #D4BE98;
-@define-color color_red        	    #EA6962;
-@define-color color_purple          #D4BE98;
-@define-color color_aqua            #D4BE98;
-@define-color color_grey            #D4BE98;
-@define-color color_white           #D4BE98;
+@define-color bg      #282828;
+@define-color fg      #d4be98;
+@define-color accent  #7daea3;
+@define-color warn    #ea6962;
+@define-color info    #d4be98;
+@define-color border  #3c3836;
 
 /*--------------------------------------------------------------------------------
- *    General 
+ * General 
  *-------------------------------------------------------------------------------*/
 
-*{
-    font-family: Maple Mono NF;
-    font-size: 13px;
+* {
+  font-family: Maple Mono NF;
+  font-size: 13px;
 }
 
 window#waybar {
-    background-color: @background;
-    color: @foreground;
-    border-top: 0px solid;
-    border-bottom: 0px solid;
-    border-color: @hard_background;
+  background-color: @bg;
+  color: @fg;
+  border:0;
+  border-top: 0;
+  border-bottom: 0;
 }
-
-
 
 /*--------------------------------------------------------------------------------
- *    Sections 
+ * Sections 
  *-------------------------------------------------------------------------------*/
 
+.modules-left,
+.modules-center,
 .modules-right {
-    border-top: 0px solid;
-    border-right: 2px solid;
-    border-bottom: 0px solid;
-    border-color: @hard_background;
-
-}
-
-.modules-center {
-    border-top: 0px solid;
-    border-bottom: 0px solid;
-    border-color: @hard_background;
+  border-top: 0;
+  border-bottom: 0;
+  border-color: @border;
 }
 
 .modules-left {
-    background-color: @background;
-    border-top: 0px solid;
-    border-left: 2px solid;
-    border-bottom: 0px solid;
-    border-color: @hard_background;
+  border-left: 2px solid;
+  border-color: @bg;
 }
 
-
+.modules-right {
+  border-right: 2px solid;
+  border-color: @bg;
+}
 
 /*--------------------------------------------------------------------------------
- *    Left Modules 
+ * Left Modules 
  *-------------------------------------------------------------------------------*/
 
 #workspaces {
-    background-color: @background;
-    color: @foreground;
-    padding-left: 1em;
+  background-color: @bg;
+  color: @fg;
+  padding-left: 1em;
 }
+
 #workspaces button {
-    color: @foreground;
-    padding: 0 6px;
+  color: @fg;
+  padding: 0 6px;
 }
+
 #workspaces button:hover {
-    background-color: @color_aqua;
-    color: #FFFFFF;
+  background-color: @accent;
+  color: #fff;
 }
+
 #workspaces button.active {
-    color: @color_blue;
+  color: @accent;
 }
+
 #workspaces button.active:hover {
-    background-color: @color_aqua;
-    color: #FFFFFF;
+  background-color: @accent;
+  color: #fff;
 }
 
 #clock {
-    background-color: @background;
-    padding-right: 1em; 
-    padding-left: 1em;
-    border-right: 2px;
-    border-right-style: solid;
-    border-right-color: @color_yellow;
+  background-color: @bg;
+  padding: 0 1em;
+  border-right: 2px solid @info;
 }
 
-
-
 /*--------------------------------------------------------------------------------
- *    Right Modules 
+ * Right Modules 
  *-------------------------------------------------------------------------------*/
 
-#temperature {
-    padding-left: 1em;
-    padding-right: 0.5em;
+#cpu {
+  padding: 0 0.5em 0 1em;
+  border-left: 2px solid @fg;
+}
+
+#temperature,
+#memory,
+#pulseaudio {
+  padding-left: 1em;
+  padding-right: 0.5em;
 }
 
 #memory {
-    padding-left: 1em;
-    padding-right: 0.5em;
-    margin-right: 1em;
-}
-
-#cpu {
-    padding-right: 0.5em;
-    padding-left: 1em;
-    border-left: 2px;
-    border-left-style: solid;
-    border-left-color: @color_green;
+  margin-right: 1em;
 }
 
 #network {
-    padding-right: 2em;
-    padding-left: 1em;
+  padding: 0 2em 0 1em;
 }
-
-#pulseaudio{
-    padding-left: 1em;
-}
-
