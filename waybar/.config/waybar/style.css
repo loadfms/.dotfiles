@@ -2,12 +2,10 @@
  * Colors 
  *-------------------------------------------------------------------------------*/
 
-@define-color bg      #282828;
-@define-color fg      #d4be98;
-@define-color accent  #7daea3;
-@define-color warn    #ea6962;
-@define-color info    #d4be98;
-@define-color border  #3c3836;
+@define-color bg           #2d353b;
+@define-color fg           #d3c6aa;
+@define-color accent       #a7c080;
+@define-color separator    #d3c6aa;
 
 /*--------------------------------------------------------------------------------
  * General 
@@ -35,7 +33,6 @@ window#waybar {
 .modules-right {
   border-top: 0;
   border-bottom: 0;
-  border-color: @border;
 }
 
 .modules-left {
@@ -80,7 +77,7 @@ window#waybar {
 #clock {
   background-color: @bg;
   padding: 0 1em;
-  border-right: 2px solid @info;
+  border-right: 2px solid @separator;
 }
 
 /*--------------------------------------------------------------------------------
@@ -89,7 +86,7 @@ window#waybar {
 
 #cpu {
   padding: 0 0.5em 0 1em;
-  border-left: 2px solid @fg;
+  border-left: 2px solid @separator;
 }
 
 #temperature,
